@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gdgssu.android_deviewsched.ui.selectsession.SelectSessionActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/select_session_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:navigationIcon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+        app:theme="@style/DeviewAppTheme_ActionBar">
+
+        <Spinner
+            android:id="@+id/select_session_spinner"
+            style="@style/Widget.DeviewAppTheme.ToolBar.Spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:dropDownVerticalOffset="10dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/select_session_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/select_session_toolbar" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/select_session_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="40dp"
+        android:src="@drawable/ic_done_white_24dp"
+        app:fabSize="normal">
+
+    </android.support.design.widget.FloatingActionButton>
+</RelativeLayout>

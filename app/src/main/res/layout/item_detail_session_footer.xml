@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/board_content_middle_margin_15dp"
+    android:paddingRight="@dimen/board_content_middle_margin_15dp"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/item_detail_session_footer_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="5"
+        android:hint="질문을 남겨주세요" />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/item_detail_session_footer_sendreply"
+        android:layout_width="0dp"
+        android:layout_height="64dip"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:src="@drawable/ic_done_white_36dp"
+        app:cb_color="#99CC00"
+        app:cb_pressedRingWidth="8dip" />
+</LinearLayout>

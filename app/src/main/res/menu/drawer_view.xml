@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_all_schedule"
+            android:icon="@drawable/ic_insert_invitation_black_24dp"
+            android:title="@string/all_schedule" />
+        <item
+            android:id="@+id/nav_my_schedule"
+            android:icon="@drawable/ic_stars_black_24dp"
+            android:title="@string/my_schedule" />
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/ic_location_on_black_24dp"
+            android:title="@string/location" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings_applications_black_24dp"
+            android:title="@string/setting" />
+    </group>
+
+</menu>

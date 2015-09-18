@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Deview2015</string>
+
+    <!-- Navigation View-->
+    <string name="home">홈</string>
+    <string name="all_schedule">전체 시간표</string>
+    <string name="my_schedule">나의 시간표</string>
+    <string name="find_friends">친구 찾기</string>
+    <string name="deview_story">#Deview2015</string>
+    <string name="location">오시는 길</string>
+    <string name="setting">설정</string>
+</resources>

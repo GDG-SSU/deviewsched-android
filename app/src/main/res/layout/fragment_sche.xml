@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_white_background"
+    android:orientation="vertical"
+    tools:context="com.gdgssu.android_deviewsched.ui.sche.ScheFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/fragment_sche_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/DeviewAppTheme_ActionBar"
+        app:navigationIcon="@drawable/abc_ic_ab_back_mtrl_am_alpha">
+
+        <Spinner
+            android:id="@+id/fragment_sche_spinner"
+            style="@style/Widget.DeviewAppTheme.ToolBar.Spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:dropDownVerticalOffset="10dp" />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/fragment_sche_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabTextColor="@android:color/white" />
+
+    <FrameLayout
+        android:id="@+id/fl_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:foreground="@drawable/bottom_shadow" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/fragment_sche_content_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <RelativeLayout
+            android:id="@+id/fragment_sche_empty_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="선택한 세션이 없습니다. \n 상단의 별모양 아이콘을 눌러서 들을 세션을 선택해주세요." />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

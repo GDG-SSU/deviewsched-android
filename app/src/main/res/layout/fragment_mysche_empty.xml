@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/fragment_mysche_empty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="아직 선택하신 시간표가 없습니다. \\n 아래 아이콘을 눌러서 관심있는 Deview 시간표를 선택해주세요"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/fragment_mysche_empty_add_session"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_mysche_empty_text"
+        android:src="@drawable/ic_stars_white_24dp" />
+
+</RelativeLayout>

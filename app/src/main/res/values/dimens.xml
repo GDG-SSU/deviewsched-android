@@ -1,0 +1,86 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--common layout values-->
+    <dimen name="defaultPadding">16dp</dimen>
+    <dimen name="halfPadding">8dp</dimen>
+    <dimen name="touchTarget">48dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--key lines-->
+    <dimen name="baseline_grid">8dp</dimen>
+    <dimen name="baseline_grid_for_text">4dp</dimen>
+    <dimen name="keyline_first">16dp</dimen>
+    <dimen name="keyline_second">72dp</dimen>
+    <dimen name="keyline_third">16dp</dimen>
+    <dimen name="keyline_first_minus">8dp</dimen>
+
+    <!--increments-->
+    <dimen name="appbar_half">28dp</dimen>
+    <dimen name="appbar">56dp</dimen>
+    <dimen name="appbar_x2">112dp</dimen>
+    <dimen name="appbar_x3">168dp</dimen>
+    <dimen name="appbar_x4">224dp</dimen>
+    <dimen name="appbar_x6">336dp</dimen>
+
+    <!--typo-->
+    <dimen name="content_headline_24sp">24sp</dimen>
+    <dimen name="content_title_20sp">20sp</dimen>
+    <dimen name="content_subtitle_16sp">16sp</dimen>
+    <dimen name="content_body_14sp">14sp</dimen>
+    <dimen name="content_cpation_12sp">12sp</dimen>
+
+    <!--navigation drawer-->
+    <dimen name="navdrawer_profile_image_size">40dp</dimen>
+
+    <!--grid-->
+    <dimen name="grid_height">@dimen/appbar_x3</dimen>
+    <dimen name="grid_padding_1dp">1dp</dimen>
+    <dimen name="grid_padding_4dp">4dp</dimen>
+    <dimen name="grid_text_padding_16dp">16dp</dimen>
+    <dimen name="grid_single_line_footer_height">48dp</dimen>
+    <dimen name="grid_two_line_footer_height">68dp</dimen>
+    <dimen name="grid_text_size_14sp">@dimen/content_body_14sp</dimen>
+    <dimen name="grid_text_size_16sp">@dimen/content_subtitle_16sp</dimen>
+
+    <!--list-->
+    <dimen name="list_two_line_footer_height">60dp</dimen>
+    <dimen name="half_fab_size">28dp</dimen>
+    <dimen name="fab_margin_with_appbar">28dp</dimen>
+    <dimen name="list_text_padding_8dp">8dp</dimen>
+    <dimen name="list_text_size_8sp">8sp</dimen>
+    <dimen name="material_listitem_height_72dp">72dp</dimen>
+    <dimen name="material_icon_width_50dp">50dp</dimen>
+    <dimen name="material_icon_height_50dp">50dp</dimen>
+    <dimen name="material_icon_paddingleft_16dp">16dp</dimen>
+    <dimen name="material_listitem_paddingleft_72dp">72dp</dimen>
+    <dimen name="material_listitem_uppertext_12sp">12sp</dimen>
+    <dimen name="material_listitem_lowertext_10sp">10sp</dimen>
+    <dimen name="material_listitem_paddingvertical_20dp">20dp</dimen>
+    <dimen name="material_listitem_paddingright_16dp">16dp</dimen>
+
+    <!--login-->
+    <dimen name="fragment_signin_margin">10dp</dimen>
+    <dimen name="fragment_signin_margin_x5">50dp</dimen>
+
+    <!--board content-->
+    <dimen name="board_content_middle_margin_15dp">15dp</dimen>
+    <dimen name="board_content_small_margin_5dp">5dp</dimen>
+
+    <!--temp-->
+    <dimen name="action_button_width">48dip</dimen>
+    <dimen name="action_button_height">42dip</dimen>
+
+    <dimen name="layout_padding_very_small">4dp</dimen>
+    <dimen name="layout_padding_small">8dp</dimen>
+    <dimen name="layout_padding_medium">16dp</dimen>
+    <dimen name="layout_padding_large">24dp</dimen>
+
+    <dimen name="layout_margin_very_small">4dp</dimen>
+    <dimen name="layout_margin_small">8dp</dimen>
+    <dimen name="layout_margin_medium">16dp</dimen>
+    <dimen name="layout_margin_large">24dp</dimen>
+
+</resources>
