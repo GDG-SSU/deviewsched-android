@@ -1,4 +1,4 @@
-package com.gdgssu.android_deviewsched.ui.splashlogin;
+package com.gdgssu.android_deviewsched.ui.splash;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +13,12 @@ import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.model.AllScheItems;
 import com.gdgssu.android_deviewsched.ui.MainActivity;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.*;
 import static com.navercorp.volleyextensions.volleyer.Volleyer.volleyer;
 
-public class SplashLoginActivity extends AppCompatActivity implements Runnable {
+public class SplashActivity extends AppCompatActivity implements Runnable {
 
-    private static final String TAG = "SplashLoginActivity";
+    private static final String TAG = makeLogTag("SplashActivity");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
