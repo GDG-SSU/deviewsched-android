@@ -148,11 +148,11 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
         avatarImage = (ImageView) findViewById(R.id.profile_image);
         nameText = (TextView) findViewById(R.id.profile_name_text);
 
-        Glide.with(getApplicationContext())
-                .load(userInfo.user.picture)
-                .transform(new GlideCircleTransform(DeviewSchedApplication.GLOBAL_CONTEXT))
-                .into(avatarImage);
-        nameText.setText(userInfo.user.name);
+//        Glide.with(getApplicationContext())
+//                .load(userInfo.user.picture)
+//                .transform(new GlideCircleTransform(this))
+//                .into(avatarImage);
+//        nameText.setText(userInfo.user.name);
 
     }
 

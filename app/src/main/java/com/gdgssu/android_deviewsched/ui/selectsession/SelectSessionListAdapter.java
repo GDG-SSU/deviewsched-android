@@ -133,7 +133,7 @@ public class SelectSessionListAdapter extends BaseAdapter {
 
         Glide.with(mContext)
                 .load(sessionItem.speakers.get(0).picture)
-                .transform(new GlideCircleTransform(DeviewSchedApplication.GLOBAL_CONTEXT))
+                .transform(new GlideCircleTransform(mContext))
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .placeholder(R.drawable.person_image_empty)
                 .into(sessionHolder.speakerImg);
@@ -146,14 +146,14 @@ public class SelectSessionListAdapter extends BaseAdapter {
 
         Glide.with(mContext)
                 .load(sessionItem.speakers.get(0).picture)
-                .transform(new GlideCircleTransform(DeviewSchedApplication.GLOBAL_CONTEXT))
+                .transform(new GlideCircleTransform(mContext))
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .placeholder(R.drawable.person_image_empty)
                 .into(sessionHolder.speakerImg);
 
         Glide.with(mContext)
                 .load(sessionItem.speakers.get(1).picture)
-                .transform(new GlideCircleTransform(DeviewSchedApplication.GLOBAL_CONTEXT))
+                .transform(new GlideCircleTransform(mContext))
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .placeholder(R.drawable.person_image_empty)
                 .into(sessionHolder.speakerImgSecond);

@@ -72,7 +72,7 @@ public class SchePagerFragment extends Fragment {
 
     private void initScheListView(View rootView) {
         listview = (ListView) rootView.findViewById(R.id.fragment_sche_pager_list);
-        adapter = new SchePagerAdapter(mTrackData, DeviewSchedApplication.GLOBAL_CONTEXT);
+        adapter = new SchePagerAdapter(mTrackData, getActivity());
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

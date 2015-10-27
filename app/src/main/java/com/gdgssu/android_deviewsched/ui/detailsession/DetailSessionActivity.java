@@ -83,9 +83,9 @@ public class DetailSessionActivity extends AppCompatActivity {
         ImageView speakerUrl = (ImageView) speakerInfoLayout.findViewById(R.id.item_detail_session_header_url);
         TextView speakerIntro = (TextView) speakerInfoLayout.findViewById(R.id.item_detail_session_header_speakerinfo);
 
-        Glide.with(DeviewSchedApplication.GLOBAL_CONTEXT)
+        Glide.with(this)
                 .load(speakers.speakers.get(index).picture)
-                .transform(new GlideCircleTransform(DeviewSchedApplication.GLOBAL_CONTEXT))
+                .transform(new GlideCircleTransform(this))
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .placeholder(R.drawable.person_image_empty)
                 .into(speakerPicture);

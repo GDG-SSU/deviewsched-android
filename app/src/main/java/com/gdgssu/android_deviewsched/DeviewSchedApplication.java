@@ -12,7 +12,6 @@ import com.navercorp.volleyextensions.volleyer.factory.DefaultRequestQueueFactor
 
 public class DeviewSchedApplication extends Application{
 
-    public static Context GLOBAL_CONTEXT;
     public static Boolean LOGIN_STATE = false;
     public static boolean FAVOR_SESSION_STATE = false;
     public static final String HOST_URL = "http://deview.unstabler.pl/";
@@ -25,15 +24,13 @@ public class DeviewSchedApplication extends Application{
     public void onCreate() {
         super.onCreate();
 
-        GLOBAL_CONTEXT = getApplicationContext();
-        FacebookSdk.sdkInitialize(GLOBAL_CONTEXT);
-        setLoginState();
-        setFavorSessionState();
-        initRequestQueue();
+//        FacebookSdk.sdkInitialize(getApplicationContext());
+//        setLoginState();
+//        setFavorSessionState();
     }
 
     public void setLoginState() {
-        LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(GLOBAL_CONTEXT);
+        LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getApplicationContext());
         LOGIN_STATE = prefHelper.getPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);
     }
 
@@ -41,12 +38,7 @@ public class DeviewSchedApplication extends Application{
         /**
          * 로그인할떄 false로 돌려야함
          */
-        FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(GLOBAL_CONTEXT);
+        FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(getApplicationContext());
         FAVOR_SESSION_STATE = prefHelper.getFavorSessionState(FavoritePreferenceHelper.PREF_FAVOR_STATE);
-    }
-
-    public static void initRequestQueue() {
-        deviewRequestQueue = DefaultRequestQueueFactory.create(GLOBAL_CONTEXT);
-        deviewRequestQueue.start();
     }
 }
