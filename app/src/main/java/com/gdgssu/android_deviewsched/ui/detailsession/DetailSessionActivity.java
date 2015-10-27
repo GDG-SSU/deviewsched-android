@@ -76,7 +76,7 @@ public class DetailSessionActivity extends AppCompatActivity {
     }
 
     private void setSpeakerInfo(final int index) {
-        RelativeLayout speakerInfoLayout = (RelativeLayout) LayoutInflater.from(getApplicationContext()).inflate(R.layout.layout_speaker_info, null, false);
+        RelativeLayout speakerInfoLayout = (RelativeLayout) LayoutInflater.from(getBaseContext()).inflate(R.layout.layout_speaker_info, null, false);
         ImageView speakerPicture = (ImageView) speakerInfoLayout.findViewById(R.id.item_detail_session_header_speaker_img);
         TextView speakerName = (TextView) speakerInfoLayout.findViewById(R.id.item_detail_session_header_name);
         TextView speakerOrg = (TextView) speakerInfoLayout.findViewById(R.id.item_detail_session_header_company);

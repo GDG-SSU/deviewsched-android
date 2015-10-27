@@ -23,7 +23,7 @@ public class SettingActivity extends AppCompatActivity {
 
         initHeaderView();
 
-        //listview.setAdapter(new SettingAdapter(getApplicationContext(),));
+        //listview.setAdapter(new SettingAdapter(getBaseContext(),));
 
     }
 

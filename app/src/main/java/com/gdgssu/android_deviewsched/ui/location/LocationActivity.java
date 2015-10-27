@@ -123,7 +123,7 @@ public class LocationActivity extends NMapActivity implements OnMapStateChangeLi
             } else {
                 boolean isMyLocationEnabled = mMapLocationManager.enableMyLocation(true);
                 if (!isMyLocationEnabled) {
-                    Toast.makeText(getApplicationContext(), "Please enable a My Location source in system settings",
+                    Toast.makeText(getBaseContext(), "Please enable a My Location source in system settings",
                             Toast.LENGTH_LONG).show();
 
                     Intent goToSettings = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);

@@ -117,15 +117,15 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
                     case 0:
                         return HeaderDesign.fromColorResAndDrawable(
                                 R.color.colorPrimary,
-                                ContextCompat.getDrawable(getApplicationContext(), R.drawable.backwall1));
+                                ContextCompat.getDrawable(getBaseContext(), R.drawable.backwall1));
                     case 1:
                         return HeaderDesign.fromColorResAndDrawable(
                                 R.color.colorPrimary,
-                                ContextCompat.getDrawable(getApplicationContext(), R.drawable.backwall2));
+                                ContextCompat.getDrawable(getBaseContext(), R.drawable.backwall2));
                     case 2:
                         return HeaderDesign.fromColorResAndDrawable(
                                 R.color.colorPrimary,
-                                ContextCompat.getDrawable(getApplicationContext(), R.drawable.backwall3));
+                                ContextCompat.getDrawable(getBaseContext(), R.drawable.backwall3));
                 }
 
                 return null;
@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
         avatarImage = (ImageView) findViewById(R.id.profile_image);
         nameText = (TextView) findViewById(R.id.profile_name_text);
 
-//        Glide.with(getApplicationContext())
+//        Glide.with(this)
 //                .load(userInfo.user.picture)
 //                .transform(new GlideCircleTransform(this))
 //                .into(avatarImage);
