@@ -30,7 +30,7 @@ public class DeviewSchedApplication extends Application{
     }
 
     public void setLoginState() {
-        LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getApplicationContext());
+        LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
         LOGIN_STATE = prefHelper.getPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);
     }
 
@@ -38,7 +38,7 @@ public class DeviewSchedApplication extends Application{
         /**
          * 로그인할떄 false로 돌려야함
          */
-        FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(getApplicationContext());
+        FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(getBaseContext());
         FAVOR_SESSION_STATE = prefHelper.getFavorSessionState(FavoritePreferenceHelper.PREF_FAVOR_STATE);
     }
 }

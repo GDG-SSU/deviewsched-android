@@ -45,7 +45,7 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-databind:2.6.0'
     compile 'com.facebook.android:facebook-android-sdk:4.0.0'
     compile 'com.navercorp.pulltorefresh:library:3.2.0@aar'
-    compile('com.github.florent37:materialviewpager:1.1.0@aar') {
+    compile('com.github.florent37:materialviewpager:1.1.2@aar') {
         transitive = true
     }
     compile('com.github.florent37:carpaccio:1.0.0@aar') {
