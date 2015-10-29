@@ -11,10 +11,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
-import com.gdgssu.android_deviewsched.model.Day;
-import com.gdgssu.android_deviewsched.model.Session;
+import com.gdgssu.android_deviewsched.model.sessioninfo.Day;
+import com.gdgssu.android_deviewsched.model.sessioninfo.Session;
 import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
 
 import java.text.SimpleDateFormat;

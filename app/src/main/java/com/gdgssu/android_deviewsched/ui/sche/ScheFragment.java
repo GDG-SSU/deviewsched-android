@@ -1,6 +1,5 @@
 package com.gdgssu.android_deviewsched.ui.sche;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -9,9 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -21,10 +17,8 @@ import android.widget.Spinner;
 
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
-import com.gdgssu.android_deviewsched.model.AllScheItems;
 import com.gdgssu.android_deviewsched.ui.DeviewFragment;
 import com.gdgssu.android_deviewsched.ui.MainActivity;
-import com.gdgssu.android_deviewsched.ui.selectsession.SelectSessionActivity;
 
 public class ScheFragment extends DeviewFragment {
 

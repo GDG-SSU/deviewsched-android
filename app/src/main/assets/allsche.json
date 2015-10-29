@@ -5,13 +5,13 @@
         {
           "sessions": [
             {
-              "id": -1,
+              "session_id": -1,
               "is_session": false,
               "starts_at": "08:40",
               "ends_at": "09:20",
               "title": "참가등록",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -25,13 +25,13 @@
               ]
             },
             {
-              "id": -1,
+              "session_id": -1,
               "is_session": false,
               "starts_at": "09:20",
               "ends_at": "09:40",
               "title": "Keynote",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -45,13 +45,13 @@
               ]
             },
             {
-              "id": 0,
+              "session_id": 0,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -73,13 +73,13 @@
               ]
             },
             {
-              "id": 1,
+              "session_id": 1,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -101,13 +101,13 @@
               ]
             },
             {
-              "id": 2,
+              "session_id": 2,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -121,13 +121,13 @@
               ]
             },
             {
-              "id": -1,
+              "session_id": -1,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
               "title": "점심시간",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -141,13 +141,13 @@
               ]
             },
             {
-              "id": 3,
+              "session_id": 3,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -169,13 +169,13 @@
               ]
             },
             {
-              "id": 4,
+              "session_id": 4,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -197,13 +197,13 @@
               ]
             },
             {
-              "id": 5,
+              "session_id": 5,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -217,13 +217,13 @@
               ]
             },
             {
-              "id": -1,
+              "session_id": -1,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
               "title": "BOF",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -241,13 +241,13 @@
         {
           "sessions": [
             {
-              "id": -1,
+              "session_id": -1,
               "is_session": false,
               "starts_at": "08:40",
               "ends_at": "09:20",
               "title": "참가등록",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -261,13 +261,13 @@
               ]
             },
             {
-              "id": -1,
+              "session_id": -1,
               "is_session": false,
               "starts_at": "09:20",
               "ends_at": "09:40",
               "title": "Keynote",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -281,13 +281,13 @@
               ]
             },
             {
-              "id": 6,
+              "session_id": 6,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -309,13 +309,13 @@
               ]
             },
             {
-              "id": 7,
+              "session_id": 7,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -337,13 +337,13 @@
               ]
             },
             {
-              "id": 8,
+              "session_id": 8,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -357,13 +357,13 @@
               ]
             },
             {
-              "id": -1,
+              "session_id": -1,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
               "title": "점심시간",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -377,13 +377,13 @@
               ]
             },
             {
-              "id": 9,
+              "session_id": 9,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -405,13 +405,13 @@
               ]
             },
             {
-              "id": 10,
+              "session_id": 10,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -433,13 +433,13 @@
               ]
             },
             {
-              "id": 11,
+              "session_id": 11,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -453,13 +453,13 @@
               ]
             },
             {
-              "id": -1,
+              "session_id": -1,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
               "title": "BOF",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -477,13 +477,13 @@
         {
           "sessions": [
             {
-              "id": -1,
+              "session_id": -1,
               "is_session": false,
               "starts_at": "08:40",
               "ends_at": "09:20",
               "title": "참가등록",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -497,13 +497,13 @@
               ]
             },
             {
-              "id": -1,
+              "session_id": -1,
               "is_session": false,
               "starts_at": "09:20",
               "ends_at": "09:40",
               "title": "Keynote",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -517,13 +517,13 @@
               ]
             },
             {
-              "id": 12,
+              "session_id": 12,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -545,13 +545,13 @@
               ]
             },
             {
-              "id": 13,
+              "session_id": 13,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -573,13 +573,13 @@
               ]
             },
             {
-              "id": 14,
+              "session_id": 14,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -593,13 +593,13 @@
               ]
             },
             {
-              "id": -1,
+              "session_id": -1,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
               "title": "점심시간",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -613,13 +613,13 @@
               ]
             },
             {
-              "id": 15,
+              "session_id": 15,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -641,13 +641,13 @@
               ]
             },
             {
-              "id": 16,
+              "session_id": 16,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -669,13 +669,13 @@
               ]
             },
             {
-              "id": 17,
+              "session_id": 17,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -689,13 +689,13 @@
               ]
             },
             {
-              "id": -1,
+              "session_id": -1,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
               "title": "BOF",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -713,13 +713,13 @@
         {
           "sessions": [
             {
-              "id": -1,
+              "session_id": -1,
               "is_session": false,
               "starts_at": "08:40",
               "ends_at": "09:20",
               "title": "참가등록",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -733,13 +733,13 @@
               ]
             },
             {
-              "id": -1,
+              "session_id": -1,
               "is_session": false,
               "starts_at": "09:20",
               "ends_at": "09:40",
               "title": "Keynote",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -753,13 +753,13 @@
               ]
             },
             {
-              "id": 18,
+              "session_id": 18,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -781,13 +781,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -809,13 +809,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -829,13 +829,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
               "title": "점심시간",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -849,13 +849,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -877,13 +877,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -905,13 +905,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -925,13 +925,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
               "title": "BOF",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -953,13 +953,13 @@
         {
           "sessions": [
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": false,
               "starts_at": "09:30",
               "ends_at": "10:00",
               "title": "참가등록",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -973,13 +973,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1001,13 +1001,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1029,13 +1029,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1049,13 +1049,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
               "title": "점심시간",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -1069,13 +1069,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1097,13 +1097,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1125,13 +1125,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1145,13 +1145,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
               "title": "BOF",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -1169,13 +1169,13 @@
         {
           "sessions": [
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": false,
               "starts_at": "09:30",
               "ends_at": "10:00",
               "title": "참가등록",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -1189,13 +1189,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1217,13 +1217,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1245,13 +1245,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1265,13 +1265,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
               "title": "점심시간",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -1285,13 +1285,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1313,13 +1313,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1341,13 +1341,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1361,13 +1361,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
               "title": "BOF",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -1385,13 +1385,13 @@
         {
           "sessions": [
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": false,
               "starts_at": "09:30",
               "ends_at": "10:00",
               "title": "참가등록",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -1405,13 +1405,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1433,13 +1433,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1461,13 +1461,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1481,13 +1481,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
               "title": "점심시간",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -1501,13 +1501,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1529,13 +1529,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1557,13 +1557,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1577,13 +1577,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
               "title": "BOF",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -1601,13 +1601,13 @@
         {
           "sessions": [
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": false,
               "starts_at": "09:30",
               "ends_at": "10:00",
               "title": "참가등록",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -1621,13 +1621,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1649,13 +1649,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1677,13 +1677,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1697,13 +1697,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
               "title": "점심시간",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {
@@ -1717,13 +1717,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
               "title": "네이버 효과툰은 어떻게 만들어졌나?",
               "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "presentation_url": "http://www.slideshare.net/deview/111-52720751",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1745,13 +1745,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
               "title": "네이버 효과툰 구현 이야기",
               "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "presentation_url": "http://www.slideshare.net/deview/121-52734801",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1773,13 +1773,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
               "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
               "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
-              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "presentation_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
@@ -1793,13 +1793,13 @@
               ]
             },
             {
-              "id": 19,
+              "session_id": 19,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
               "title": "BOF",
               "description": "",
-              "presentaion_url": "",
+              "presentation_url": "",
               "video_url": "",
               "speakers": [
                 {

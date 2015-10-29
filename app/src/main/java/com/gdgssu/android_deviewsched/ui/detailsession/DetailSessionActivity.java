@@ -21,8 +21,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
-import com.gdgssu.android_deviewsched.model.DetailSessionInfo;
-import com.gdgssu.android_deviewsched.model.Speakers;
 import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
 
 import static com.navercorp.volleyextensions.volleyer.Volleyer.volleyer;

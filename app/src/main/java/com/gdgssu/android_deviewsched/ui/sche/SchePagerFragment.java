@@ -17,9 +17,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
-import com.gdgssu.android_deviewsched.model.DetailSessionInfo;
 import com.gdgssu.android_deviewsched.model.FavoriteSession;
-import com.gdgssu.android_deviewsched.model.Track;
+import com.gdgssu.android_deviewsched.model.sessioninfo.Track;
 import com.gdgssu.android_deviewsched.ui.detailsession.DetailSessionActivity;
 import com.gdgssu.android_deviewsched.ui.selectsession.SelectSessionActivity;
 

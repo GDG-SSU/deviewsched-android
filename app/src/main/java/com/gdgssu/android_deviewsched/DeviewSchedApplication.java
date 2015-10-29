@@ -1,15 +1,12 @@
 package com.gdgssu.android_deviewsched;
 
 import android.app.Application;
-import android.content.Context;
 
 import com.android.volley.RequestQueue;
-import com.facebook.FacebookSdk;
 import com.gdgssu.android_deviewsched.helper.FavoritePreferenceHelper;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
 
-import com.gdgssu.android_deviewsched.model.Day;
-import com.navercorp.volleyextensions.volleyer.factory.DefaultRequestQueueFactory;
+import com.gdgssu.android_deviewsched.model.sessioninfo.Day;
 
 import java.util.ArrayList;
 

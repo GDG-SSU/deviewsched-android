@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.FavoritePreferenceHelper;
-import com.gdgssu.android_deviewsched.model.AllScheItems;
 import com.gdgssu.android_deviewsched.model.FavoriteSession;
 
 public class SelectSessionActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
