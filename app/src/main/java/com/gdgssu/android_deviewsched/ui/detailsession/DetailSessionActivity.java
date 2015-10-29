@@ -1,25 +1,24 @@
 package com.gdgssu.android_deviewsched.ui.detailsession;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.model.sessioninfo.Session;
 import com.gdgssu.android_deviewsched.model.sessioninfo.Speaker;
@@ -42,7 +41,7 @@ public class DetailSessionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_session);
+        setContentView(R.layout.activity_detailsession);
 
         Intent intent = getIntent();
         sessionInfo = (Session) intent.getSerializableExtra("SessionInfo");
@@ -63,15 +62,15 @@ public class DetailSessionActivity extends AppCompatActivity {
 
     private void setSpeakerInfo(final int index) {
         RelativeLayout speakerInfoLayout = (RelativeLayout) LayoutInflater.from(getBaseContext()).inflate(R.layout.layout_speaker_info, null, false);
-        ImageView speakerPicture = (ImageView) speakerInfoLayout.findViewById(R.id.item_detail_session_header_speaker_img);
-        TextView speakerName = (TextView) speakerInfoLayout.findViewById(R.id.item_detail_session_header_name);
-        TextView speakerOrg = (TextView) speakerInfoLayout.findViewById(R.id.item_detail_session_header_company);
-        ImageView speakerUrl = (ImageView) speakerInfoLayout.findViewById(R.id.item_detail_session_header_url);
-        TextView speakerIntro = (TextView) speakerInfoLayout.findViewById(R.id.item_detail_session_header_speakerinfo);
+        ImageView speakerPicture = (ImageView) speakerInfoLayout.findViewById(R.id.speaker_img);
+        TextView speakerName = (TextView) speakerInfoLayout.findViewById(R.id.speaker_name);
+        TextView speakerOrg = (TextView) speakerInfoLayout.findViewById(R.id.speaker_company);
+        ImageView speakerUrl = (ImageView) speakerInfoLayout.findViewById(R.id.speaker_url);
+        TextView speakerIntro = (TextView) speakerInfoLayout.findViewById(R.id.speaker_intro);
 
-        Glide.with(this)
+        Glide.with(getBaseContext())
                 .load(speakers.get(index).picture)
-                .transform(new GlideCircleTransform(this))
+                .transform(new GlideCircleTransform(getBaseContext()))
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .placeholder(R.drawable.person_image_empty)
                 .into(speakerPicture);
@@ -81,9 +80,9 @@ public class DetailSessionActivity extends AppCompatActivity {
         speakerUrl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Uri uri = Uri.parse(speakers.speakers.get(index).email);
-//                Intent intent = new Intent(Intent.ACTION_SEND, uri);
-//                startActivity(intent);
+                Uri uri = Uri.parse(speakers.get(index).url);
+                Intent intent = new Intent(Intent.ACTION_SEND, uri);
+                startActivity(intent);
             }
         });
         speakerIntro.setText(Html.fromHtml(speakers.get(index).introduction));
@@ -96,46 +95,47 @@ public class DetailSessionActivity extends AppCompatActivity {
 
         initToolbar();
 
-        sessionTitle = (TextView) findViewById(R.id.activity_detail_session_header_title);
-        sessionDesc = (TextView) findViewById(R.id.activity_detail_session_header_sessioninfo);
-        speakerBasket = (LinearLayout) findViewById(R.id.activity_detail_session_header_speaker_basket);
-
-    }
-
-    private void initToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle("세션 안내");
-        }
-
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        sessionTitle = (TextView) findViewById(R.id.detailsession_title);
+        sessionDesc = (TextView) findViewById(R.id.detailsession_sessioninfo);
+        speakerBasket = (LinearLayout) findViewById(R.id.detailsession_speaker_basket);
+        ImageView backarrowButton = (ImageView) findViewById(R.id.detailsession_backbutton);
+        backarrowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
+
+        ImageView shareButton = (ImageView) findViewById(R.id.detailsession_share);
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Todo : 세션 공유시 실행할 액션 작성
+            }
+        });
+
+        setData();
+
+        ImageView backdropImg = (ImageView) findViewById(R.id.detailsession_backdrop);
+        Glide.with(getBaseContext())
+                .load("http://insanehong.kr/post/deview2013/@img/keynote.jpg")
+                .centerCrop()
+                .into(backdropImg);
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_detail_session, menu);
+    private void initToolbar() {
 
-        return true;
-    }
+        CollapsingToolbarLayout collapsingToolbar =
+                (CollapsingToolbarLayout) findViewById(R.id.detailsession_collapsingtoolbar);
+        collapsingToolbar.setTitle("");
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.detailsession_toolbar);
+        setSupportActionBar(toolbar);
 
-        switch (item.getItemId()) {
-            case R.id.menu_detail_session_share:
-
-                return true;
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setTitle("세션 안내");
         }
-
-        return super.onOptionsItemSelected(item);
     }
 }

@@ -1,6 +1,7 @@
 package com.gdgssu.android_deviewsched.ui.sche;
 
 import android.content.Context;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,11 +19,6 @@ import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
 import java.util.ArrayList;
 
 public class SchePagerAdapter extends BaseAdapter {
-
-    private final String[] SESSION_TIME =
-            {
-                    "10:00~10:50", "11:00~11:50", "12:00~12:50", "14:10 ~ 15:00", "15:10 ~ 16:00", "16:10 ~ 17:00"
-            };
 
     private LayoutInflater mInflater;
     private ArrayList<Session> sessionItems;
@@ -81,9 +77,19 @@ public class SchePagerAdapter extends BaseAdapter {
             setOneSpeakerInfo(sessionHolder, sessionItem);
         }
 
+        if (!sessionItem.is_session) {
+            setInvisibleSpeakerPicture(sessionHolder);
+        }
+
         sessionHolder.sessionName.setText(sessionItem.title);
 
         return convertView;
+    }
+
+    private void setInvisibleSpeakerPicture(SessionViewHolder sessionHolder) {
+        sessionHolder.speakerImg.setVisibility(View.GONE);
+        sessionHolder.speakerImgSecond.setVisibility(View.GONE);
+        sessionHolder.speakerName.setVisibility(View.GONE);
     }
 
     public void setOneSpeakerInfo(SessionViewHolder sessionHolder, Session sessionItem) {
@@ -115,7 +121,7 @@ public class SchePagerAdapter extends BaseAdapter {
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(sessionHolder.speakerImgSecond);
 
-        sessionHolder.speakerName.setText(sessionItem.speakers.get(0).name + "/" + sessionItem.speakers.get(1).name);
+        sessionHolder.speakerName.setText(String.format("%s/%s", sessionItem.speakers.get(0).name, sessionItem.speakers.get(1).name));
     }
 
     public static class SessionViewHolder {

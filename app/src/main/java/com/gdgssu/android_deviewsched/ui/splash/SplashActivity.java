@@ -4,10 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.model.sessioninfo.AllScheItems;
@@ -28,7 +24,7 @@ public class SplashActivity extends AppCompatActivity implements Runnable {
         setContentView(R.layout.activity_splashlogin);
 
         Handler handler = new Handler();
-        handler.postDelayed(this, 3000);
+        handler.postDelayed(this, 1500);
 
     }
 
