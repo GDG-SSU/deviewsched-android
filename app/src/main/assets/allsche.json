@@ -1,600 +1,1632 @@
 {
-  "tracks": [
+  "days": [
     {
-      "sessions": [
+      "tracks": [
         {
-          "id": 1,
-          "session_title": "행복한 프로그래머를 위한 철학",
-          "speakers": [
+          "sessions": [
             {
-              "name": "유석문",
-              "img": "http://deview.kr/data/deview/acnr/2/13/15.png"
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "session_title": "네이버 모바일 홈을 움직이는 반응형 무한스크롤의 비밀",
-          "speakers": [
-            {
-              "name": "손찬욱",
-              "img": "http://deview.kr/data/deview/acnr/2/6/7.png"
-            }
-          ]
-        },
-        {
-          "id": 3,
-          "session_title": "지금까지 상상한 표현의 한계를 넘자-webGL",
-          "speakers": [
-            {
-              "name": "백선기",
-              "img": "http://deview.kr/data/deview/acnr/2/1/1.png"
+              "is_session": false,
+              "starts_at": "08:40",
+              "ends_at": "09:20",
+              "title": "참가등록",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
             },
             {
-              "name": "이준호",
-              "img": "http://deview.kr/data/deview/acnr/2/1/51.png"
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "session_title": "자바스크립트 라이브러리 개발/운영 경험기",
-          "speakers": [
-            {
-              "name": "전용우",
-              "img": "http://deview.kr/data/deview/acnr/2/12/14.png"
-            }
-          ]
-        },
-        {
-          "id": 5,
-          "session_title": "간결하고 효율적인 안드로이드 앱의 구조와 개발 전략",
-          "speakers": [
-            {
-              "name": "신동길",
-              "img": "http://deview.kr/data/deview/acnr/2/41/44.png"
-            }
-          ]
-        },
-        {
-          "id": 6,
-          "session_title": "Docker로 보는 클라우드 서버 운영의 미래",
-          "speakers": [
-            {
-              "name": "김대권",
-              "img": "http://deview.kr/data/deview/acnr/2/20/22.png"
-            }
-          ]
-        },
-        {
-          "id": 7,
-          "session_title": "Ansible의 이해와 활용",
-          "speakers": [
-            {
-              "name": "김용환",
-              "img": "http://deview.kr/data/deview/acnr/2/15/17.png"
-            }
-          ]
-        },
-        {
-          "id": 30,
-          "session_title": "행복한 프로그래머를 위한 철학",
-          "speakers": [
-            {
-              "name": "유석문",
-              "img": "http://deview.kr/data/deview/acnr/2/13/15.png"
-            }
-          ]
-        },
-        {
-          "id": 31,
-          "session_title": "네이버 모바일 홈을 움직이는 반응형 무한스크롤의 비밀",
-          "speakers": [
-            {
-              "name": "손찬욱",
-              "img": "http://deview.kr/data/deview/acnr/2/6/7.png"
-            }
-          ]
-        },
-        {
-          "id": 32,
-          "session_title": "지금까지 상상한 표현의 한계를 넘자-webGL",
-          "speakers": [
-            {
-              "name": "백선기",
-              "img": "http://deview.kr/data/deview/acnr/2/1/1.png"
+              "is_session": false,
+              "starts_at": "09:20",
+              "ends_at": "09:40",
+              "title": "Keynote",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "송창현",
+                  "organization": "NAVER CTO",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
             },
             {
-              "name": "이준호",
-              "img": "http://deview.kr/data/deview/acnr/2/1/51.png"
+              "is_session": true,
+              "starts_at": "10:00",
+              "ends_at": "10:50",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "11:00",
+              "ends_at": "11:50",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "12:00",
+              "ends_at": "12:50",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "12:50",
+              "ends_at": "14:10",
+              "title": "점심시간",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "14:10",
+              "ends_at": "15:00",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "15:10",
+              "ends_at": "16:00",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "16:10",
+              "ends_at": "17:00",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "17:15",
+              "ends_at": "18:30",
+              "title": "BOF",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
             }
           ]
         },
         {
-          "id": 33,
-          "session_title": "자바스크립트 라이브러리 개발/운영 경험기",
-          "speakers": [
+          "sessions": [
             {
-              "name": "전용우",
-              "img": "http://deview.kr/data/deview/acnr/2/12/14.png"
+              "is_session": false,
+              "starts_at": "08:40",
+              "ends_at": "09:20",
+              "title": "참가등록",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "09:20",
+              "ends_at": "09:40",
+              "title": "Keynote",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "송창현",
+                  "organization": "NAVER CTO",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "10:00",
+              "ends_at": "10:50",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "11:00",
+              "ends_at": "11:50",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "12:00",
+              "ends_at": "12:50",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "12:50",
+              "ends_at": "14:10",
+              "title": "점심시간",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "14:10",
+              "ends_at": "15:00",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "15:10",
+              "ends_at": "16:00",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "16:10",
+              "ends_at": "17:00",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "17:15",
+              "ends_at": "18:30",
+              "title": "BOF",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
             }
           ]
         },
         {
-          "id": 34,
-          "session_title": "간결하고 효율적인 안드로이드 앱의 구조와 개발 전략",
-          "speakers": [
+          "sessions": [
             {
-              "name": "신동길",
-              "img": "http://deview.kr/data/deview/acnr/2/41/44.png"
+              "is_session": false,
+              "starts_at": "08:40",
+              "ends_at": "09:20",
+              "title": "참가등록",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "09:20",
+              "ends_at": "09:40",
+              "title": "Keynote",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "송창현",
+                  "organization": "NAVER CTO",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "10:00",
+              "ends_at": "10:50",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "11:00",
+              "ends_at": "11:50",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "12:00",
+              "ends_at": "12:50",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "12:50",
+              "ends_at": "14:10",
+              "title": "점심시간",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "14:10",
+              "ends_at": "15:00",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "15:10",
+              "ends_at": "16:00",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "16:10",
+              "ends_at": "17:00",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "17:15",
+              "ends_at": "18:30",
+              "title": "BOF",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
             }
           ]
         },
         {
-          "id": 35,
-          "session_title": "Docker로 보는 클라우드 서버 운영의 미래",
-          "speakers": [
+          "sessions": [
             {
-              "name": "김대권",
-              "img": "http://deview.kr/data/deview/acnr/2/20/22.png"
-            }
-          ]
-        },
-        {
-          "id": 36,
-          "session_title": "Ansible의 이해와 활용",
-          "speakers": [
+              "is_session": false,
+              "starts_at": "08:40",
+              "ends_at": "09:20",
+              "title": "참가등록",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
             {
-              "name": "김용환",
-              "img": "http://deview.kr/data/deview/acnr/2/15/17.png"
+              "is_session": false,
+              "starts_at": "09:20",
+              "ends_at": "09:40",
+              "title": "Keynote",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "송창현",
+                  "organization": "NAVER CTO",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "10:00",
+              "ends_at": "10:50",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "11:00",
+              "ends_at": "11:50",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "12:00",
+              "ends_at": "12:50",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "12:50",
+              "ends_at": "14:10",
+              "title": "점심시간",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "14:10",
+              "ends_at": "15:00",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "15:10",
+              "ends_at": "16:00",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "16:10",
+              "ends_at": "17:00",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "17:15",
+              "ends_at": "18:30",
+              "title": "BOF",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "sessions": [
+      "tracks": [
         {
-          "id": 8,
-          "session_title": "스위프트 프로그래밍 언어",
-          "speakers": [
+          "sessions": [
             {
-              "name": "김영후",
-              "img": "http://deview.kr/data/deview/acnr/2/5/6.png"
-            }
-          ]
-        },
-        {
-          "id": 9,
-          "session_title": "자신있는 개발자에서 훌륭한 개발자로",
-          "speakers": [
-            {
-              "name": "이민석",
-              "img": "http://deview.kr/data/deview/acnr/2/14/16.png"
-            }
-          ]
-        },
-        {
-          "id": 10,
-          "session_title": "모바일 앱 크래시!! 네이버에서는 어떻게 수집하고 보여줄까요?",
-          "speakers": [
-            {
-              "name": "유성덕",
-              "img": "http://deview.kr/data/deview/acnr/2/8/9.png"
-            }
-          ]
-        },
-        {
-          "id": 11,
-          "session_title": "안드로이드 동시성 프로그래밍 - RxJava를 활용한 Functional Reactive Programming",
-          "speakers": [
-            {
-              "name": "최정열",
-              "img": "http://deview.kr/data/deview/acnr/2/4/5.png"
+              "is_session": false,
+              "starts_at": "09:30",
+              "ends_at": "10:00",
+              "title": "참가등록",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
             },
             {
-              "name": "조현태",
-              "img": "http://deview.kr/data/deview/acnr/2/4/55.png"
-            }
-          ]
-        },
-        {
-          "id": 12,
-          "session_title": "GitHub's First Principles",
-          "speakers": [
-            {
-              "name": "Phil Haack",
-              "img": "http://deview.kr/data/deview/acnr/2/28/30.png"
-            }
-          ]
-        },
-        {
-          "id": 13,
-          "session_title": "Realm: a database for Android & iOS",
-          "speakers": [
-            {
-              "name": "Tim Anglade",
-              "img": "http://deview.kr/data/deview/acnr/2/32/34.png"
-            }
-          ]
-        },
-        {
-          "id": 14,
-          "session_title": "How can I hack your application?",
-          "speakers": [
-            {
-              "name": "이석하",
-              "img": "http://deview.kr/data/deview/acnr/2/44/58.png"
-            }
-          ]
-        },
-        {
-          "id": 37,
-          "session_title": "스위프트 프로그래밍 언어",
-          "speakers": [
-            {
-              "name": "김영후",
-              "img": "http://deview.kr/data/deview/acnr/2/5/6.png"
-            }
-          ]
-        },
-        {
-          "id": 38,
-          "session_title": "자신있는 개발자에서 훌륭한 개발자로",
-          "speakers": [
-            {
-              "name": "이민석",
-              "img": "http://deview.kr/data/deview/acnr/2/14/16.png"
-            }
-          ]
-        },
-        {
-          "id": 39,
-          "session_title": "모바일 앱 크래시!! 네이버에서는 어떻게 수집하고 보여줄까요?",
-          "speakers": [
-            {
-              "name": "유성덕",
-              "img": "http://deview.kr/data/deview/acnr/2/8/9.png"
-            }
-          ]
-        },
-        {
-          "id": 40,
-          "session_title": "안드로이드 동시성 프로그래밍 - RxJava를 활용한 Functional Reactive Programming",
-          "speakers": [
-            {
-              "name": "최정열",
-              "img": "http://deview.kr/data/deview/acnr/2/4/5.png"
+              "is_session": true,
+              "starts_at": "10:00",
+              "ends_at": "10:50",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
             },
             {
-              "name": "조현태",
-              "img": "http://deview.kr/data/deview/acnr/2/4/55.png"
-            }
-          ]
-        },
-        {
-          "id": 41,
-          "session_title": "GitHub's First Principles",
-          "speakers": [
-            {
-              "name": "Phil Haack",
-              "img": "http://deview.kr/data/deview/acnr/2/28/30.png"
-            }
-          ]
-        },
-        {
-          "id": 42,
-          "session_title": "Realm: a database for Android & iOS",
-          "speakers": [
-            {
-              "name": "Tim Anglade",
-              "img": "http://deview.kr/data/deview/acnr/2/32/34.png"
-            }
-          ]
-        },
-        {
-          "id": 43,
-          "session_title": "How can I hack your application?",
-          "speakers": [
-            {
-              "name": "이석하",
-              "img": "http://deview.kr/data/deview/acnr/2/44/58.png"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "sessions": [
-        {
-          "id": 15,
-          "session_title": "Service Workers",
-          "speakers": [
-            {
-              "name": "송정기",
-              "img": "http://deview.kr/data/deview/acnr/2/3/3.png"
-            }
-          ]
-        },
-        {
-          "id": 16,
-          "session_title": "WebRTC 개발, 현재, 그리고 미래",
-          "speakers": [
-            {
-              "name": "최진호",
-              "img": "http://deview.kr/data/deview/acnr/2/2/2.png"
-            }
-          ]
-        },
-        {
-          "id": 18,
-          "session_title": "소프트웨어개발 방법론을 건축가에게만 배워야 하는가?",
-          "speakers": [
-            {
-              "name": "신현묵",
-              "img": "http://deview.kr/data/deview/acnr/2/11/13.png"
-            }
-          ]
-        },
-        {
-          "id": 19,
-          "session_title": "앱 세상에서 HTML5 생존기: HTML5 기반 모바일 단말용 게임 개발 및 최적화",
-          "speakers": [
-            {
-              "name": "임상석",
-              "img": "http://deview.kr/data/deview/acnr/2/48/53.png"
-            }
-          ]
-        },
-        {
-          "id": 20,
-          "session_title": "Lessons from developing a Web browser for Raspberry Pi",
-          "speakers": [
-            {
-              "name": "오창석",
-              "img": "http://deview.kr/data/deview/acnr/2/16/18.png"
-            }
-          ]
-        },
-        {
-          "id": 21,
-          "session_title": "오픈소스 하드웨어 플랫폼과 Node.js로 구현하는 IoT 플랫폼",
-          "speakers": [
-            {
-              "name": "안진섭",
-              "img": "http://deview.kr/data/deview/acnr/2/53/63.png"
-            }
-          ]
-        },
-        {
-          "id": 22,
-          "session_title": "Developing VR Experiences with Oculus SDK",
-          "speakers": [
-            {
-              "name": "이호민",
-              "img": "http://deview.kr/data/deview/acnr/2/45/65.png"
-            }
-          ]
-        },
-        {
-          "id": 44,
-          "session_title": "Service Workers",
-          "speakers": [
-            {
-              "name": "송정기",
-              "img": "http://deview.kr/data/deview/acnr/2/3/3.png"
-            }
-          ]
-        },
-        {
-          "id": 45,
-          "session_title": "WebRTC 개발, 현재, 그리고 미래",
-          "speakers": [
-            {
-              "name": "최진호",
-              "img": "http://deview.kr/data/deview/acnr/2/2/2.png"
-            }
-          ]
-        },
-        {
-          "id": 46,
-          "session_title": "소프트웨어개발 방법론을 건축가에게만 배워야 하는가?",
-          "speakers": [
-            {
-              "name": "신현묵",
-              "img": "http://deview.kr/data/deview/acnr/2/11/13.png"
-            }
-          ]
-        },
-        {
-          "id": 47,
-          "session_title": "앱 세상에서 HTML5 생존기: HTML5 기반 모바일 단말용 게임 개발 및 최적화",
-          "speakers": [
-            {
-              "name": "임상석",
-              "img": "http://deview.kr/data/deview/acnr/2/48/53.png"
-            }
-          ]
-        },
-        {
-          "id": 48,
-          "session_title": "Lessons from developing a Web browser for Raspberry Pi",
-          "speakers": [
-            {
-              "name": "오창석",
-              "img": "http://deview.kr/data/deview/acnr/2/16/18.png"
-            }
-          ]
-        },
-        {
-          "id": 49,
-          "session_title": "오픈소스 하드웨어 플랫폼과 Node.js로 구현하는 IoT 플랫폼",
-          "speakers": [
-            {
-              "name": "안진섭",
-              "img": "http://deview.kr/data/deview/acnr/2/53/63.png"
-            }
-          ]
-        },
-        {
-          "id": 50,
-          "session_title": "Developing VR Experiences with Oculus SDK",
-          "speakers": [
-            {
-              "name": "이호민",
-              "img": "http://deview.kr/data/deview/acnr/2/45/65.png"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "sessions": [
-        {
-          "id": 23,
-          "session_title": "신개념 N스크린 웹앱 프레임워크 PARS",
-          "speakers": [
-            {
-              "name": "이동영",
-              "img": "http://deview.kr/data/deview/acnr/2/54/64.png"
-            }
-          ]
-        },
-        {
-          "id": 24,
-          "session_title": "아이비컨과 공유기 해킹을 통한 인도어 IOT 삽질기",
-          "speakers": [
-            {
-              "name": "최시원",
-              "img": "http://deview.kr/data/deview/acnr/2/40/42.png"
-            }
-          ]
-        },
-        {
-          "id": 25,
-          "session_title": "Automated Recognition of Alzheimer's Disease from Wearable Devices: Big Brain Data and Big Visual Data",
-          "speakers": [
-            {
-              "name": "Michael S. Ryoo",
-              "img": "http://deview.kr/data/deview/acnr/2/46/50.png"
+              "is_session": true,
+              "starts_at": "11:00",
+              "ends_at": "11:50",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
             },
             {
-              "name": "윤경식",
-              "img": "http://deview.kr/data/deview/acnr/2/46/59.png"
-            }
-          ]
-        },
-        {
-          "id": 26,
-          "session_title": "오타 수정과 편집 기능을 가진 Android Keyboard Service 개발기",
-          "speakers": [
-            {
-              "name": "조상희",
-              "img": "http://deview.kr/data/deview/acnr/2/57/68.png"
-            }
-          ]
-        },
-        {
-          "id": 27,
-          "session_title": "모바일 P2P 미디어 스트리밍 방법",
-          "speakers": [
-            {
-              "name": "전종환",
-              "img": "http://deview.kr/data/deview/acnr/2/42/45.png"
-            }
-          ]
-        },
-        {
-          "id": 28,
-          "session_title": "RE-view of Android L Developer PRE-view",
-          "speakers": [
-            {
-              "name": "이경민",
-              "img": "http://deview.kr/data/deview/acnr/2/18/20.png"
-            }
-          ]
-        },
-        {
-          "id": 29,
-          "session_title": "안드로이드 L-Preview 보안 아키텍처 및 설비",
-          "speakers": [
-            {
-              "name": "양정수",
-              "img": "http://deview.kr/images/2014/no_img.jpg"
-            }
-          ]
-        },
-        {
-          "id": 51,
-          "session_title": "신개념 N스크린 웹앱 프레임워크 PARS",
-          "speakers": [
-            {
-              "name": "이동영",
-              "img": "http://deview.kr/data/deview/acnr/2/54/64.png"
-            }
-          ]
-        },
-        {
-          "id": 52,
-          "session_title": "아이비컨과 공유기 해킹을 통한 인도어 IOT 삽질기",
-          "speakers": [
-            {
-              "name": "최시원",
-              "img": "http://deview.kr/data/deview/acnr/2/40/42.png"
-            }
-          ]
-        },
-        {
-          "id": 53,
-          "session_title": "Automated Recognition of Alzheimer's Disease from Wearable Devices: Big Brain Data and Big Visual Data",
-          "speakers": [
-            {
-              "name": "Michael S. Ryoo",
-              "img": "http://deview.kr/data/deview/acnr/2/46/50.png"
+              "is_session": true,
+              "starts_at": "12:00",
+              "ends_at": "12:50",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
             },
             {
-              "name": "윤경식",
-              "img": "http://deview.kr/data/deview/acnr/2/46/59.png"
+              "is_session": false,
+              "starts_at": "12:50",
+              "ends_at": "14:10",
+              "title": "점심시간",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "14:10",
+              "ends_at": "15:00",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "15:10",
+              "ends_at": "16:00",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "16:10",
+              "ends_at": "17:00",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "17:15",
+              "ends_at": "18:30",
+              "title": "BOF",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
             }
           ]
         },
         {
-          "id": 54,
-          "session_title": "오타 수정과 편집 기능을 가진 Android Keyboard Service 개발기",
-          "speakers": [
+          "sessions": [
             {
-              "name": "조상희",
-              "img": "http://deview.kr/data/deview/acnr/2/57/68.png"
+              "is_session": false,
+              "starts_at": "09:30",
+              "ends_at": "10:00",
+              "title": "참가등록",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "10:00",
+              "ends_at": "10:50",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "11:00",
+              "ends_at": "11:50",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "12:00",
+              "ends_at": "12:50",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "12:50",
+              "ends_at": "14:10",
+              "title": "점심시간",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "14:10",
+              "ends_at": "15:00",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "15:10",
+              "ends_at": "16:00",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "16:10",
+              "ends_at": "17:00",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "17:15",
+              "ends_at": "18:30",
+              "title": "BOF",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
             }
           ]
         },
         {
-          "id": 55,
-          "session_title": "모바일 P2P 미디어 스트리밍 방법",
-          "speakers": [
+          "sessions": [
             {
-              "name": "전종환",
-              "img": "http://deview.kr/data/deview/acnr/2/42/45.png"
+              "is_session": false,
+              "starts_at": "09:30",
+              "ends_at": "10:00",
+              "title": "참가등록",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "10:00",
+              "ends_at": "10:50",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "11:00",
+              "ends_at": "11:50",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "12:00",
+              "ends_at": "12:50",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "12:50",
+              "ends_at": "14:10",
+              "title": "점심시간",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "14:10",
+              "ends_at": "15:00",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "15:10",
+              "ends_at": "16:00",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "16:10",
+              "ends_at": "17:00",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "17:15",
+              "ends_at": "18:30",
+              "title": "BOF",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
             }
           ]
         },
         {
-          "id": 56,
-          "session_title": "RE-view of Android L Developer PRE-view",
-          "speakers": [
+          "sessions": [
             {
-              "name": "이경민",
-              "img": "http://deview.kr/data/deview/acnr/2/18/20.png"
-            }
-          ]
-        },
-        {
-          "id": 57,
-          "session_title": "안드로이드 L-Preview 보안 아키텍처 및 설비",
-          "speakers": [
+              "is_session": false,
+              "starts_at": "09:30",
+              "ends_at": "10:00",
+              "title": "참가등록",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
             {
-              "name": "양정수",
-              "img": "http://deview.kr/images/2014/no_img.jpg"
+              "is_session": true,
+              "starts_at": "10:00",
+              "ends_at": "10:50",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "11:00",
+              "ends_at": "11:50",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "12:00",
+              "ends_at": "12:50",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "12:50",
+              "ends_at": "14:10",
+              "title": "점심시간",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "14:10",
+              "ends_at": "15:00",
+              "title": "네이버 효과툰은 어떻게 만들어졌나?",
+              "description": "\"고고고\", \"악의는없다\", \"소름\"에 적용된 새로운 네이버 효과툰의 아키텍쳐와 동작원리에 대해 소개합니다. 효과툰 장르의 정의, 스크롤에 따른 모션, 비개발자인 작가가 쓰는 저작도구 등에 대한 고민과 그 결과물의 속사정을 모두 공개합니다. 프로젝트의 A-Z를 고민하는 하이브리드 개발자에게 도움이 되길 바랍니다.<br>본 세션에서는 스크롤 툰에서의 효과에 대해 효과의 종류와 구현 방법에 대해 고민한 내용을 공유하고, 효과툰 뷰어와 페이지, 레이어 구조에 대해 설명합니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/111-52720751",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
+                  "name": "김효",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:h.kim@navercorp.com",
+                  "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/160.jpg",
+                  "name": "이현철",
+                  "organization": "NAVER",
+                  "url": "mailto:andrew.lee@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "15:10",
+              "ends_at": "16:00",
+              "title": "네이버 효과툰 구현 이야기",
+              "description": "효과툰 에디터를 왜 Nodewebkit과 Angular.js 조합으로 만들었고, 뷰어를 IE8부터 iOS8까지 다양한 웹 환경에서 보여주기 위해 경험한 문제들과 그 해결법을 공유합니다. 이 발표로 비슷한 업무를 할 예정이신 분들의 삽질 시간이 조금이나마 줄었으면 좋겠습니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/121-52734801",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
+                  "name": "임대현",
+                  "organization": "NAVER LABS",
+                  "url": "mailto:hi.iamdenny@gmail.com",
+                  "introduction": "와이프와 아들을 무척 사랑하는 개발자"
+                },
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/143.jpg",
+                  "name": "김지한",
+                  "organization": "NAVER",
+                  "url": "mailto:kim.jihan@navercorp.com",
+                  "introduction": "컴퓨터 그래픽스&음악, 웹브라우저 엔진 개발을 했고, 현재는 네이버 웹UI 개발을 하고 있습니다"
+                }
+              ]
+            },
+            {
+              "is_session": true,
+              "starts_at": "16:10",
+              "ends_at": "17:00",
+              "title": "Packetbeat과 Elasticsearch를 이용한 실시간 모니터링",
+              "description": "가용 상태의 어플리케이션을 실시간으로 모니터링 하는 것은 항상 DevOps 담당자들에게 중요한 관심 사항입니다. 정기적인 프로그램 배포 과정도 테스트를 거쳐 성능의 저하를 탐지하고 그 원인을 신속하게 찾아내는 일은 필수적으로 필요합니다. 하지만 시스템 상태를 정확하게 시각화하여 모니터링 하는 것은 쉽지 않은 과정입니다.<br>Packetbeat 는 서로 다른 네트워크 패킷들을 이용해서 어플리케이션을 모니터링하고 문제를 해결할 수 있도록 돕는 오픈소스 프로젝트 입니다. HTTP, MySQL, PgSQL 또는 레디스 같은 프로그램의 네트워크 데이터를 application layer 프로토콜에서 수집하고 수집된 데이터를 Elasticsearch 와 Kibana 를 이용해서 분석하고 시각화합니다.<br>이 세션은 Packetbeat 이 어떻게 네트워크 패킷들을 빠른 속도로 수집하고 분해해서 복호화 하는지 내부적인 동작 구조에 대해 이야기 합니다. 또한 Elasticsearch 의 aggregations 을 이용해서 최소한의 구성으로 성능에 대한 핵심적인 지표들을 시각화 하는 방법에 대해서도 이야기 합니다.<br><br>* 본 세션은 동시 통역이 제공됩니다.",
+              "presentaion_url": "http://www.slideshare.net/deview/131-packetbeat-elasticsearch",
+              "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
+              "speakers": [
+                {
+                  "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
+                  "name": "Tudor Golubenco",
+                  "organization": "Elastic",
+                  "url": "",
+                  "introduction": "Tudor Golubenco 는 Packetbeat 의 개발자이자 공동 창업자이자입니다. Packetbeat 은 엘라스틱에 2015년 인수되어 Tudor는 현재 엘라스틱에서 Beats 프로젝트의 리더를 맡고 있습니다. Packetbeat 을 개발하기 이전에 Tudor 는 VoIP/IMS 네트워크 모니터링 솔루션 업체인 IPTEGO 에서 CTO를 역임 했으며, 그의 팀이 개발한 모니터링 소프트웨어는 Vodafone, Deutsche Telekom, KPN을 비롯한 150개의 통신사에서 사용이 되었습니다. IPTEGO가 인수 합병 된 이후에는 Acme Packet 과 Oracle 에서도 근무를 하였으며 주로 Go, Python, C, Javascript 등을 이용해서 프로그래밍을 즐기고 있습니다."
+                }
+              ]
+            },
+            {
+              "is_session": false,
+              "starts_at": "17:15",
+              "ends_at": "18:30",
+              "title": "BOF",
+              "description": "",
+              "presentaion_url": "",
+              "video_url": "",
+              "speakers": [
+                {
+                  "picture": "",
+                  "name": "",
+                  "organization": "",
+                  "url": "",
+                  "introduction": ""
+                }
+              ]
             }
           ]
         }
