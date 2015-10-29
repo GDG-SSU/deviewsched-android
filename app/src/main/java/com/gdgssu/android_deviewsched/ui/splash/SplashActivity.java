@@ -10,7 +10,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
+import com.gdgssu.android_deviewsched.model.sessioninfo.AllScheItems;
 import com.gdgssu.android_deviewsched.ui.MainActivity;
+import com.gdgssu.android_deviewsched.util.JsonFromFile;
+import com.google.gson.Gson;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.*;
 import static com.navercorp.volleyextensions.volleyer.Volleyer.volleyer;
@@ -29,24 +32,30 @@ public class SplashActivity extends AppCompatActivity implements Runnable {
 
     }
 
-    private void getAllScheData() {
+//    private void getAllScheData() {
+//
+//        volleyer(DeviewSchedApplication.deviewRequestQueue)
+//                .get(DeviewSchedApplication.HOST_URL + "2015/list")
+//                .withTargetClass(AllScheItems.class)
+//                .withListener(new Response.Listener<AllScheItems>() {
+//                    @Override
+//                    public void onResponse(AllScheItems items) {
+//                        AllScheItems.result = items;
+//                    }
+//                })
+//                .withErrorListener(new Response.ErrorListener() {
+//                    @Override
+//                    public void onErrorResponse(VolleyError error) {
+//                        Log.d(TAG, error.toString());
+//                    }
+//                })
+//                .execute();
+//    }
 
-        volleyer(DeviewSchedApplication.deviewRequestQueue)
-                .get(DeviewSchedApplication.HOST_URL + "2015/list")
-                .withTargetClass(AllScheItems.class)
-                .withListener(new Response.Listener<AllScheItems>() {
-                    @Override
-                    public void onResponse(AllScheItems items) {
-                        AllScheItems.result = items;
-                    }
-                })
-                .withErrorListener(new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.d(TAG, error.toString());
-                    }
-                })
-                .execute();
+    private void getAllScheDataFromFile(){
+        Gson gson = new Gson();
+        String jsonString = JsonFromFile.readJsonFromAssets("allsche.json", getBaseContext());
+        DeviewSchedApplication.allscheItems = gson.fromJson(jsonString, AllScheItems.class);
     }
 
     @Override

@@ -6,6 +6,7 @@ import com.android.volley.RequestQueue;
 import com.gdgssu.android_deviewsched.helper.FavoritePreferenceHelper;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
 
+import com.gdgssu.android_deviewsched.model.sessioninfo.AllScheItems;
 import com.gdgssu.android_deviewsched.model.sessioninfo.Day;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class DeviewSchedApplication extends Application{
 
     public static RequestQueue deviewRequestQueue;
 
-    public static ArrayList<Day> allscheItems = new ArrayList<>();
+    public static AllScheItems allscheItems = new AllScheItems();
 
     @Override
     public void onCreate() {
