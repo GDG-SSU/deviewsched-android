@@ -87,7 +87,7 @@ public class ScheFragment extends DeviewFragment {
 
     private void initFragmentPager(View rootView) {
         mPager = (ViewPager) rootView.findViewById(R.id.fragment_sche_content_pager);
-        mAdapter = new SchePagerFragmentAdapter(getChildFragmentManager(), AllScheItems.result.days.get(0));
+        mAdapter = new SchePagerFragmentAdapter(getChildFragmentManager(), DeviewSchedApplication.allscheItems.days.get(0));
         mPager.setAdapter(mAdapter);
 
         TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.fragment_sche_tabs);
@@ -140,10 +140,10 @@ public class ScheFragment extends DeviewFragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (mAdapter != null) {
                     if (position == 0) {
-                        mAdapter.setDayItem(AllScheItems.result.days.get(0));
+                        mAdapter.setDayItem(DeviewSchedApplication.allscheItems.days.get(0));
                         mAdapter.notifyDataSetChanged();
                     } else {
-                        mAdapter.setDayItem(AllScheItems.result.days.get(1));
+                        mAdapter.setDayItem(DeviewSchedApplication.allscheItems.days.get(1));
                         mAdapter.notifyDataSetChanged();
                     }
                 }

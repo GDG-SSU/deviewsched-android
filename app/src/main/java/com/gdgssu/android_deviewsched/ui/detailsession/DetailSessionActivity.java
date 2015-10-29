@@ -21,14 +21,18 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
+import com.gdgssu.android_deviewsched.model.sessioninfo.Session;
+import com.gdgssu.android_deviewsched.model.sessioninfo.Speaker;
 import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
+
+import java.util.ArrayList;
 
 import static com.navercorp.volleyextensions.volleyer.Volleyer.volleyer;
 
 public class DetailSessionActivity extends AppCompatActivity {
 
-    private DetailSessionInfo sessionInfo;
-    private Speakers speakers;
+    private Session sessionInfo;
+    private ArrayList<Speaker> speakers;
 
     private TextView sessionTitle;
     private TextView sessionDesc;
@@ -41,34 +45,18 @@ public class DetailSessionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail_session);
 
         Intent intent = getIntent();
-        sessionInfo = (DetailSessionInfo) intent.getSerializableExtra("DetailSessionInfo");
+        sessionInfo = (Session) intent.getSerializableExtra("SessionInfo");
+
+        speakers = sessionInfo.speakers;
 
         initView();
-
-        volleyer(DeviewSchedApplication.deviewRequestQueue)
-                .get(DeviewSchedApplication.HOST_URL + "2015/" + sessionInfo.id + "/speakers")
-                .withTargetClass(Speakers.class)
-                .withListener(new Response.Listener<Speakers>() {
-                    @Override
-                    public void onResponse(Speakers item) {
-                        speakers = item;
-
-                        setData();
-                    }
-                })
-                .withErrorListener(new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                    }
-                })
-                .execute();
     }
 
     public void setData() {
         sessionTitle.setText(sessionInfo.title);
         sessionDesc.setText(Html.fromHtml(sessionInfo.description));
 
-        for (int i = 0; i < speakers.speakers.size(); i++) {
+        for (int i = 0; i < speakers.size(); i++) {
             setSpeakerInfo(i);
         }
     }
@@ -82,14 +70,14 @@ public class DetailSessionActivity extends AppCompatActivity {
         TextView speakerIntro = (TextView) speakerInfoLayout.findViewById(R.id.item_detail_session_header_speakerinfo);
 
         Glide.with(this)
-                .load(speakers.speakers.get(index).picture)
+                .load(speakers.get(index).picture)
                 .transform(new GlideCircleTransform(this))
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .placeholder(R.drawable.person_image_empty)
                 .into(speakerPicture);
 
-        speakerName.setText(speakers.speakers.get(index).name);
-        speakerOrg.setText(speakers.speakers.get(index).organization);
+        speakerName.setText(speakers.get(index).name);
+        speakerOrg.setText(speakers.get(index).organization);
         speakerUrl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,7 +86,7 @@ public class DetailSessionActivity extends AppCompatActivity {
 //                startActivity(intent);
             }
         });
-        speakerIntro.setText(Html.fromHtml(speakers.speakers.get(index).introduction));
+        speakerIntro.setText(Html.fromHtml(speakers.get(index).introduction));
 
         speakerBasket.addView(speakerInfoLayout);
     }

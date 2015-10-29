@@ -73,7 +73,7 @@ public class SchePagerAdapter extends BaseAdapter {
 
         Session sessionItem = sessionItems.get(position);
 
-        sessionHolder.sessionTime.setText(SESSION_TIME[position]);
+        sessionHolder.sessionTime.setText(String.format("%s~%s", sessionItem.starts_at, sessionItem.ends_at));
 
         if (sessionItem.speakers.size() > 1) {
             setTwoSpeakerInfo(sessionHolder, sessionItem);

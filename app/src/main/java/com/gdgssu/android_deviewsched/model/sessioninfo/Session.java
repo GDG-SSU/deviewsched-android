@@ -10,8 +10,8 @@ public class Session implements Serializable {
 
     public int session_id;
     public boolean is_session;
-    public long starts_at;
-    public long ends_at;
+    public String starts_at;
+    public String ends_at;
     public String title;
     public String description;
     public String presentation_url;

@@ -60,6 +60,8 @@ public class SplashActivity extends AppCompatActivity implements Runnable {
 
     @Override
     public void run() {
+        getAllScheDataFromFile();
+
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }

@@ -77,27 +77,11 @@ public class SchePagerFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                volleyer(DeviewSchedApplication.deviewRequestQueue)
-                        .get(DeviewSchedApplication.HOST_URL + "2015/" + mTrackData.sessions.get(position).id)
-                        .withTargetClass(DetailSessionInfo.class)
-                        .withListener(new Response.Listener<DetailSessionInfo>() {
-                            @Override
-                            public void onResponse(DetailSessionInfo item) {
-
-                                Intent intent = new Intent(new Intent(getActivity(), DetailSessionActivity.class));
-                                intent.putExtra("DetailSessionInfo", item);
-                                getActivity().startActivity(intent);
-
-                            }
-                        })
-                        .withErrorListener(new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                Log.d(TAG, error.toString());
-                            }
-                        })
-                        .execute();
-
+                if (mTrackData.sessions.get(position).is_session){
+                    Intent intent = new Intent(new Intent(getActivity(), DetailSessionActivity.class));
+                    intent.putExtra("SessionInfo", mTrackData.sessions.get(position));
+                    getActivity().startActivity(intent);
+                }
             }
         });
         listview.setAdapter(adapter);

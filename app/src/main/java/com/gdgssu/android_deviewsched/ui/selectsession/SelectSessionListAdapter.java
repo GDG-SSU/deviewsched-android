@@ -100,8 +100,8 @@ public class SelectSessionListAdapter extends BaseAdapter {
             convertView.setBackgroundColor(mContext.getResources().getColor(android.R.color.white));
         }
 
-        selectHolder.sessionTime.setText(String.format("%s~%s", transferTimestamp(sessionItem.starts_at), transferTimestamp(sessionItem.ends_at)));
-        selectHolder.sessionTrack.setText(String.format("Track %s", sessionItem.track));
+//        selectHolder.sessionTime.setText(String.format("%s~%s", transferTimestamp(sessionItem.starts_at), transferTimestamp(sessionItem.ends_at)));
+        //selectHolder.sessionTrack.setText(String.format("Track %s", sessionItem.));
 
         if (sessionItem.speakers.size() > 1) {
             setTwoSpeakerInfo(selectHolder, sessionItem);

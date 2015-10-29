@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.FavoritePreferenceHelper;
 import com.gdgssu.android_deviewsched.model.FavoriteSession;
@@ -60,7 +61,7 @@ public class SelectSessionActivity extends AppCompatActivity implements AdapterV
     private void initListView() {
         ListView listview = (ListView) findViewById(R.id.select_session_list);
         listview.setOnItemClickListener(this);
-        mAdapter = new SelectSessionListAdapter(AllScheItems.result.days.get(0), getBaseContext());
+        mAdapter = new SelectSessionListAdapter(DeviewSchedApplication.allscheItems.days.get(0), getBaseContext());
         listview.setAdapter(mAdapter);
     }
 
@@ -93,10 +94,10 @@ public class SelectSessionActivity extends AppCompatActivity implements AdapterV
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    mAdapter.setDayItem(AllScheItems.result.days.get(0));
+                    mAdapter.setDayItem(DeviewSchedApplication.allscheItems.days.get(0));
                     mAdapter.notifyDataSetChanged();
                 } else {
-                    mAdapter.setDayItem(AllScheItems.result.days.get(1));
+                    mAdapter.setDayItem(DeviewSchedApplication.allscheItems.days.get(1));
                     mAdapter.notifyDataSetChanged();
                 }
             }
@@ -113,11 +114,11 @@ public class SelectSessionActivity extends AppCompatActivity implements AdapterV
         if (!SelectSessionListAdapter.sessionItems.get(position).isSelected) {
             view.setBackgroundColor(getResources().getColor(R.color.colorAccent));
             SelectSessionListAdapter.sessionItems.get(position).isSelected = true;
-            selectedSessionList.selectSession(SelectSessionListAdapter.sessionItems.get(position).id);
+            selectedSessionList.selectSession(SelectSessionListAdapter.sessionItems.get(position).session_id);
         } else {
             view.setBackgroundColor(getResources().getColor(android.R.color.white));
             SelectSessionListAdapter.sessionItems.get(position).isSelected = false;
-            selectedSessionList.selectSession(SelectSessionListAdapter.sessionItems.get(position).id);
+            selectedSessionList.selectSession(SelectSessionListAdapter.sessionItems.get(position).session_id);
         }
     }
 }
