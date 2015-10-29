@@ -8,13 +8,15 @@ import java.util.ArrayList;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Session implements Serializable {
 
-    public int day;
+    public boolean is_session;
     public long starts_at;
-    public ArrayList<Speaker> speakers;
-    public int track;
-    public int id;
-    public String title;
     public long ends_at;
+    public String title;
+    public String description;
+    public String presentation_url;
+    public String video_url;
+    public ArrayList<Speaker> speakers;
+    public int id;
     public boolean isSelected = false;
 
 }

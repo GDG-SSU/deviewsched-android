@@ -8,7 +8,10 @@ import com.facebook.FacebookSdk;
 import com.gdgssu.android_deviewsched.helper.FavoritePreferenceHelper;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
 
+import com.gdgssu.android_deviewsched.model.Day;
 import com.navercorp.volleyextensions.volleyer.factory.DefaultRequestQueueFactory;
+
+import java.util.ArrayList;
 
 public class DeviewSchedApplication extends Application{
 
@@ -19,6 +22,8 @@ public class DeviewSchedApplication extends Application{
     private static final String TAG = "DeviewSchedApplication";
 
     public static RequestQueue deviewRequestQueue;
+
+    public static ArrayList<Day> allscheItems = new ArrayList<>();
 
     @Override
     public void onCreate() {

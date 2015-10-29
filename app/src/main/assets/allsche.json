@@ -5,6 +5,7 @@
         {
           "sessions": [
             {
+              "id": -1,
               "is_session": false,
               "starts_at": "08:40",
               "ends_at": "09:20",
@@ -14,6 +15,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -23,6 +25,7 @@
               ]
             },
             {
+              "id": -1,
               "is_session": false,
               "starts_at": "09:20",
               "ends_at": "09:40",
@@ -32,6 +35,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "송창현",
                   "organization": "NAVER CTO",
@@ -41,6 +45,7 @@
               ]
             },
             {
+              "id": 0,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
@@ -50,6 +55,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -57,6 +63,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -66,6 +73,7 @@
               ]
             },
             {
+              "id": 1,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
@@ -75,6 +83,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -82,6 +91,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -91,6 +101,7 @@
               ]
             },
             {
+              "id": 2,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
@@ -100,6 +111,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -109,6 +121,7 @@
               ]
             },
             {
+              "id": -1,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
@@ -118,6 +131,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -127,6 +141,7 @@
               ]
             },
             {
+              "id": 3,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
@@ -136,6 +151,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -143,6 +159,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -152,6 +169,7 @@
               ]
             },
             {
+              "id": 4,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
@@ -161,6 +179,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -168,6 +187,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -177,6 +197,7 @@
               ]
             },
             {
+              "id": 5,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
@@ -186,6 +207,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -195,6 +217,7 @@
               ]
             },
             {
+              "id": -1,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
@@ -204,6 +227,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -217,6 +241,7 @@
         {
           "sessions": [
             {
+              "id": -1,
               "is_session": false,
               "starts_at": "08:40",
               "ends_at": "09:20",
@@ -226,6 +251,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -235,6 +261,7 @@
               ]
             },
             {
+              "id": -1,
               "is_session": false,
               "starts_at": "09:20",
               "ends_at": "09:40",
@@ -244,6 +271,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "송창현",
                   "organization": "NAVER CTO",
@@ -253,6 +281,7 @@
               ]
             },
             {
+              "id": 6,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
@@ -262,6 +291,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -269,6 +299,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -278,6 +309,7 @@
               ]
             },
             {
+              "id": 7,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
@@ -287,6 +319,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -294,6 +327,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -303,6 +337,7 @@
               ]
             },
             {
+              "id": 8,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
@@ -312,6 +347,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -321,6 +357,7 @@
               ]
             },
             {
+              "id": -1,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
@@ -330,6 +367,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -339,6 +377,7 @@
               ]
             },
             {
+              "id": 9,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
@@ -348,6 +387,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -355,6 +395,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -364,6 +405,7 @@
               ]
             },
             {
+              "id": 10,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
@@ -373,6 +415,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -380,6 +423,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -389,6 +433,7 @@
               ]
             },
             {
+              "id": 11,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
@@ -398,6 +443,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -407,6 +453,7 @@
               ]
             },
             {
+              "id": -1,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
@@ -416,6 +463,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -429,6 +477,7 @@
         {
           "sessions": [
             {
+              "id": -1,
               "is_session": false,
               "starts_at": "08:40",
               "ends_at": "09:20",
@@ -438,6 +487,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -447,6 +497,7 @@
               ]
             },
             {
+              "id": -1,
               "is_session": false,
               "starts_at": "09:20",
               "ends_at": "09:40",
@@ -456,6 +507,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "송창현",
                   "organization": "NAVER CTO",
@@ -465,6 +517,7 @@
               ]
             },
             {
+              "id": 12,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
@@ -474,6 +527,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -481,6 +535,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -490,6 +545,7 @@
               ]
             },
             {
+              "id": 13,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
@@ -499,6 +555,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -506,6 +563,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -515,6 +573,7 @@
               ]
             },
             {
+              "id": 14,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
@@ -524,6 +583,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -533,6 +593,7 @@
               ]
             },
             {
+              "id": -1,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
@@ -542,6 +603,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -551,6 +613,7 @@
               ]
             },
             {
+              "id": 15,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
@@ -560,6 +623,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -567,6 +631,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -576,6 +641,7 @@
               ]
             },
             {
+              "id": 16,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
@@ -585,6 +651,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -592,6 +659,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -601,6 +669,7 @@
               ]
             },
             {
+              "id": 17,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
@@ -610,6 +679,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -619,6 +689,7 @@
               ]
             },
             {
+              "id": -1,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
@@ -628,6 +699,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -641,6 +713,7 @@
         {
           "sessions": [
             {
+              "id": -1,
               "is_session": false,
               "starts_at": "08:40",
               "ends_at": "09:20",
@@ -650,6 +723,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -659,6 +733,7 @@
               ]
             },
             {
+              "id": -1,
               "is_session": false,
               "starts_at": "09:20",
               "ends_at": "09:40",
@@ -668,6 +743,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "송창현",
                   "organization": "NAVER CTO",
@@ -677,6 +753,7 @@
               ]
             },
             {
+              "id": 18,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
@@ -686,6 +763,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -693,6 +771,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -702,6 +781,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
@@ -711,6 +791,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -718,6 +799,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -727,6 +809,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
@@ -736,6 +819,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -745,6 +829,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
@@ -754,6 +839,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -763,6 +849,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
@@ -772,6 +859,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -779,6 +867,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -788,6 +877,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
@@ -797,6 +887,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -804,6 +895,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -813,6 +905,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
@@ -822,6 +915,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -831,6 +925,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
@@ -840,6 +935,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -857,6 +953,7 @@
         {
           "sessions": [
             {
+              "id": 19,
               "is_session": false,
               "starts_at": "09:30",
               "ends_at": "10:00",
@@ -866,6 +963,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -875,6 +973,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
@@ -884,6 +983,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -891,6 +991,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -900,6 +1001,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
@@ -909,6 +1011,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -916,6 +1019,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -925,6 +1029,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
@@ -934,6 +1039,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -943,6 +1049,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
@@ -952,6 +1059,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -961,6 +1069,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
@@ -970,6 +1079,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -977,6 +1087,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -986,6 +1097,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
@@ -995,6 +1107,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -1002,6 +1115,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -1011,6 +1125,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
@@ -1020,6 +1135,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -1029,6 +1145,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
@@ -1038,6 +1155,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -1051,6 +1169,7 @@
         {
           "sessions": [
             {
+              "id": 19,
               "is_session": false,
               "starts_at": "09:30",
               "ends_at": "10:00",
@@ -1060,6 +1179,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -1069,6 +1189,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
@@ -1078,6 +1199,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -1085,6 +1207,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -1094,6 +1217,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
@@ -1103,6 +1227,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -1110,6 +1235,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -1119,6 +1245,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
@@ -1128,6 +1255,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -1137,6 +1265,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
@@ -1146,6 +1275,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -1155,6 +1285,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
@@ -1164,6 +1295,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -1171,6 +1303,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -1180,6 +1313,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
@@ -1189,6 +1323,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -1196,6 +1331,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -1205,6 +1341,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
@@ -1214,6 +1351,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -1223,6 +1361,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
@@ -1232,6 +1371,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -1245,6 +1385,7 @@
         {
           "sessions": [
             {
+              "id": 19,
               "is_session": false,
               "starts_at": "09:30",
               "ends_at": "10:00",
@@ -1254,6 +1395,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -1263,6 +1405,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
@@ -1272,6 +1415,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -1279,6 +1423,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -1288,6 +1433,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
@@ -1297,6 +1443,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -1304,6 +1451,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -1313,6 +1461,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
@@ -1322,6 +1471,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -1331,6 +1481,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
@@ -1340,6 +1491,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -1349,6 +1501,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
@@ -1358,6 +1511,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -1365,6 +1519,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -1374,6 +1529,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
@@ -1383,6 +1539,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -1390,6 +1547,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -1399,6 +1557,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
@@ -1408,6 +1567,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -1417,6 +1577,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
@@ -1426,6 +1587,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -1439,6 +1601,7 @@
         {
           "sessions": [
             {
+              "id": 19,
               "is_session": false,
               "starts_at": "09:30",
               "ends_at": "10:00",
@@ -1448,6 +1611,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -1457,6 +1621,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "10:00",
               "ends_at": "10:50",
@@ -1466,6 +1631,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -1473,6 +1639,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -1482,6 +1649,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "11:00",
               "ends_at": "11:50",
@@ -1491,6 +1659,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -1498,6 +1667,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -1507,6 +1677,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "12:00",
               "ends_at": "12:50",
@@ -1516,6 +1687,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -1525,6 +1697,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": false,
               "starts_at": "12:50",
               "ends_at": "14:10",
@@ -1534,6 +1707,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
@@ -1543,6 +1717,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "14:10",
               "ends_at": "15:00",
@@ -1552,6 +1727,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=35B8A72DD833B489B8A0D3B32D2F617EC61B&outKey=V1299d502e9b3c47bbc4fcd6e857318eed4cffd85be8521631b9acd6e857318eed4cf&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/150.jpg?20151021145604",
                   "name": "김효",
                   "organization": "NAVER LABS",
@@ -1559,6 +1735,7 @@
                   "introduction": "클러스터 파일시스템, NoSQL, 웹브라우저 엔진 개발자였던 네이버 웹기술 프로덕트 매니저"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/160.jpg",
                   "name": "이현철",
                   "organization": "NAVER",
@@ -1568,6 +1745,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "15:10",
               "ends_at": "16:00",
@@ -1577,6 +1755,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=85BF6C4F6A1186EEE33959498E28E4722CA9&outKey=V125e7143a366eb9fdf89dba242c2c296791c8129df1248264a28dba242c2c296791c&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/129.jpg?20151021145719",
                   "name": "임대현",
                   "organization": "NAVER LABS",
@@ -1584,6 +1763,7 @@
                   "introduction": "와이프와 아들을 무척 사랑하는 개발자"
                 },
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/143.jpg",
                   "name": "김지한",
                   "organization": "NAVER",
@@ -1593,6 +1773,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": true,
               "starts_at": "16:10",
               "ends_at": "17:00",
@@ -1602,6 +1783,7 @@
               "video_url": "http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A0A5BFD7FAF27BDEB0E2FF1A3199CF0B8398&outKey=V124af6358271f561e3935a3a735d0a8cb030e7950ba4db3f0cd75a3a735d0a8cb030&controlBarMovable=true&jsCallable=true&skinName=tvcast_white",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "http://deview.kr/data/deview/acnr/157.jpg?20151021145742",
                   "name": "Tudor Golubenco",
                   "organization": "Elastic",
@@ -1611,6 +1793,7 @@
               ]
             },
             {
+              "id": 19,
               "is_session": false,
               "starts_at": "17:15",
               "ends_at": "18:30",
@@ -1620,6 +1803,7 @@
               "video_url": "",
               "speakers": [
                 {
+                  "speaker_id": 0,
                   "picture": "",
                   "name": "",
                   "organization": "",
