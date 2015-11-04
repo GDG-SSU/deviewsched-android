@@ -11,6 +11,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.design.widget.NavigationView;
 import android.support.v7.widget.Toolbar;
@@ -34,9 +35,9 @@ import com.github.florent37.materialviewpager.header.HeaderDesign;
 
 public class MainActivity extends AppCompatActivity implements DeviewFragment.OnFragmentInteractionListener {
 
-    private DrawerLayout mDrawerLayout;
     private MaterialViewPager mViewPager;
     private Toolbar mToolbar;
+    private NavigationView mNavigationView;
 
     private ImageView avatarImage;
     private TextView nameText;
@@ -65,20 +66,7 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
         setTitle("");
 
         mToolbar = mViewPager.getToolbar();
-
-        if (mToolbar != null) {
-            setSupportActionBar(mToolbar);
-
-            final ActionBar actionBar = getSupportActionBar();
-            if (actionBar != null) {
-                actionBar.setDisplayHomeAsUpEnabled(true);
-                actionBar.setDisplayShowHomeEnabled(true);
-                actionBar.setDisplayShowTitleEnabled(true);
-                actionBar.setDisplayUseLogoEnabled(false);
-                actionBar.setHomeButtonEnabled(true);
-                actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
-            }
-        }
+        setSupportActionBar(mToolbar);
     }
 
     private void initMaterialViewPager() {
@@ -138,12 +126,13 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
     }
 
     private void initNavigationView() {
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-
-        if (navigationView != null)
-            setupDrawerContent(navigationView);
+        mNavigationView = (NavigationView) findViewById(R.id.nav_view);
+        setupDrawerContent(mNavigationView);
 
         avatarImage = (ImageView) findViewById(R.id.profile_image);
         nameText = (TextView) findViewById(R.id.profile_name_text);
@@ -153,6 +142,8 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
 //                .transform(new GlideCircleTransform(this))
 //                .into(avatarImage);
 //        nameText.setText(userInfo.user.name);
+
+        mNavigationView.getMenu().findItem(R.id.nav_home).setChecked(true);
 
     }
 
@@ -183,7 +174,8 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
 
                 }
                 menuItem.setChecked(true);
-                mDrawerLayout.closeDrawers();
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawers();
                 return true;
             }
         });
@@ -196,6 +188,8 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
          */
 
         fragmentManager.popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+
+        mNavigationView.getMenu().findItem(R.id.nav_home).setChecked(true);
     }
 
     public void showSche(CharSequence title) {
@@ -227,11 +221,8 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                mDrawerLayout.openDrawer(GravityCompat.START);
-                return true;
-        }
+        int id = item.getItemId();
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -242,9 +233,13 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-
-        showHome();
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+            showHome();
+        }
     }
 
     @Override

@@ -2,6 +2,9 @@
     <string name="app_name">Deview2015</string>
     <string name="facebook_app_id">1636564173257027</string>
 
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
     <!-- Navigation View-->
     <string name="home">Home</string>
     <string name="all_schedule">All Sessions</string>
@@ -21,4 +24,6 @@
     <string name="aboutus">About us</string>
     <string name="title_activity_detail_session">DetailSessionActivity</string>
     <string name="title_activity_select_session">SelectSessionActivity</string>
+    <string name="nav_category2">Account &amp; Setting</string>
+    <string name="account">Login</string>
 </resources>

@@ -1,61 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/chosen_account_view"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/appbar_x2">
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/backwall2"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/backwall2" />
+        android:id="@+id/profile_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:src="@android:drawable/sym_def_app_icon" />
 
-    <RelativeLayout
-        android:id="@+id/chosen_account_content_view"
+    <TextView
+        android:id="@+id/profile_point"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/keyline_first"
-        android:paddingRight="@dimen/keyline_third"
-        android:paddingTop="@dimen/keyline_first">
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="Android Studio"
+        android:textColor="@color/white_alpha_87"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-        <TextView
-            android:id="@+id/profile_point"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:paddingLeft="@dimen/keyline_second"
-            android:singleLine="true"
-            android:text=""
-            android:textColor="@color/white_alpha_54"
-            android:textSize="@dimen/content_cpation_12sp" />
+    <TextView
+        android:id="@+id/profile_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="android.studio@android.com"
+        android:textColor="@color/white_alpha_54"
+        android:textSize="@dimen/content_body_14sp" />
 
-        <TextView
-            android:id="@+id/profile_name_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/profile_point"
-            android:layout_alignParentLeft="true"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:paddingLeft="@dimen/keyline_second"
-            android:singleLine="true"
-            android:text="이준수"
-            android:textColor="@color/white_alpha_87"
-            android:textSize="@dimen/content_body_14sp" />
-
-        <ImageView
-            android:id="@+id/profile_image"
-            android:layout_width="@dimen/navdrawer_profile_image_size"
-            android:layout_height="@dimen/navdrawer_profile_image_size"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="@dimen/keyline_first"
-            android:scaleType="centerCrop"
-            android:src="@drawable/person_image_empty" />
-
-    </RelativeLayout>
-
-</FrameLayout>
+</LinearLayout>
