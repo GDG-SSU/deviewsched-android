@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="pref_noti_category"
+        android:title="@string/pref_noti_category">
+        <!-- You should be to use Switch UI, implement a SwitchPreferenceCompat-->
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="pref_noti"
+            android:title="@string/pref_noti" />
+        <ListPreference
+            android:dependency="pref_noti"
+            android:key="pref_noti_cycletime"
+            android:summary="@string/pref_summary_noti_cycletime"
+            android:title="@string/pref_noti_cycletime"
+            android:defaultValue="10"
+            android:entries="@array/noti_cycletime_entry"
+            android:entryValues="@array/noti_cycletime_entryvalues"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_aboutus_category"
+        android:title="@string/pref_aboutus_category">
+        <Preference
+            android:key="pref_aboutus"
+            android:summary="@string/pref_summ_aboutus"
+            android:title="@string/pref_aboutus" />
+        <Preference
+            android:key="pref_github"
+            android:summary="@string/pref_summ_github"
+            android:title="@string/pref_github">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/Acegugu/BestPracticeForAndroid" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

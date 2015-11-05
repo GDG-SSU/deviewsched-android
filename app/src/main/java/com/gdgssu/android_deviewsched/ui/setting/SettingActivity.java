@@ -2,8 +2,6 @@ package com.gdgssu.android_deviewsched.ui.setting;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.ListView;
 
 import com.gdgssu.android_deviewsched.R;
 
@@ -15,20 +13,12 @@ public class SettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
-        initView();
+        setFragment();
     }
 
-    private void initView() {
-        ListView listview = (ListView)findViewById(R.id.listview);
-
-        initHeaderView();
-
-        //listview.setAdapter(new SettingAdapter(getBaseContext(),));
-
-    }
-
-    private void initHeaderView() {
-        View headerView = getLayoutInflater().inflate(R.layout.item_setting_header, null, false);
-
+    private void setFragment() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.setting_contents_container, new PreferenceFragment())
+                .commit();
     }
 }

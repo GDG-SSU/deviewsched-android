@@ -14,7 +14,7 @@
     <string name="location">Location</string>
     <string name="setting">Setting</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_setting">SettingActivity</string>
 
@@ -26,4 +26,29 @@
     <string name="title_activity_select_session">SelectSessionActivity</string>
     <string name="nav_category2">Account &amp; Setting</string>
     <string name="account">Login</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- Setting text -->
+    <string name="pref_noti_category">Notification</string>
+    <string name="pref_noti">Notification setting</string>
+    <string name="pref_noti_cycletime">On notification cycle</string>
+    <string name="pref_summary_noti_cycletime">Alarm on 10 minute</string>
+
+    <string name="pref_aboutus_category">About us</string>
+    <string name="pref_aboutus">Developers</string>
+    <string name="pref_summ_aboutus">Ace Kim / Gyuhwan Park / Kahye Wi</string>
+    <string name="pref_github">Show project repo</string>
+    <string name="pref_summ_github">https://github.com/Acegugu/BestPracticeForAndroid</string>
 </resources>

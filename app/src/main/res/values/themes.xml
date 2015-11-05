@@ -49,4 +49,15 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+    <style name="DeviewAppTheme.SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- preferenceTheme is neccessary attribute for PreferenceFragmentCompat -->
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <!-- This is set font size of prefernence contents -->
+        <item name="android:textSize">16sp</item>
+    </style>
+
 </resources>
