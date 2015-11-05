@@ -26,9 +26,12 @@ import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
 
 import java.util.ArrayList;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 import static com.navercorp.volleyextensions.volleyer.Volleyer.volleyer;
 
 public class DetailSessionActivity extends AppCompatActivity {
+
+    private static final String TAG = makeLogTag("DetailSessionActivity");
 
     private Session sessionInfo;
     private ArrayList<Speaker> speakers;

@@ -24,9 +24,12 @@ import com.nhn.android.mapviewer.overlay.NMapMyLocationOverlay;
 import com.nhn.android.mapviewer.overlay.NMapOverlayManager;
 import com.nhn.android.mapviewer.overlay.NMapPOIdataOverlay;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
+
 public class LocationActivity extends NMapActivity implements OnMapStateChangeListener, NMapView.OnMapViewTouchEventListener, NMapLocationManager.OnLocationChangeListener{
 
-    private static final String TAG = "LocationActivity";
+    private static final String TAG = makeLogTag("LocationActivity");
+
     private NMapView mMapView;
     private NMapController mMapController;
     private static final String API_KEY = "ac17879e60c5f82514b4255d32a6fa3a";

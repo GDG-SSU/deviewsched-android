@@ -13,7 +13,11 @@ import java.security.NoSuchAlgorithmException;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
+
 public class AuthorizationHelper {
+
+    private static final String TAG = makeLogTag("AuthorizationHelper");
 
     public static String getAuthorizationHeader(String url, String method, String facebookToken, String seriaizedParameters) throws UnsupportedEncodingException, NoSuchAlgorithmException, InvalidKeyException {
         String nonce = generateRandomString(32);

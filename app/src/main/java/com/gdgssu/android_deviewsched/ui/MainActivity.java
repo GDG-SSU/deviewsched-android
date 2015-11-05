@@ -30,7 +30,11 @@ import com.gdgssu.android_deviewsched.ui.setting.SettingActivity;
 import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.github.florent37.materialviewpager.header.HeaderDesign;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
+
 public class MainActivity extends AppCompatActivity implements DeviewFragment.OnFragmentInteractionListener {
+
+    private static final String TAG = makeLogTag("MainActivity");
 
     private MaterialViewPager mViewPager;
     private Toolbar mToolbar;
@@ -84,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
                     case 2:
                         return "#Deview2015";
                 }
-                return "";
+                return null;
             }
         });
 
@@ -105,7 +109,6 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
                                 R.color.colorPrimary,
                                 ContextCompat.getDrawable(getBaseContext(), R.drawable.backwall3));
                 }
-
                 return null;
             }
         });
@@ -200,6 +203,18 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        AppEventsLogger.activateApp(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        AppEventsLogger.deactivateApp(this);
+    }
+
+    @Override
     public void onFragmentInteraction(Uri uri) {
     }
 
@@ -212,17 +227,5 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
             super.onBackPressed();
             showHome();
         }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        AppEventsLogger.activateApp(this);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        AppEventsLogger.deactivateApp(this);
     }
 }

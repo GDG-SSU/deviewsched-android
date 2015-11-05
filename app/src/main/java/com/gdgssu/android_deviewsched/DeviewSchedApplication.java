@@ -16,7 +16,6 @@ public class DeviewSchedApplication extends Application{
     public static Boolean LOGIN_STATE = false;
     public static boolean FAVOR_SESSION_STATE = false;
     public static final String HOST_URL = "http://deview.unstabler.pl/";
-
     private static final String TAG = "DeviewSchedApplication";
 
     public static RequestQueue deviewRequestQueue;

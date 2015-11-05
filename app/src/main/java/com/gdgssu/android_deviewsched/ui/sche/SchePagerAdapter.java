@@ -18,7 +18,11 @@ import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
 
 import java.util.ArrayList;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
+
 public class SchePagerAdapter extends BaseAdapter {
+
+    private static final String TAG = makeLogTag("SchePagerAdapter");
 
     private LayoutInflater mInflater;
     private ArrayList<Session> sessionItems;

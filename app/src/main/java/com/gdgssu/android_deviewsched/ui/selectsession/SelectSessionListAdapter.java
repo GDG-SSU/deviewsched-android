@@ -21,14 +21,16 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
+
 public class SelectSessionListAdapter extends BaseAdapter {
+
+    private static final String TAG = makeLogTag("SelectSessionListAdapter");
 
     private final String[] SESSION_TIME =
             {
                     "10:00~10:50", "11:00~11:50", "12:00~12:50", "14:10 ~ 15:00", "15:10 ~ 16:00", "16:10 ~ 17:00"
             };
-
-    private static final String TAG = SelectSessionListAdapter.class.getSimpleName();
 
     public static ArrayList<Session> sessionItems = new ArrayList<>();
 

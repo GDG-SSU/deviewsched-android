@@ -8,11 +8,15 @@ import android.support.v7.preference.PreferenceManager;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.util.LogUtils;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
+
 public class PreferenceFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener {
+
+    private static final String TAG = makeLogTag("PreferenceFragment");
+
     public static final String KEY_PREF_NOTI = "pref_noti";
     public static final String KEY_PREF_NOTI_CYCLETIME = "pref_noti_cycletime";
 
-    private static final String TAG = PreferenceFragment.class.getSimpleName();
     private SharedPreferences sharedPref;
 
     @Override

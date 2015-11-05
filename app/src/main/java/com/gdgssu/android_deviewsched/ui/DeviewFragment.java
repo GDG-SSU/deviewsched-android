@@ -1,6 +1,6 @@
 package com.gdgssu.android_deviewsched.ui;
 
-import android.app.Activity;
+import android.content.Context;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
 
@@ -16,15 +16,14 @@ public class DeviewFragment extends Fragment {
     }
 
     @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
+    public void onAttach(Context context) {
+        super.onAttach(context);
         try {
-            mListener = (OnFragmentInteractionListener) activity;
+            mListener = (OnFragmentInteractionListener) context;
         } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
+            throw new ClassCastException(context.toString()
                     + " must implement OnFragmentInteractionListener");
-        }
-    }
+        }    }
 
     @Override
     public void onDetach() {
@@ -36,5 +35,4 @@ public class DeviewFragment extends Fragment {
         // TODO: Update argument type and name
         public void onFragmentInteraction(Uri uri);
     }
-
 }

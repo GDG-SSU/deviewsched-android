@@ -4,7 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
+
 public class LoginPreferenceHelper {
+
+    private static final String TAG = makeLogTag("LoginPreferenceHelper");
 
     private final String PREF_NAME = "com.gdgssu.loginpref";
 

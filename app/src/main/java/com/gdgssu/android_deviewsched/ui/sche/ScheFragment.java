@@ -20,7 +20,11 @@ import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.ui.DeviewFragment;
 import com.gdgssu.android_deviewsched.ui.MainActivity;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
+
 public class ScheFragment extends DeviewFragment {
+
+    private static final String TAG = makeLogTag("ScheFragment");
 
     private static final String KEY_TITLE = "title";
 
@@ -28,7 +32,6 @@ public class ScheFragment extends DeviewFragment {
     private CharSequence title;
     private boolean isMySession = false;
 
-    private String TAG = "ScheFragment";
 
     private SchePagerFragmentAdapter mAdapter;
 

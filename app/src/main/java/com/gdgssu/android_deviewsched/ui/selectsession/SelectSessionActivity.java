@@ -17,9 +17,11 @@ import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.FavoritePreferenceHelper;
 import com.gdgssu.android_deviewsched.model.FavoriteSession;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
+
 public class SelectSessionActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    private static final String TAG = SelectSessionActivity.class.getSimpleName();
+    private static final String TAG = makeLogTag("SelectSessionActivity");
 
     private SelectSessionListAdapter mAdapter;
     private FavoriteSession selectedSessionList = new FavoriteSession();

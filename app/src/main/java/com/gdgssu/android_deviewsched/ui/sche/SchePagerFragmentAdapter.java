@@ -8,7 +8,11 @@ import com.gdgssu.android_deviewsched.model.sessioninfo.Day;
 
 import java.util.ArrayList;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
+
 public class SchePagerFragmentAdapter extends FragmentStatePagerAdapter {
+
+    private static final String TAG = makeLogTag("SchePagerFragmentAdapter");
 
     private ArrayList<CharSequence> pagerTitles = new ArrayList<CharSequence>();
     private Day dayItem;

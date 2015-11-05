@@ -11,7 +11,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
+
 public class FavoritePreferenceHelper {
+
+    private static final String TAG = makeLogTag("FavoritePreferenceHelper");
 
     private final String PREF_NAME = "com.gdgssu.favoritepref";
 

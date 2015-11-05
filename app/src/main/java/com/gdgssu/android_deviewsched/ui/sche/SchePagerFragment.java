@@ -22,11 +22,12 @@ import com.gdgssu.android_deviewsched.model.sessioninfo.Track;
 import com.gdgssu.android_deviewsched.ui.detailsession.DetailSessionActivity;
 import com.gdgssu.android_deviewsched.ui.selectsession.SelectSessionActivity;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 import static com.navercorp.volleyextensions.volleyer.Volleyer.volleyer;
 
 public class SchePagerFragment extends Fragment {
 
-    private static final String TAG = "SchePagerFragment";
+    private static final String TAG = makeLogTag("SchePagerFragment");
 
     private Track mTrackData;
 
