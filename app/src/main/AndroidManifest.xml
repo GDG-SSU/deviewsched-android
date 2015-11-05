@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gdgssu.android_deviewsched" >
+    package="com.gdgssu.android_deviewsched">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -11,23 +11,19 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/DeviewAppTheme" >
+        android:screenOrientation="portrait"
+        android:theme="@style/DeviewAppTheme">
         <activity
             android:name=".ui.MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/DeviewAppTheme_MaterialViewPager" >
-        </activity>
+            android:theme="@style/DeviewAppTheme_MaterialViewPager"></activity>
         <activity
             android:name=".ui.setting.SettingActivity"
             android:label="@string/setting"
-            android:theme="@style/DeviewAppTheme.SettingsTheme"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:theme="@style/DeviewAppTheme.SettingsTheme"></activity>
         <activity
             android:name=".ui.splash.SplashActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,9 +34,7 @@
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-        </activity>
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -49,18 +43,15 @@
         <activity
             android:name=".ui.detailsession.DetailSessionActivity"
             android:label="@string/title_activity_detail_session"
-            android:screenOrientation="portrait"
-            android:theme="@style/DeviewAppTheme" >
-        </activity>
+            android:theme="@style/DeviewAppTheme"></activity>
         <activity
             android:name=".ui.location.LocationActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/DeviewAppTheme" >
-        </activity>
+            android:theme="@style/DeviewAppTheme"></activity>
         <activity
             android:name=".ui.selectsession.SelectSessionActivity"
-            android:label="@string/title_activity_select_session" >
-        </activity>
+            android:label="@string/title_activity_select_session"></activity>
+
+        <activity android:name=".ui.account.AccoutActivity"></activity>
     </application>
 
 </manifest>
