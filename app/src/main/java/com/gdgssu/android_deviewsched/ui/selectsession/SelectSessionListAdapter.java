@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.LOGD;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
 public class SelectSessionListAdapter extends BaseAdapter {
@@ -52,7 +53,7 @@ public class SelectSessionListAdapter extends BaseAdapter {
                 }
             }
         } catch (IndexOutOfBoundsException e) {
-            Log.d(TAG, e.toString());
+            LOGD(TAG, e.toString());
         }
     }
 

@@ -64,8 +64,6 @@ public class ScheFragment extends DeviewFragment {
     @Override
     public void onStop() {
         super.onStop();
-
-        Log.d(TAG, "onStop()");
     }
 
     @Override
