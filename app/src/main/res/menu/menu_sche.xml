@@ -7,5 +7,4 @@
         android:title="favorite"
         android:icon="@drawable/ic_stars_white_24dp"
         app:showAsAction="always"/>
-
 </menu>
