@@ -41,14 +41,16 @@
     </string>
 
     <!-- Setting text -->
-    <string name="pref_noti_category">Notification</string>
-    <string name="pref_noti">Notification setting</string>
-    <string name="pref_noti_cycletime">On notification cycle</string>
-    <string name="pref_summary_noti_cycletime">Alarm on 10 minute</string>
+    <string name="pref_noti_category">Notifications</string>
+    <string name="pref_session_noti">Notify select session start</string>
+    <string name="pref_friends_noti">Setting find my friends</string>
 
     <string name="pref_aboutus_category">About us</string>
     <string name="pref_aboutus">Developers</string>
-    <string name="pref_summ_aboutus">Ace Kim / Gyuhwan Park / Kahye Wi</string>
+    <string name="pref_summ_aboutus">Ace Kim - ace.jckim@gmail.com</string>
     <string name="pref_github">Show project repo</string>
-    <string name="pref_summ_github">https://github.com/Acegugu/BestPracticeForAndroid</string>
+    <string name="pref_summ_github">https://github.com/Acegugu/deviewsched-android</string>
+
+    <string name="pref_lawinfo_category">Law Informations</string>
+    <string name="pref_opensourcelicense">Opensource Licenses</string>
 </resources>

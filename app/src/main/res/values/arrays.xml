@@ -4,19 +4,4 @@
         <item>Day 1</item>
         <item>Day 2</item>
     </string-array>
-
-    <string-array name="noti_cycletime_entry">
-        <item name="cycle_ten">10</item>
-        <item name="cycle_thirty">30</item>
-        <item name="cycle_one_hour">60</item>
-        <item name="cycle_three_hour">180</item>
-    </string-array>
-
-    <string-array name="noti_cycletime_entryvalues">
-        <item name="ten">10</item>
-        <item name="thirty">30</item>
-        <item name="one_hour">60</item>
-        <item name="three_hour">180</item>
-    </string-array>
-
 </resources>

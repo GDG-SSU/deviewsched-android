@@ -13,4 +13,18 @@
     <string name="setting">설정</string>
     <string name="nav_category2">계정 및 설정</string>
     <string name="account">로그인</string>
+
+    <!-- Setting text -->
+    <string name="pref_noti_category">알림</string>
+    <string name="pref_session_noti">선택한 세션 시작 알림</string>
+    <string name="pref_friends_noti">친구 찾기 설정</string>
+
+    <string name="pref_aboutus_category">About us</string>
+    <string name="pref_aboutus">개발자</string>
+    <string name="pref_summ_aboutus">Ace Kim - ace.jckim@gmail.com</string>
+    <string name="pref_github">프로젝트 저장소</string>
+    <string name="pref_summ_github">https://github.com/Acegugu/deviewsched-android</string>
+
+    <string name="pref_lawinfo_category">법률 정보</string>
+    <string name="pref_opensourcelicense">오픈소스 라이센스</string>
 </resources>

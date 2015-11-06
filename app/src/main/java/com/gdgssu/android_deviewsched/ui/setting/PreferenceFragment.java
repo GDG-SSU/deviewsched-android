@@ -15,9 +15,8 @@ public class PreferenceFragment extends PreferenceFragmentCompat implements Shar
     private static final String TAG = makeLogTag("PreferenceFragment");
 
     public static final String KEY_PREF_NOTI = "pref_noti";
-    public static final String KEY_PREF_NOTI_CYCLETIME = "pref_noti_cycletime";
 
-    private SharedPreferences sharedPref;
+    private SharedPreferences sharedPref = null;
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
@@ -32,11 +31,6 @@ public class PreferenceFragment extends PreferenceFragmentCompat implements Shar
         switch (key) {
             case KEY_PREF_NOTI:
                 LogUtils.LOGI(TAG, "Change KEY_PREF_NOTI");
-
-                break;
-
-            case KEY_PREF_NOTI_CYCLETIME:
-                LogUtils.LOGI(TAG, "Change KEY_PREF_NOTI_CYCLETIME");
 
                 break;
 
@@ -59,7 +53,6 @@ public class PreferenceFragment extends PreferenceFragmentCompat implements Shar
     @Override
     public void onPause() {
         super.onPause();
-
         getPreferenceScreen().getSharedPreferences()
                 .registerOnSharedPreferenceChangeListener(this);
     }
