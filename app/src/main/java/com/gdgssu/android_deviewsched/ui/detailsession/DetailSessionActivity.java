@@ -119,6 +119,8 @@ public class DetailSessionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Todo : 세션 공유시 실행할 액션 작성
+                ShareSessionDialogFragment dialogFragment = new ShareSessionDialogFragment();
+                dialogFragment.show(getSupportFragmentManager(), "ShareSessionDialog");
             }
         });
 

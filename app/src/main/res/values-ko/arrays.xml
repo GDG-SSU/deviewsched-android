@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="share_sns_list">
+        <item>페이스북</item>
+        <item>트위터</item>
+    </string-array>
+</resources>

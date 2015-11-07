@@ -14,7 +14,6 @@
     <string name="location">Location</string>
     <string name="setting">Setting</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_setting">SettingActivity</string>
 
@@ -39,6 +38,9 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <!-- DetailSessionActivity -->
+    <string name="share_session_dialog_title">Where is sns to share this session?</string>
 
     <!-- Setting text -->
     <string name="pref_noti_category">Notifications</string>
