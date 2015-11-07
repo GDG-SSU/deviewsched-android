@@ -1,6 +1,7 @@
 package com.gdgssu.android_deviewsched.ui.selectsession;
 
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -46,6 +47,7 @@ public class SelectSessionActivity extends AppCompatActivity implements AdapterV
                     Toast.makeText(getBaseContext(), "선택한 세션이 없습니다", Toast.LENGTH_SHORT).show();
                     FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(getBaseContext());
                     prefHelper.setFavorSessionState(FavoritePreferenceHelper.PREF_FAVOR_STATE, false);
+
                     return;
                 }
 
@@ -71,10 +73,6 @@ public class SelectSessionActivity extends AppCompatActivity implements AdapterV
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.select_session_toolbar);
         setSupportActionBar(mToolbar);
-
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("세션 선택");
 
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,11 +112,11 @@ public class SelectSessionActivity extends AppCompatActivity implements AdapterV
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         if (!SelectSessionListAdapter.sessionItems.get(position).isSelected) {
-            view.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            view.setBackgroundColor(ContextCompat.getColor(getBaseContext(), R.color.colorAccent));
             SelectSessionListAdapter.sessionItems.get(position).isSelected = true;
             selectedSessionList.selectSession(SelectSessionListAdapter.sessionItems.get(position).session_id);
         } else {
-            view.setBackgroundColor(getResources().getColor(android.R.color.white));
+            view.setBackgroundColor(ContextCompat.getColor(getBaseContext(), android.R.color.white));
             SelectSessionListAdapter.sessionItems.get(position).isSelected = false;
             selectedSessionList.selectSession(SelectSessionListAdapter.sessionItems.get(position).session_id);
         }

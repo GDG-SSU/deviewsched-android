@@ -1,6 +1,7 @@
 package com.gdgssu.android_deviewsched.ui.selectsession;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,16 +23,12 @@ import java.util.Date;
 import java.util.Locale;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.LOGD;
+import static com.gdgssu.android_deviewsched.util.LogUtils.LOGE;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
 public class SelectSessionListAdapter extends BaseAdapter {
 
     private static final String TAG = makeLogTag("SelectSessionListAdapter");
-
-    private final String[] SESSION_TIME =
-            {
-                    "10:00~10:50", "11:00~11:50", "12:00~12:50", "14:10 ~ 15:00", "15:10 ~ 16:00", "16:10 ~ 17:00"
-            };
 
     public static ArrayList<Session> sessionItems = new ArrayList<>();
 
@@ -47,13 +44,15 @@ public class SelectSessionListAdapter extends BaseAdapter {
     public void makeSelectSessionList(Day day) {
 
         try {
-            for (int i = 0; i < 6; i++) {
-                for (int j = 0; j < 4; j++) {
-                    sessionItems.add(day.tracks.get(j).sessions.get(i));
+            for (int i = 0; i < day.tracks.size(); i++) {
+                for (int j = 0; j < day.tracks.get(i).sessions.size(); j++) {
+                    if (day.tracks.get(i).sessions.get(j).is_session) {
+                        sessionItems.add(day.tracks.get(i).sessions.get(j));
+                    }
                 }
             }
         } catch (IndexOutOfBoundsException e) {
-            LOGD(TAG, e.toString());
+            LOGE(TAG, e.toString());
         }
     }
 
@@ -97,13 +96,13 @@ public class SelectSessionListAdapter extends BaseAdapter {
 
         Session sessionItem = sessionItems.get(position);
 
-        if (sessionItems.get(position).isSelected){
-            convertView.setBackgroundColor(mContext.getResources().getColor(R.color.colorAccent));
-        }else{
-            convertView.setBackgroundColor(mContext.getResources().getColor(android.R.color.white));
+        if (sessionItem.isSelected) {
+            convertView.setBackgroundColor(ContextCompat.getColor(mContext, R.color.colorAccent));
+        } else {
+            convertView.setBackgroundColor(ContextCompat.getColor(mContext, android.R.color.white));
         }
 
-//        selectHolder.sessionTime.setText(String.format("%s~%s", transferTimestamp(sessionItem.starts_at), transferTimestamp(sessionItem.ends_at)));
+        selectHolder.sessionTime.setText(String.format("%s~%s", sessionItem.starts_at, sessionItem.ends_at));
         //selectHolder.sessionTrack.setText(String.format("Track %s", sessionItem.));
 
         if (sessionItem.speakers.size() > 1) {
@@ -113,6 +112,7 @@ public class SelectSessionListAdapter extends BaseAdapter {
         }
 
         selectHolder.sessionName.setText(sessionItem.title);
+
 
         return convertView;
     }
@@ -160,7 +160,7 @@ public class SelectSessionListAdapter extends BaseAdapter {
                 .placeholder(R.drawable.person_image_empty)
                 .into(sessionHolder.speakerImgSecond);
 
-        sessionHolder.speakerName.setText(sessionItem.speakers.get(0).name + "/" + sessionItem.speakers.get(1).name);
+        sessionHolder.speakerName.setText(String.format("%s/%s", sessionItem.speakers.get(0).name, sessionItem.speakers.get(1).name));
     }
 
     public static class SelectSessionHolder {

@@ -21,7 +21,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="aboutus">About us</string>
-    <string name="title_activity_detail_session">DetailSessionActivity</string>
     <string name="title_activity_select_session">SelectSessionActivity</string>
     <string name="nav_category2">Account &amp; Setting</string>
     <string name="account">Login</string>
@@ -41,6 +40,7 @@
 
     <!-- DetailSessionActivity -->
     <string name="share_session_dialog_title">Where is sns to share this session?</string>
+    <string name="detail_session_activity_title">About Session</string>
 
     <!-- Setting text -->
     <string name="pref_noti_category">Notifications</string>

@@ -118,7 +118,6 @@ public class DetailSessionActivity extends AppCompatActivity {
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Todo : 세션 공유시 실행할 액션 작성
                 ShareSessionDialogFragment dialogFragment = new ShareSessionDialogFragment();
                 dialogFragment.show(getSupportFragmentManager(), "ShareSessionDialog");
             }
@@ -135,17 +134,12 @@ public class DetailSessionActivity extends AppCompatActivity {
     }
 
     private void initToolbar() {
-
-        CollapsingToolbarLayout collapsingToolbar =
-                (CollapsingToolbarLayout) findViewById(R.id.detailsession_collapsingtoolbar);
-        collapsingToolbar.setTitle("");
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.detailsession_toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
-            actionBar.setTitle("세션 안내");
+            actionBar.setTitle(getString(R.string.detail_session_activity_title));
         }
     }
 }

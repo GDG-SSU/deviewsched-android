@@ -35,6 +35,7 @@
                 android:layout_height="@dimen/appbar"
                 android:background="@color/colorPrimary"
                 android:fitsSystemWindows="true"
+                android:title="세션안내"
                 android:theme="@style/DeviewAppTheme_ActionBar"/>
 
         </android.support.design.widget.CollapsingToolbarLayout>
