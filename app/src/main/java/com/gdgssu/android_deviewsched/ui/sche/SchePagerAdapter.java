@@ -72,7 +72,6 @@ public class SchePagerAdapter extends BaseAdapter {
         }
 
         Session sessionItem = sessionItems.get(position);
-
         sessionHolder.sessionTime.setText(String.format("%s~%s", sessionItem.starts_at, sessionItem.ends_at));
 
         if (sessionItem.speakers.size() > 1) {
@@ -84,24 +83,27 @@ public class SchePagerAdapter extends BaseAdapter {
         if (!sessionItem.is_session) {
             sessionHolder.speakerName.setVisibility(View.GONE);
         }
-
         sessionHolder.sessionName.setText(sessionItem.title);
 
         return convertView;
-    }
-
-    private void setInvisibleSpeakerPicture(SessionViewHolder sessionHolder) {
-        sessionHolder.speakerImg.setVisibility(View.GONE);
-        sessionHolder.speakerImgSecond.setVisibility(View.GONE);
-        sessionHolder.speakerName.setVisibility(View.GONE);
     }
 
     public void setOneSpeakerInfo(SessionViewHolder sessionHolder, Session sessionItem) {
         sessionHolder.speakerImgSecond.setVisibility(View.GONE);
         sessionHolder.speakerName.setText(sessionItem.speakers.get(0).name);
 
-        Object img = null;
+        Object img = getSessionSpeakerImg(sessionItem);
 
+        Glide.with(mContext)
+                .load(img)
+                .transform(new GlideCircleTransform(mContext))
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .placeholder(R.drawable.person_image_empty)
+                .into(sessionHolder.speakerImg);
+    }
+
+    private Object getSessionSpeakerImg(Session sessionItem) {
+        Object img = null;
         if (sessionItem.is_session) {
             img = sessionItem.speakers.get(0).picture;
         } else {
@@ -115,13 +117,7 @@ public class SchePagerAdapter extends BaseAdapter {
                 img = R.drawable.ic_group_black_24dp;
             }
         }
-
-        Glide.with(mContext)
-                .load(img)
-                .transform(new GlideCircleTransform(mContext))
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(R.drawable.person_image_empty)
-                .into(sessionHolder.speakerImg);
+        return img;
     }
 
     private void setTwoSpeakerInfo(SessionViewHolder sessionHolder, Session sessionItem) {
