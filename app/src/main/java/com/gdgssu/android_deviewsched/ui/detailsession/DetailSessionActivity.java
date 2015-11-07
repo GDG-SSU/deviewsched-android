@@ -1,15 +1,12 @@
 package com.gdgssu.android_deviewsched.ui.detailsession;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,6 +17,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.gdgssu.android_deviewsched.R;
+import com.gdgssu.android_deviewsched.helper.SpeakerURIHandler;
 import com.gdgssu.android_deviewsched.model.sessioninfo.Session;
 import com.gdgssu.android_deviewsched.model.sessioninfo.Speaker;
 import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
@@ -80,14 +78,21 @@ public class DetailSessionActivity extends AppCompatActivity {
 
         speakerName.setText(speakers.get(index).name);
         speakerOrg.setText(speakers.get(index).organization);
-        speakerUrl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri uri = Uri.parse(speakers.get(index).url);
-                Intent intent = new Intent(Intent.ACTION_SEND, uri);
-                startActivity(intent);
-            }
-        });
+
+        if (speakers.get(index).url.equals("")) {
+            speakerUrl.setVisibility(View.GONE);
+        } else {
+            speakerUrl.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent urlIntent = SpeakerURIHandler.getIntent(speakers.get(index).url);
+                    if (urlIntent != null) {
+                        startActivity(urlIntent);
+                    }
+                }
+            });
+        }
+
         speakerIntro.setText(Html.fromHtml(speakers.get(index).introduction));
 
         speakerBasket.addView(speakerInfoLayout);

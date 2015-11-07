@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.gdgssu.android_deviewsched.R;
-import com.gdgssu.android_deviewsched.util.LogUtils;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 

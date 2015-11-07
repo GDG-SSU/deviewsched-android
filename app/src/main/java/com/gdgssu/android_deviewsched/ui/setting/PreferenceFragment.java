@@ -17,6 +17,7 @@ public class PreferenceFragment extends PreferenceFragmentCompat implements Shar
     private static final String TAG = makeLogTag("PreferenceFragment");
 
     private static final String KEY_PREF_NOTI = "pref_session_noti";
+    private static final String KEY_FRIENDS_NOTI = "pref_friends_noti";
     private static final String KEY_PREF_OSSLICENSES = "pref_opensourcelicense";
 
     private SharedPreferences sharedPref = null;
@@ -39,12 +40,10 @@ public class PreferenceFragment extends PreferenceFragmentCompat implements Shar
 
                 break;
 
-            default:
-                try {
-                    throw new Exception("Cannot found preference key");
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+            case KEY_FRIENDS_NOTI:
+                LogUtils.LOGI(TAG, "Change KEY_FRIENDS_NOTI");
+
+                break;
         }
     }
 
@@ -52,17 +51,12 @@ public class PreferenceFragment extends PreferenceFragmentCompat implements Shar
     public boolean onPreferenceTreeClick(Preference preference) {
 
         switch (preference.getKey()) {
+
             case KEY_PREF_OSSLICENSES:
                 //Todo : SettingActivity에서 PreferenceFragment에서 OSSlicensesFragment로 전환하는 로직 작성
                 mListener.onFragmentChange();
-                break;
 
-            default:
-                try {
-                    throw new Exception("Cannot found preference key");
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                break;
         }
 
         return super.onPreferenceTreeClick(preference);
