@@ -82,7 +82,7 @@ public class SchePagerAdapter extends BaseAdapter {
         }
 
         if (!sessionItem.is_session) {
-            setInvisibleSpeakerPicture(sessionHolder);
+            sessionHolder.speakerName.setVisibility(View.GONE);
         }
 
         sessionHolder.sessionName.setText(sessionItem.title);
@@ -98,15 +98,30 @@ public class SchePagerAdapter extends BaseAdapter {
 
     public void setOneSpeakerInfo(SessionViewHolder sessionHolder, Session sessionItem) {
         sessionHolder.speakerImgSecond.setVisibility(View.GONE);
+        sessionHolder.speakerName.setText(sessionItem.speakers.get(0).name);
+
+        Object img = null;
+
+        if (sessionItem.is_session) {
+            img = sessionItem.speakers.get(0).picture;
+        } else {
+            if (sessionItem.title.equals("참가등록")) {
+                img = R.drawable.ic_check_circle_black_24dp;
+            } else if (sessionItem.title.equals("Keynote")) {
+                img = "http://tv03.search.naver.net/thm?size=120x150&quality=9&q=http://sstatic.naver.net/people/46/201110261031042641.jpg";
+            } else if (sessionItem.title.equals("점심시간")) {
+                img = R.drawable.ic_restaurant_menu_black_24dp;
+            } else if (sessionItem.title.equals("BOF")) {
+                img = R.drawable.ic_group_black_24dp;
+            }
+        }
 
         Glide.with(mContext)
-                .load(sessionItem.speakers.get(0).picture)
+                .load(img)
                 .transform(new GlideCircleTransform(mContext))
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .placeholder(R.drawable.person_image_empty)
                 .into(sessionHolder.speakerImg);
-
-        sessionHolder.speakerName.setText(sessionItem.speakers.get(0).name);
     }
 
     private void setTwoSpeakerInfo(SessionViewHolder sessionHolder, Session sessionItem) {
