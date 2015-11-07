@@ -23,7 +23,8 @@ public class DeviewFragment extends Fragment {
         } catch (ClassCastException e) {
             throw new ClassCastException(context.toString()
                     + " must implement OnFragmentInteractionListener");
-        }    }
+        }
+    }
 
     @Override
     public void onDetach() {
@@ -33,6 +34,6 @@ public class DeviewFragment extends Fragment {
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        public void onFragmentInteraction(Uri uri);
+        void onFragmentInteraction(Uri uri);
     }
 }

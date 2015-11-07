@@ -11,7 +11,7 @@
         <SwitchPreferenceCompat
             android:defaultValue="true"
             android:key="pref_friends_noti"
-            android:title="@string/pref_friends_noti"/>
+            android:title="@string/pref_friends_noti" />
     </PreferenceCategory>
     <PreferenceCategory
         android:key="pref_aboutus_category"
@@ -34,6 +34,7 @@
         android:title="@string/pref_lawinfo_category">
         <Preference
             android:key="pref_opensourcelicense"
-            android:title="@string/pref_opensourcelicense" />
+            android:title="@string/pref_opensourcelicense">
+        </Preference>
     </PreferenceCategory>
 </PreferenceScreen>
