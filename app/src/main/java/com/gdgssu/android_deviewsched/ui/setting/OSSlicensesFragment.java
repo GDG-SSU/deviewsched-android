@@ -9,10 +9,11 @@ import android.view.ViewGroup;
 
 import com.gdgssu.android_deviewsched.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
+
 public class OSSlicensesFragment extends Fragment {
+
+    private static final String TAG = makeLogTag("OSSlicensesFragment");
 
     public OSSlicensesFragment() {
         // Required empty public constructor

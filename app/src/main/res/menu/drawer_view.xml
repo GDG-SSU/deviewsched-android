@@ -15,6 +15,10 @@
             android:icon="@drawable/ic_stars_black_24dp"
             android:title="@string/my_schedule" />
         <item
+            android:id="@+id/nav_find_friends"
+            android:icon="@drawable/ic_person_pin_black_24dp"
+            android:title="@string/find_friends" />
+        <item
             android:id="@+id/nav_location"
             android:icon="@drawable/ic_location_on_black_24dp"
             android:title="@string/location" />

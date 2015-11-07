@@ -14,13 +14,16 @@ import com.navercorp.volleyextensions.volleyer.factory.DefaultRequestQueueFactor
 
 import java.util.ArrayList;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
+
 public class DeviewSchedApplication extends Application {
+
+    private static final String TAG = makeLogTag("DeviewSchedApplication");
 
     private Context GLOBAL_CONTEXT = null;
     public static Boolean LOGIN_STATE = false;
     public static boolean FAVOR_SESSION_STATE = false;
     public static final String HOST_URL = "http://deview.unstabler.pl/";
-    private static final String TAG = "DeviewSchedApplication";
 
     public static RequestQueue deviewRequestQueue;
 

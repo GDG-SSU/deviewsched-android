@@ -155,6 +155,10 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
                         showSche(getResources().getText(R.string.my_schedule));
                         break;
 
+                    case R.id.nav_find_friends:
+                        showFindFriends();
+                        break;
+
                     case R.id.nav_location:
                         showLocation();
                         break;
@@ -188,6 +192,10 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.content_container, allScheFragment);
         fragmentTransaction.addToBackStack(null).commit();
+    }
+
+    private void showFindFriends() {
+
     }
 
     private void showLocation() {
