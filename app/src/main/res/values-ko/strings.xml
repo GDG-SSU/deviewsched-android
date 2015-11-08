@@ -14,7 +14,7 @@
     <string name="nav_category2">계정 및 설정</string>
     <string name="account">로그인</string>
 
-    <!-- DetailSessionActivity -->
+    <!-- DetailSessionFragment -->
     <string name="share_session_dialog_title">어디에 공유하시겠어요?</string>
     <string name="detail_session_activity_title">세션 안내</string>
 

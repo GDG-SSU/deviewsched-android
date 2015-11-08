@@ -25,6 +25,7 @@ import com.gdgssu.android_deviewsched.example.RecyclerViewFragment;
 import com.gdgssu.android_deviewsched.model.UserItem;
 import com.gdgssu.android_deviewsched.ui.account.AccoutActivity;
 import com.gdgssu.android_deviewsched.ui.location.LocationActivity;
+import com.gdgssu.android_deviewsched.ui.sche.ScheActivity;
 import com.gdgssu.android_deviewsched.ui.sche.ScheFragment;
 import com.gdgssu.android_deviewsched.ui.setting.SettingActivity;
 import com.github.florent37.materialviewpager.MaterialViewPager;
@@ -185,15 +186,17 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
          * Todo 아래의 메소드가 호출되면 MainActivity위로 있는 모든 Fragment가 소멸됨
          */
         fragmentManager.popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        mNavigationView.getMenu().findItem(R.id.nav_home).setChecked(true);
     }
 
     private void showSche(CharSequence title) {
-        Fragment allScheFragment = ScheFragment.newInstance(title);
-        getSupportFragmentManager().beginTransaction()
-                .add(R.id.content_container, allScheFragment)
-                .addToBackStack(null)
-                .commit();
+        Intent intent = new Intent(getBaseContext(), ScheActivity.class);
+        intent.putExtra("title", title);
+        startActivity(intent);
+//        Fragment allScheFragment = ScheFragment.newInstance(title);
+//        getSupportFragmentManager().beginTransaction()
+//                .add(R.id.content_container, allScheFragment)
+//                .addToBackStack(null)
+//                .commit();
     }
 
     private void showFindFriends() {

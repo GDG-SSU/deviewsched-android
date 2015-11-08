@@ -32,7 +32,6 @@ public class ScheFragment extends DeviewFragment {
     private CharSequence title;
     private boolean isMySession = false;
 
-
     private SchePagerFragmentAdapter mAdapter;
 
     public static ScheFragment newInstance(CharSequence title) {
@@ -123,7 +122,7 @@ public class ScheFragment extends DeviewFragment {
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity) getActivity()).showHome();
+                getActivity().finish();
             }
         });
 

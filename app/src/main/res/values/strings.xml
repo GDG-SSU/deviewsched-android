@@ -38,7 +38,7 @@
         completions."
     </string>
 
-    <!-- DetailSessionActivity -->
+    <!-- DetailSessionFragment -->
     <string name="share_session_dialog_title">Where is sns to share this session?</string>
     <string name="detail_session_activity_title">About Session</string>
 

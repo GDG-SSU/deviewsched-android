@@ -23,7 +23,6 @@ import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
 public class SelectSessionActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    //for tablet
     private static final String TAG = makeLogTag("SelectSessionActivity");
 
     private SelectSessionListAdapter mAdapter;

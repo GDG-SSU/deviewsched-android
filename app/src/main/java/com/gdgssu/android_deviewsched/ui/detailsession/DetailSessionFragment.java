@@ -2,13 +2,14 @@ package com.gdgssu.android_deviewsched.ui.detailsession;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -20,16 +21,14 @@ import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.SpeakerURIHandler;
 import com.gdgssu.android_deviewsched.model.sessioninfo.Session;
 import com.gdgssu.android_deviewsched.model.sessioninfo.Speaker;
+import com.gdgssu.android_deviewsched.ui.sche.ScheActivity;
 import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
 
 import java.util.ArrayList;
 
-import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
-import static com.navercorp.volleyextensions.volleyer.Volleyer.volleyer;
+public class DetailSessionFragment extends Fragment {
 
-public class DetailSessionActivity extends AppCompatActivity {
-
-    private static final String TAG = makeLogTag("DetailSessionActivity");
+    public static final String KEY_SESSION = "SESSION_DATA";
 
     private Session sessionInfo;
     private ArrayList<Speaker> speakers;
@@ -38,19 +37,41 @@ public class DetailSessionActivity extends AppCompatActivity {
     private TextView sessionDesc;
     private LinearLayout speakerBasket;
 
+    public static DetailSessionFragment newInstance(Session sessionData) {
+        DetailSessionFragment fragment = new DetailSessionFragment();
+        Bundle args = new Bundle();
+        args.putSerializable(KEY_SESSION, sessionData);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    public DetailSessionFragment() {
+        // Required empty public constructor
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detailsession);
 
-        Intent intent = getIntent();
-        sessionInfo = (Session) intent.getSerializableExtra("SessionInfo");
-
-        speakers = sessionInfo.speakers;
-
-        initView();
+        if (getArguments().getSerializable(KEY_SESSION) != null) {
+            sessionInfo = (Session) getArguments().getSerializable(KEY_SESSION);
+            speakers = sessionInfo.speakers;
+        }
     }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.activity_detailsession, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        initView(view);
+    }
+
 
     public void setData() {
         sessionTitle.setText(sessionInfo.title);
@@ -62,16 +83,16 @@ public class DetailSessionActivity extends AppCompatActivity {
     }
 
     private void setSpeakerInfo(final int index) {
-        RelativeLayout speakerInfoLayout = (RelativeLayout) LayoutInflater.from(getBaseContext()).inflate(R.layout.layout_speaker_info, null, false);
+        RelativeLayout speakerInfoLayout = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.layout_speaker_info, null, false);
         ImageView speakerPicture = (ImageView) speakerInfoLayout.findViewById(R.id.speaker_img);
         TextView speakerName = (TextView) speakerInfoLayout.findViewById(R.id.speaker_name);
         TextView speakerOrg = (TextView) speakerInfoLayout.findViewById(R.id.speaker_company);
         ImageView speakerUrl = (ImageView) speakerInfoLayout.findViewById(R.id.speaker_url);
         TextView speakerIntro = (TextView) speakerInfoLayout.findViewById(R.id.speaker_intro);
 
-        Glide.with(getBaseContext())
+        Glide.with(getActivity())
                 .load(speakers.get(index).picture)
-                .transform(new GlideCircleTransform(getBaseContext()))
+                .transform(new GlideCircleTransform(getActivity()))
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .placeholder(R.drawable.person_image_empty)
                 .into(speakerPicture);
@@ -99,45 +120,44 @@ public class DetailSessionActivity extends AppCompatActivity {
     }
 
 
-    private void initView() {
+    private void initView(View rootView) {
 
-        initToolbar();
+        initToolbar(rootView);
 
-        sessionTitle = (TextView) findViewById(R.id.detailsession_title);
-        sessionDesc = (TextView) findViewById(R.id.detailsession_sessioninfo);
-        speakerBasket = (LinearLayout) findViewById(R.id.detailsession_speaker_basket);
-        ImageView backarrowButton = (ImageView) findViewById(R.id.detailsession_backbutton);
+        sessionTitle = (TextView) rootView.findViewById(R.id.detailsession_title);
+        sessionDesc = (TextView) rootView.findViewById(R.id.detailsession_sessioninfo);
+        speakerBasket = (LinearLayout) rootView.findViewById(R.id.detailsession_speaker_basket);
+        ImageView backarrowButton = (ImageView) rootView.findViewById(R.id.detailsession_backbutton);
         backarrowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                ((ScheActivity) getActivity()).onBackPressed();
             }
         });
 
-        ImageView shareButton = (ImageView) findViewById(R.id.detailsession_share);
+        ImageView shareButton = (ImageView) rootView.findViewById(R.id.detailsession_share);
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ShareSessionDialogFragment dialogFragment = new ShareSessionDialogFragment();
-                dialogFragment.show(getSupportFragmentManager(), "ShareSessionDialog");
+                dialogFragment.show(getActivity().getSupportFragmentManager(), "ShareSessionDialog");
             }
         });
 
         setData();
 
-        ImageView backdropImg = (ImageView) findViewById(R.id.detailsession_backdrop);
-        Glide.with(getBaseContext())
+        ImageView backdropImg = (ImageView) rootView.findViewById(R.id.detailsession_backdrop);
+        Glide.with(getActivity())
                 .load("http://insanehong.kr/post/deview2013/@img/keynote.jpg")
                 .centerCrop()
                 .into(backdropImg);
-
     }
 
-    private void initToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.detailsession_toolbar);
-        setSupportActionBar(toolbar);
+    private void initToolbar(View rootView) {
+        Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.detailsession_toolbar);
+        ((ScheActivity) getActivity()).setSupportActionBar(toolbar);
 
-        ActionBar actionBar = getSupportActionBar();
+        ActionBar actionBar = ((ScheActivity) getActivity()).getSupportActionBar();
         if (actionBar != null) {
             actionBar.setTitle(getString(R.string.detail_session_activity_title));
         }

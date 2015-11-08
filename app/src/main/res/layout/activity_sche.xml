@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sche_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_white_background"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/sche_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/detailsession_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

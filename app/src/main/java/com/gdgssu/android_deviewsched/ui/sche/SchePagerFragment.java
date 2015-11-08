@@ -3,7 +3,6 @@ package com.gdgssu.android_deviewsched.ui.sche;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,13 +12,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.model.FavoriteSession;
 import com.gdgssu.android_deviewsched.model.sessioninfo.Track;
-import com.gdgssu.android_deviewsched.ui.detailsession.DetailSessionActivity;
 import com.gdgssu.android_deviewsched.ui.selectsession.SelectSessionActivity;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
@@ -78,11 +73,8 @@ public class SchePagerFragment extends Fragment {
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
                 if (mTrackData.sessions.get(position).is_session) {
-                    Intent intent = new Intent(new Intent(getActivity(), DetailSessionActivity.class));
-                    intent.putExtra("SessionInfo", mTrackData.sessions.get(position));
-                    getActivity().startActivity(intent);
+                    ((ScheActivity) getActivity()).setDetailSessionFragment(mTrackData.sessions.get(position));
                 }
             }
         });
@@ -90,26 +82,26 @@ public class SchePagerFragment extends Fragment {
 
     }
 
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.menu_sche, menu);
-
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.menu_all_sche_favorite:
-
-                Intent intent = new Intent(getActivity(), SelectSessionActivity.class);
-                startActivityForResult(intent, ScheFragment.SELECT_SESSION);
-
-                return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
+//
+//    @Override
+//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+//        super.onCreateOptionsMenu(menu, inflater);
+//        inflater.inflate(R.menu.menu_sche, menu);
+//
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//
+//        switch (item.getItemId()) {
+//            case R.id.menu_all_sche_favorite:
+//
+//                Intent intent = new Intent(getActivity(), SelectSessionActivity.class);
+//                startActivityForResult(intent, ScheFragment.SELECT_SESSION);
+//
+//                return true;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 }
