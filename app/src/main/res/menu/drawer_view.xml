@@ -4,22 +4,27 @@
     <group android:checkableBehavior="none">
         <item
             android:id="@+id/nav_home"
+            android:checked="true"
             android:icon="@drawable/ic_dashboard_black_24dp"
             android:title="@string/home" />
         <item
             android:id="@+id/nav_all_schedule"
+            android:checked="true"
             android:icon="@drawable/ic_insert_invitation_black_24dp"
             android:title="@string/all_schedule" />
         <item
             android:id="@+id/nav_my_schedule"
+            android:checked="true"
             android:icon="@drawable/ic_stars_black_24dp"
             android:title="@string/my_schedule" />
         <item
             android:id="@+id/nav_find_friends"
+            android:checked="true"
             android:icon="@drawable/ic_person_pin_black_24dp"
             android:title="@string/find_friends" />
         <item
             android:id="@+id/nav_location"
+            android:checked="true"
             android:icon="@drawable/ic_location_on_black_24dp"
             android:title="@string/location" />
     </group>
