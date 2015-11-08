@@ -44,10 +44,10 @@ public class SelectSessionListAdapter extends BaseAdapter {
     public void makeSelectSessionList(Day day) {
 
         try {
-            for (int i = 0; i < day.tracks.size(); i++) {
-                for (int j = 0; j < day.tracks.get(i).sessions.size(); j++) {
-                    if (day.tracks.get(i).sessions.get(j).is_session) {
-                        sessionItems.add(day.tracks.get(i).sessions.get(j));
+            for (int i = 0; i < day.tracks.get(0).sessions.size(); i++) {
+                for (int j = 0; j < day.tracks.size(); j++) {
+                    if (day.tracks.get(j).sessions.get(i).is_session) {
+                        sessionItems.add(day.tracks.get(j).sessions.get(i));
                     }
                 }
             }

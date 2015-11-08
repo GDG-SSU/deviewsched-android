@@ -22,6 +22,7 @@ import com.gdgssu.android_deviewsched.model.sessioninfo.Track;
 import com.gdgssu.android_deviewsched.ui.detailsession.DetailSessionActivity;
 import com.gdgssu.android_deviewsched.ui.selectsession.SelectSessionActivity;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 import static com.navercorp.volleyextensions.volleyer.Volleyer.volleyer;
 
@@ -78,7 +79,7 @@ public class SchePagerFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                if (mTrackData.sessions.get(position).is_session){
+                if (mTrackData.sessions.get(position).is_session) {
                     Intent intent = new Intent(new Intent(getActivity(), DetailSessionActivity.class));
                     intent.putExtra("SessionInfo", mTrackData.sessions.get(position));
                     getActivity().startActivity(intent);
@@ -104,7 +105,7 @@ public class SchePagerFragment extends Fragment {
             case R.id.menu_all_sche_favorite:
 
                 Intent intent = new Intent(getActivity(), SelectSessionActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, ScheFragment.SELECT_SESSION);
 
                 return true;
         }

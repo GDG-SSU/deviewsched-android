@@ -30,6 +30,7 @@ import com.gdgssu.android_deviewsched.ui.setting.SettingActivity;
 import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.github.florent37.materialviewpager.header.HeaderDesign;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
 public class MainActivity extends AppCompatActivity implements DeviewFragment.OnFragmentInteractionListener {
@@ -189,9 +190,10 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
 
     private void showSche(CharSequence title) {
         Fragment allScheFragment = ScheFragment.newInstance(title);
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.content_container, allScheFragment);
-        fragmentTransaction.addToBackStack(null).commit();
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.content_container, allScheFragment)
+                .addToBackStack(null)
+                .commit();
     }
 
     private void showFindFriends() {
@@ -234,6 +236,15 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
         } else {
             super.onBackPressed();
             showHome();
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == ScheFragment.SELECT_SESSION){
+            showSche("title");
         }
     }
 }
