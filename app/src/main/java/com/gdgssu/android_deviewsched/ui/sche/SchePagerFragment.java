@@ -1,12 +1,8 @@
 package com.gdgssu.android_deviewsched.ui.sche;
 
-import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -15,11 +11,8 @@ import android.widget.ListView;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.model.FavoriteSession;
 import com.gdgssu.android_deviewsched.model.sessioninfo.Track;
-import com.gdgssu.android_deviewsched.ui.selectsession.SelectSessionActivity;
 
-import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
-import static com.navercorp.volleyextensions.volleyer.Volleyer.volleyer;
 
 public class SchePagerFragment extends Fragment {
 
@@ -79,7 +72,6 @@ public class SchePagerFragment extends Fragment {
             }
         });
         listview.setAdapter(adapter);
-
     }
 
 //

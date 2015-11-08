@@ -6,7 +6,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +17,6 @@ import android.widget.Spinner;
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.ui.DeviewFragment;
-import com.gdgssu.android_deviewsched.ui.MainActivity;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 

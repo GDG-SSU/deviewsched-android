@@ -26,7 +26,11 @@ import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
 
 import java.util.ArrayList;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
+
 public class DetailSessionFragment extends Fragment {
+
+    private static final String TAG = makeLogTag("DetailSessionFragment");
 
     public static final String KEY_SESSION = "SESSION_DATA";
 
@@ -62,7 +66,7 @@ public class DetailSessionFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_detailsession, container, false);
+        return inflater.inflate(R.layout.fragment_detailsession, container, false);
     }
 
     @Override
@@ -131,7 +135,7 @@ public class DetailSessionFragment extends Fragment {
         backarrowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((ScheActivity) getActivity()).onBackPressed();
+                getActivity().onBackPressed();
             }
         });
 
