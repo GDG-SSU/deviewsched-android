@@ -17,6 +17,7 @@ import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.FavoritePreferenceHelper;
 import com.gdgssu.android_deviewsched.model.FavoriteSession;
+import com.gdgssu.android_deviewsched.ui.sche.ScheFragment;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
@@ -33,6 +34,8 @@ public class SelectSessionActivity extends AppCompatActivity implements AdapterV
         setContentView(R.layout.activity_select_session);
 
         initView();
+
+        setResult(ScheFragment.SELECT_SESSION);
 
     }
 

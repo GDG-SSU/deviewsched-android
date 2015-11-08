@@ -242,9 +242,5 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == ScheFragment.SELECT_SESSION){
-            showSche("title");
-        }
     }
 }

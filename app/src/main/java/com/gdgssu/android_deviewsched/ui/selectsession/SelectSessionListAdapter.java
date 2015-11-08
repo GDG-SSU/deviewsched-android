@@ -42,7 +42,6 @@ public class SelectSessionListAdapter extends BaseAdapter {
     }
 
     public void makeSelectSessionList(Day day) {
-
         try {
             for (int i = 0; i < day.tracks.get(0).sessions.size(); i++) {
                 for (int j = 0; j < day.tracks.size(); j++) {

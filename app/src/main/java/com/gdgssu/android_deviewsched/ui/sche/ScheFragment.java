@@ -25,8 +25,8 @@ import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 public class ScheFragment extends DeviewFragment {
 
     private static final String TAG = makeLogTag("ScheFragment");
-
     private static final String KEY_TITLE = "title";
+    public static final int SELECT_SESSION = 100;
 
     private ViewPager mPager;
     private CharSequence title;
