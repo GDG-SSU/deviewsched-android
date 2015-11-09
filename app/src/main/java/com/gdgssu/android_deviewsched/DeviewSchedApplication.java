@@ -23,7 +23,6 @@ public class DeviewSchedApplication extends Application {
     private Context GLOBAL_CONTEXT = null;
     public static Boolean LOGIN_STATE = false;
     public static boolean FAVOR_SESSION_STATE = false;
-    public static final String HOST_URL = "http://deview.unstabler.pl/";
 
     public static RequestQueue deviewRequestQueue;
 

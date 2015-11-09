@@ -31,6 +31,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.location.LocationActivity"
+            android:theme="@style/DeviewAppTheme" />
+        <activity
+            android:name=".ui.selectsession.SelectSessionActivity"
+            android:label="세션선택" />
+        <activity android:name=".ui.account.AccoutActivity" />
+        <activity
+            android:name=".ui.sche.ScheActivity"
+            android:theme="@style/DeviewAppTheme" />
+
+        <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name"
@@ -41,15 +52,11 @@
             android:value="@string/facebook_app_id" />
 
         <activity
-            android:name=".ui.location.LocationActivity"
-            android:theme="@style/DeviewAppTheme" />
+            android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
-            android:name=".ui.selectsession.SelectSessionActivity"
-            android:label="세션선택" />
-        <activity android:name=".ui.account.AccoutActivity" />
-        <activity
-            android:name=".ui.sche.ScheActivity"
-            android:theme="@style/DeviewAppTheme" />
+            android:name="com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity"
+            android:label="OAuth2.0 In-app" />
     </application>
 
 </manifest>

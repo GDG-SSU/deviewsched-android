@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -14,6 +15,9 @@ import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.FavoritePreferenceHelper;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
+import com.nhn.android.naverlogin.OAuthLogin;
+import com.nhn.android.naverlogin.OAuthLoginHandler;
+import com.nhn.android.naverlogin.ui.view.OAuthLoginButton;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.LOGE;
 import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
@@ -23,29 +27,64 @@ public class AccoutActivity extends AppCompatActivity implements FacebookCallbac
 
     private static final String TAG = makeLogTag("AccoutActivity");
 
-    private CallbackManager callbackManager;
+    private CallbackManager mCallbackManager;
+    private OAuthLogin mOAuthLoginModule;
+    private static OAuthLoginHandler mOAuthLoginHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accout);
 
-        initView();
+        initNaverLoginInstance();
+        mCallbackManager = CallbackManager.Factory.create();
 
-        callbackManager = CallbackManager.Factory.create();
-        setLoginState();
-        setFavorSessionState();
+        initView();
+//        setLoginState();
+//        setFavorSessionState();
+    }
+
+    private void initNaverLoginInstance() {
+
+        mOAuthLoginModule = OAuthLogin.getInstance();
+        mOAuthLoginModule.init(getApplicationContext(),
+                null,  //OAUTH_CLIENT_ID
+                null,  //OAUTH_CLIENT_SECRET
+                null); //OAUTH_CLIENT_NAME
+
+        mOAuthLoginHandler = new OAuthLoginHandler() {
+            @Override
+            public void run(boolean success) {
+                if (success) {
+                    String accessToken = mOAuthLoginModule.getAccessToken(getApplicationContext());
+                    String refreshToken = mOAuthLoginModule.getRefreshToken(getApplicationContext());
+                    long expiresAt = mOAuthLoginModule.getExpiresAt(getApplicationContext());
+                    String tokenType = mOAuthLoginModule.getTokenType(getApplicationContext());
+                    LOGI(TAG, String.format("AccessToken : %s / RefreshToken : %s / ExpiresAt : %d / TokenType : %s / LoginState : %s", accessToken, refreshToken, expiresAt, tokenType, mOAuthLoginModule.getState(getApplicationContext()).toString()));
+
+                } else {
+                    String errorCode = mOAuthLoginModule.getLastErrorCode(getApplicationContext()).getCode();
+                    String errorDesc = mOAuthLoginModule.getLastErrorDesc(getApplicationContext());
+                    Toast.makeText(getBaseContext(), "errorCode:" + errorCode
+                            + ", errorDesc:" + errorDesc, Toast.LENGTH_SHORT).show();
+                }
+            }
+        };
     }
 
     private void initView() {
-        final LoginButton fbLoginButton = (LoginButton)findViewById(R.id.account_facebooklogin);
+        final LoginButton fbLoginButton = (LoginButton) findViewById(R.id.account_facebooklogin);
         fbLoginButton.setReadPermissions("user_friends");
         fbLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fbLoginButton.registerCallback(callbackManager, AccoutActivity.this);
+                fbLoginButton.registerCallback(mCallbackManager, AccoutActivity.this);
             }
         });
+
+        OAuthLoginButton naverLoginButton = (OAuthLoginButton) findViewById(R.id.account_naverlogin);
+        naverLoginButton.setOAuthLoginHandler(mOAuthLoginHandler);
+
     }
 
     public void setLoginState() {
@@ -65,7 +104,7 @@ public class AccoutActivity extends AppCompatActivity implements FacebookCallbac
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        callbackManager.onActivityResult(requestCode, resultCode, data);
+        mCallbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
