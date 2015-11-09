@@ -1,6 +1,8 @@
 package com.gdgssu.android_deviewsched.ui.sche;
 
 import android.net.Uri;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -17,6 +19,7 @@ public class ScheActivity extends AppCompatActivity implements DeviewFragment.On
     private static final String KEY_TITLE = "title";
 
     private CharSequence title;
+    private FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,15 +30,17 @@ public class ScheActivity extends AppCompatActivity implements DeviewFragment.On
             this.title = getIntent().getStringExtra(KEY_TITLE);
         }
 
-        getSupportFragmentManager().beginTransaction()
+        fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction()
                 .add(R.id.sche_list_container, ScheFragment.newInstance(this.title))
                 .commit();
     }
 
     public void setDetailSessionFragment(Session sessionData) {
-        getSupportFragmentManager().beginTransaction()
-                .add(R.id.detailsession_container, DetailSessionFragment.newInstance(sessionData))
-                .addToBackStack(null)
+        fragmentManager.beginTransaction()
+                .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out)
+                .replace(R.id.detailsession_container, DetailSessionFragment.newInstance(sessionData))
+                .addToBackStack("detailsession")
                 .commit();
     }
 
@@ -43,8 +48,8 @@ public class ScheActivity extends AppCompatActivity implements DeviewFragment.On
     public void onBackPressed() {
         super.onBackPressed();
 
-        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
-            getSupportFragmentManager().popBackStackImmediate();
+        if (fragmentManager.getBackStackEntryCount() > 0) {
+            fragmentManager.popBackStackImmediate("detailsession", FragmentManager.POP_BACK_STACK_INCLUSIVE);
         }
     }
 
