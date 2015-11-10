@@ -14,43 +14,55 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.design.widget.NavigationView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginManager;
+import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.example.RecyclerViewFragment;
-import com.gdgssu.android_deviewsched.model.UserItem;
+import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
+import com.gdgssu.android_deviewsched.helper.ProfileChangedListener;
+import com.gdgssu.android_deviewsched.helper.UserProfileProvider;
+import com.gdgssu.android_deviewsched.model.User;
 import com.gdgssu.android_deviewsched.ui.account.AccoutActivity;
 import com.gdgssu.android_deviewsched.ui.location.LocationActivity;
 import com.gdgssu.android_deviewsched.ui.sche.ScheActivity;
 import com.gdgssu.android_deviewsched.ui.setting.SettingActivity;
+import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
 import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.github.florent37.materialviewpager.header.HeaderDesign;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-public class MainActivity extends AppCompatActivity implements DeviewFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements DeviewFragment.OnFragmentInteractionListener, ProfileChangedListener {
 
     private static final String TAG = makeLogTag("MainActivity");
 
     private MaterialViewPager mViewPager;
     private Toolbar mToolbar;
     private NavigationView mNavigationView;
+    private ImageView mAvatarImage;
+    private TextView mNameText;
 
     private FragmentManager fragmentManager;
 
-    private UserItem userInfo;
+    private User mUser = new User();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fragmentManager = getSupportFragmentManager();
+        if (getIntent() != null) {
+            mUser = (User) getIntent().getSerializableExtra("UserInfo");
+        }
 
-        Intent intent = getIntent();
-        userInfo = (UserItem) intent.getSerializableExtra("UserInfo");
+        fragmentManager = getSupportFragmentManager();
 
         initMaterialViewPager();
         initToolbar();
@@ -124,16 +136,31 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         setupDrawerContent(mNavigationView);
 
-        ImageView avatarImage = (ImageView) findViewById(R.id.profile_image);
-        TextView nameText = (TextView) findViewById(R.id.profile_name_text);
+        View headerView = mNavigationView.inflateHeaderView(R.layout.nav_header);
+        mAvatarImage = (ImageView) headerView.findViewById(R.id.profile_image);
+        mNameText = (TextView) headerView.findViewById(R.id.profile_name_text);
 
-//        Glide.with(this)
-//                .load(userInfo.user.picture)
-//                .transform(new GlideCircleTransform(this))
-//                .into(avatarImage);
-//        nameText.setText(userInfo.user.name);
+        setUserInfo();
+    }
 
-        mNavigationView.getMenu().findItem(R.id.nav_home).setChecked(true);
+    private void setUserInfo() {
+        if (DeviewSchedApplication.LOGIN_STATE) {
+            Glide.with(this)
+                    .load(mUser.picture)
+                    .transform(new GlideCircleTransform(this))
+                    .into(mAvatarImage);
+
+            mNameText.setText(mUser.name);
+        }
+    }
+
+    private void setResetUserInfo() {
+        mAvatarImage.setImageResource(android.R.drawable.sym_def_app_icon);
+        mNameText.setText("Deview 애플리케이션에 로그인해주세요");
+
+        LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
+        prefHelper.setPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);
+        DeviewSchedApplication.LOGIN_STATE = false;
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
@@ -162,6 +189,13 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
                         break;
 
                     case R.id.nav_account:
+                        if (DeviewSchedApplication.LOGIN_STATE) {
+                            LoginManager.getInstance().logOut();
+                            setResetUserInfo();
+                            Toast.makeText(getBaseContext(), "로그아웃 되었습니다", Toast.LENGTH_LONG).show();
+
+                            return true;
+                        }
                         showAccount();
                         break;
 
@@ -188,11 +222,6 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
         Intent intent = new Intent(getBaseContext(), ScheActivity.class);
         intent.putExtra("title", title);
         startActivity(intent);
-//        Fragment allScheFragment = ScheFragment.newInstance(title);
-//        getSupportFragmentManager().beginTransaction()
-//                .add(R.id.content_container, allScheFragment)
-//                .addToBackStack(null)
-//                .commit();
     }
 
     private void showFindFriends() {
@@ -204,7 +233,7 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
     }
 
     private void showAccount() {
-        startActivity(new Intent(getBaseContext(), AccoutActivity.class));
+        startActivityForResult(new Intent(getBaseContext(), AccoutActivity.class), AccoutActivity.ACCOUNT_REQUEST);
     }
 
     private void showSetting() {
@@ -241,5 +270,21 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == AccoutActivity.ACCOUNT_REQUEST) {
+            if (DeviewSchedApplication.LOGIN_STATE) {
+                mUser = UserProfileProvider.getUserProfile();
+                setUserInfo();
+                //이미지를 정상적으로 못불러오는 경우가 생김
+            }
+        }
+    }
+
+    @Override
+    public void updateUserProfile(Uri imageUri, String name) {
+        this.mUser.picture = imageUri.toString();
+        this.mUser.name = name;
+
+        setUserInfo();
     }
 }

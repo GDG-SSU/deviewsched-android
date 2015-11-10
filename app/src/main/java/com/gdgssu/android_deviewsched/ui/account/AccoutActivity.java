@@ -13,8 +13,9 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
-import com.gdgssu.android_deviewsched.helper.FavoritePreferenceHelper;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
+import com.gdgssu.android_deviewsched.helper.UserProfileProvider;
+import com.gdgssu.android_deviewsched.model.User;
 import com.nhn.android.naverlogin.OAuthLogin;
 import com.nhn.android.naverlogin.OAuthLoginHandler;
 import com.nhn.android.naverlogin.ui.view.OAuthLoginButton;
@@ -26,6 +27,8 @@ import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 public class AccoutActivity extends AppCompatActivity implements FacebookCallback<LoginResult> {
 
     private static final String TAG = makeLogTag("AccoutActivity");
+
+    public static final int ACCOUNT_REQUEST = 100;
 
     private CallbackManager mCallbackManager;
     private OAuthLogin mOAuthLoginModule;
@@ -40,8 +43,6 @@ public class AccoutActivity extends AppCompatActivity implements FacebookCallbac
         mCallbackManager = CallbackManager.Factory.create();
 
         initView();
-//        setLoginState();
-//        setFavorSessionState();
     }
 
     private void initNaverLoginInstance() {
@@ -78,26 +79,19 @@ public class AccoutActivity extends AppCompatActivity implements FacebookCallbac
         fbLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fbLoginButton.registerCallback(mCallbackManager, AccoutActivity.this);
+                if (!DeviewSchedApplication.LOGIN_STATE) {
+                    fbLoginButton.registerCallback(mCallbackManager, AccoutActivity.this);
+                } else if (DeviewSchedApplication.LOGIN_STATE) {
+                    LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
+                    prefHelper.setPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);
+                    DeviewSchedApplication.LOGIN_STATE = false;
+                    setResult(ACCOUNT_REQUEST);
+                }
             }
         });
 
         OAuthLoginButton naverLoginButton = (OAuthLoginButton) findViewById(R.id.account_naverlogin);
         naverLoginButton.setOAuthLoginHandler(mOAuthLoginHandler);
-
-    }
-
-    public void setLoginState() {
-        LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
-        DeviewSchedApplication.LOGIN_STATE = prefHelper.getPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);
-    }
-
-    public void setFavorSessionState() {
-        /**
-         * 로그인할떄 false로 돌려야함
-         */
-        FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(getBaseContext());
-        DeviewSchedApplication.FAVOR_SESSION_STATE = prefHelper.getFavorSessionState(FavoritePreferenceHelper.PREF_FAVOR_STATE);
     }
 
     @Override
@@ -109,7 +103,10 @@ public class AccoutActivity extends AppCompatActivity implements FacebookCallbac
 
     @Override
     public void onSuccess(LoginResult loginResult) {
-        LOGI(TAG, "onSuccess");
+        LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
+        prefHelper.setPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, true);
+        DeviewSchedApplication.LOGIN_STATE = true;
+        setResult(ACCOUNT_REQUEST);
     }
 
     @Override

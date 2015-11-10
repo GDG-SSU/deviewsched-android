@@ -19,23 +19,12 @@
         android:src="@android:drawable/sym_def_app_icon" />
 
     <TextView
-        android:id="@+id/profile_point"
+        android:id="@+id/profile_name_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Android Studio"
-        android:textColor="@color/white_alpha_87"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
-    <TextView
-        android:id="@+id/profile_name_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:singleLine="true"
-        android:text="android.studio@android.com"
-        android:textColor="@color/white_alpha_54"
-        android:textSize="@dimen/content_body_14sp" />
+        android:text="Deview 애플리케이션에 로그인해주세요"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white_alpha_87" />
 
 </LinearLayout>

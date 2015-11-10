@@ -12,6 +12,7 @@
     <string name="find_friends">Find My Friends</string>
     <string name="deview_story">#Deview2015</string>
     <string name="location">Location</string>
+    <string name="account">Login/Logout</string>
     <string name="setting">Setting</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -23,7 +24,6 @@
     <string name="aboutus">About us</string>
     <string name="title_activity_select_session">SelectSessionActivity</string>
     <string name="nav_category2">Account &amp; Setting</string>
-    <string name="account">Login</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>

@@ -2,18 +2,25 @@ package com.gdgssu.android_deviewsched;
 
 import android.app.Application;
 import android.content.Context;
+import android.net.Uri;
 
 import com.android.volley.RequestQueue;
+import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
+import com.facebook.Profile;
+import com.facebook.ProfileTracker;
 import com.gdgssu.android_deviewsched.helper.FavoritePreferenceHelper;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
 
+import com.gdgssu.android_deviewsched.helper.ProfileChangedListener;
 import com.gdgssu.android_deviewsched.model.sessioninfo.AllScheItems;
 import com.gdgssu.android_deviewsched.model.sessioninfo.Day;
+import com.gdgssu.android_deviewsched.ui.MainActivity;
 import com.navercorp.volleyextensions.volleyer.factory.DefaultRequestQueueFactory;
 
 import java.util.ArrayList;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
 public class DeviewSchedApplication extends Application {
@@ -24,7 +31,11 @@ public class DeviewSchedApplication extends Application {
     public static Boolean LOGIN_STATE = false;
     public static boolean FAVOR_SESSION_STATE = false;
 
+    private CallbackManager mCallbackManager;
     public static RequestQueue deviewRequestQueue;
+    private ProfileTracker profileTracker;
+
+    private MainActivity mActivity = new MainActivity();
 
     public static AllScheItems allscheItems = new AllScheItems();
 
@@ -35,6 +46,14 @@ public class DeviewSchedApplication extends Application {
         GLOBAL_CONTEXT = getApplicationContext();
 
         FacebookSdk.sdkInitialize(GLOBAL_CONTEXT);
+        mCallbackManager = CallbackManager.Factory.create();
+        profileTracker = new ProfileTracker() {
+            @Override
+            protected void onCurrentProfileChanged(Profile oldProfile, Profile currentProfile) {
+//                mActivity.updateUserProfile(currentProfile.getProfilePictureUri(100, 100), currentProfile.getName());
+            }
+        };
+
         setLoginState();
         setFavorSessionState();
         initRequestQueue();
