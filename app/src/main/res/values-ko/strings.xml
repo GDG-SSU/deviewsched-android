@@ -13,6 +13,8 @@
     <string name="account">로그인/로그아웃</string>
     <string name="setting">설정</string>
     <string name="nav_category2">계정 및 설정</string>
+    <string name="please_login">Deview2016에 로그인해주세요</string>
+    <string name="logout_msg">로그아웃 되었습니다</string>
 
     <!-- DetailSessionFragment -->
     <string name="share_session_dialog_title">어디에 공유하시겠어요?</string>

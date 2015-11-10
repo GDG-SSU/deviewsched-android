@@ -154,9 +154,9 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
         }
     }
 
-    private void setResetUserInfo() {
+    private void resetUserInfo() {
         mAvatarImage.setImageResource(android.R.drawable.sym_def_app_icon);
-        mNameText.setText("Deview 애플리케이션에 로그인해주세요");
+        mNameText.setText(getText(R.string.please_login));
 
         LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
         prefHelper.setPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);
@@ -191,8 +191,8 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
                     case R.id.nav_account:
                         if (DeviewSchedApplication.LOGIN_STATE) {
                             LoginManager.getInstance().logOut();
-                            setResetUserInfo();
-                            Toast.makeText(getBaseContext(), "로그아웃 되었습니다", Toast.LENGTH_LONG).show();
+                            resetUserInfo();
+                            Toast.makeText(getBaseContext(), getText(R.string.logout_msg), Toast.LENGTH_LONG).show();
 
                             return true;
                         }
