@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Deview2015</string>
+    <string name="app_name">Deview2016</string>
+
+    <!-- MainView -->
+    <string name="main_pager_one">About Deview</string>
+    <string name="main_pager_two">Hot Sessions</string>
+    <string name="main_pager_three">#Deview2016</string>
 
     <!-- Navigation View-->
     <string name="home">홈</string>
     <string name="all_schedule">전체 시간표</string>
     <string name="my_schedule">나의 시간표</string>
     <string name="find_friends">친구 찾기</string>
-    <string name="deview_story">#Deview2015</string>
+    <string name="deview_story">#Deview2016</string>
     <string name="location">오시는 길</string>
     <string name="account">로그인/로그아웃</string>
     <string name="setting">설정</string>
     <string name="nav_category2">계정 및 설정</string>
     <string name="please_login">Deview2016에 로그인해주세요</string>
     <string name="logout_msg">로그아웃 되었습니다</string>
+
+    <string name="navigation_drawer_open">네비게이션 뷰가 열렸습니다</string>
+    <string name="navigation_drawer_close">네비게이션 뷰가 닫혔습니다</string>
 
     <!-- DetailSessionFragment -->
     <string name="share_session_dialog_title">어디에 공유하시겠어요?</string>

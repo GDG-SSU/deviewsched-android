@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
 
     private MaterialViewPager mViewPager;
     private Toolbar mToolbar;
-    private NavigationView mNavigationView;
     private ImageView mAvatarImage;
     private TextView mNameText;
 
@@ -92,11 +91,11 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
             public CharSequence getPageTitle(int position) {
                 switch (position % 3) {
                     case 0:
-                        return "Deview2015";
+                        return getText(R.string.main_pager_one);
                     case 1:
-                        return "Hot Sessions";
+                        return getText(R.string.main_pager_two);
                     case 2:
-                        return "#Deview2015";
+                        return getText(R.string.main_pager_three);
                 }
                 return null;
             }
@@ -133,10 +132,10 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        mNavigationView = (NavigationView) findViewById(R.id.nav_view);
-        setupDrawerContent(mNavigationView);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        setupDrawerContent(navigationView);
 
-        View headerView = mNavigationView.inflateHeaderView(R.layout.nav_header);
+        View headerView = navigationView.inflateHeaderView(R.layout.nav_header);
         mAvatarImage = (ImageView) headerView.findViewById(R.id.profile_image);
         mNameText = (TextView) headerView.findViewById(R.id.profile_name_text);
 
