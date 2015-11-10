@@ -5,13 +5,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
-import com.facebook.CallbackManager;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
-import com.facebook.Profile;
-import com.facebook.ProfileTracker;
-import com.facebook.login.LoginManager;
-import com.facebook.login.LoginResult;
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.UserProfileProvider;
@@ -21,12 +14,7 @@ import com.gdgssu.android_deviewsched.ui.MainActivity;
 import com.gdgssu.android_deviewsched.util.JsonFromFile;
 import com.google.gson.Gson;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-
 import static com.gdgssu.android_deviewsched.util.LogUtils.*;
-import static com.navercorp.volleyextensions.volleyer.Volleyer.volleyer;
 
 public class SplashActivity extends AppCompatActivity implements Runnable {
 
@@ -74,7 +62,7 @@ public class SplashActivity extends AppCompatActivity implements Runnable {
 
         User user = new User();
         if (DeviewSchedApplication.LOGIN_STATE) {
-            user = UserProfileProvider.getUserProfile();
+            user = UserProfileProvider.getUserProfile(getBaseContext(),60);
         }
 
         Intent intent = new Intent(this, MainActivity.class);

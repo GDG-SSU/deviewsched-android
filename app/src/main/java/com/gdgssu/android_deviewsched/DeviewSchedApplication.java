@@ -2,7 +2,6 @@ package com.gdgssu.android_deviewsched;
 
 import android.app.Application;
 import android.content.Context;
-import android.net.Uri;
 
 import com.android.volley.RequestQueue;
 import com.facebook.CallbackManager;
@@ -11,17 +10,11 @@ import com.facebook.Profile;
 import com.facebook.ProfileTracker;
 import com.gdgssu.android_deviewsched.helper.FavoritePreferenceHelper;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
+import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-import com.gdgssu.android_deviewsched.helper.ProfileChangedListener;
 import com.gdgssu.android_deviewsched.model.sessioninfo.AllScheItems;
-import com.gdgssu.android_deviewsched.model.sessioninfo.Day;
 import com.gdgssu.android_deviewsched.ui.MainActivity;
 import com.navercorp.volleyextensions.volleyer.factory.DefaultRequestQueueFactory;
-
-import java.util.ArrayList;
-
-import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
-import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
 public class DeviewSchedApplication extends Application {
 

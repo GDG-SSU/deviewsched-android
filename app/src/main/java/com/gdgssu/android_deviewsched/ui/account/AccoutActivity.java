@@ -14,8 +14,6 @@ import com.facebook.login.widget.LoginButton;
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
-import com.gdgssu.android_deviewsched.helper.UserProfileProvider;
-import com.gdgssu.android_deviewsched.model.User;
 import com.nhn.android.naverlogin.OAuthLogin;
 import com.nhn.android.naverlogin.OAuthLoginHandler;
 import com.nhn.android.naverlogin.ui.view.OAuthLoginButton;

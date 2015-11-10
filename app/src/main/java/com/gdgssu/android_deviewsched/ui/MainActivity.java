@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
     }
 
     private void resetUserInfo() {
-        mAvatarImage.setImageResource(android.R.drawable.sym_def_app_icon);
+        mAvatarImage.setImageResource(R.drawable.person_image_empty);
         mNameText.setText(getText(R.string.please_login));
 
         LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
@@ -272,7 +272,7 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
 
         if (requestCode == AccoutActivity.ACCOUNT_REQUEST) {
             if (DeviewSchedApplication.LOGIN_STATE) {
-                mUser = UserProfileProvider.getUserProfile();
+                mUser = UserProfileProvider.getUserProfile(getBaseContext(), 60);
                 setUserInfo();
                 //이미지를 정상적으로 못불러오는 경우가 생김
             }
