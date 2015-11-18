@@ -1,5 +1,6 @@
 package com.gdgssu.android_deviewsched.ui.detailsession;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -110,9 +112,13 @@ public class DetailSessionFragment extends Fragment {
             speakerUrl.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent urlIntent = SpeakerURIHandler.getIntent(speakers.get(index).url);
-                    if (urlIntent != null) {
-                        startActivity(urlIntent);
+                    try {
+                        Intent urlIntent = SpeakerURIHandler.getIntent(speakers.get(index).url);
+                        if (urlIntent != null) {
+                            startActivity(urlIntent);
+                        }
+                    } catch (ActivityNotFoundException e) {
+                        Toast.makeText(getActivity(), getActivity().getString(R.string.error_url_intent), Toast.LENGTH_SHORT).show();
                     }
                 }
             });
