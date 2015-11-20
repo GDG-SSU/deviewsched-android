@@ -2,7 +2,6 @@ package com.gdgssu.android_deviewsched.ui.sche;
 
 import android.net.Uri;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -17,8 +16,10 @@ public class ScheActivity extends AppCompatActivity implements DeviewFragment.On
 
     private static final String TAG = makeLogTag("ScheActivity");
     private static final String KEY_TITLE = "title";
+    private static final String KEY_MYSESSION = "mysession";
 
     private CharSequence title;
+    private boolean isMySession;
     private FragmentManager fragmentManager;
 
     @Override
@@ -28,11 +29,12 @@ public class ScheActivity extends AppCompatActivity implements DeviewFragment.On
 
         if (getIntent() != null) {
             this.title = getIntent().getStringExtra(KEY_TITLE);
+            this.isMySession = getIntent().getBooleanExtra(KEY_MYSESSION, false);
         }
 
         fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .add(R.id.sche_list_container, ScheFragment.newInstance(this.title))
+                .add(R.id.sche_list_container, ScheFragment.newInstance(this.title, this.isMySession))
                 .commit();
     }
 

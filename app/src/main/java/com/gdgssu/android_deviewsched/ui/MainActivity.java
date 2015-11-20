@@ -32,6 +32,7 @@ import com.gdgssu.android_deviewsched.model.User;
 import com.gdgssu.android_deviewsched.ui.account.AccoutActivity;
 import com.gdgssu.android_deviewsched.ui.location.LocationActivity;
 import com.gdgssu.android_deviewsched.ui.sche.ScheActivity;
+import com.gdgssu.android_deviewsched.ui.sche.ScheFragment;
 import com.gdgssu.android_deviewsched.ui.setting.SettingActivity;
 import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
 import com.github.florent37.materialviewpager.MaterialViewPager;
@@ -172,11 +173,11 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
                         break;
 
                     case R.id.nav_all_schedule:
-                        showSche(getResources().getText(R.string.all_schedule));
+                        showSche(getResources().getText(R.string.all_schedule), false);
                         break;
 
                     case R.id.nav_my_schedule:
-                        showSche(getResources().getText(R.string.my_schedule));
+                        showSche(getResources().getText(R.string.my_schedule), true);
                         break;
 
                     case R.id.nav_find_friends:
@@ -217,9 +218,10 @@ public class MainActivity extends AppCompatActivity implements DeviewFragment.On
         fragmentManager.popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
     }
 
-    private void showSche(CharSequence title) {
+    private void showSche(CharSequence title, boolean isMySession) {
         Intent intent = new Intent(getBaseContext(), ScheActivity.class);
-        intent.putExtra("title", title);
+        intent.putExtra(ScheFragment.KEY_TITLE, title);
+        intent.putExtra(ScheFragment.KEY_MYSESSION, isMySession);
         startActivity(intent);
     }
 
