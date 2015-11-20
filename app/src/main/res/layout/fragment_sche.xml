@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -27,6 +27,7 @@
         android:id="@+id/fragment_sche_tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_sche_toolbar"
         android:background="@color/colorPrimary"
         app:tabIndicatorColor="@color/colorAccent"
         app:tabSelectedTextColor="@color/colorAccent"
@@ -36,31 +37,35 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="2dp"
+        android:layout_below="@id/fragment_sche_tabs"
         android:foreground="@drawable/bottom_shadow" />
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_container">
 
         <android.support.v4.view.ViewPager
             android:id="@+id/fragment_sche_content_pager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
-        <RelativeLayout
-            android:id="@+id/fragment_sche_empty_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            android:background="@android:color/white">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:gravity="center"
-                android:text="선택한 세션이 없습니다. \n 상단의 별모양 아이콘을 눌러서 들을 세션을 선택해주세요." />
-        </RelativeLayout>
     </FrameLayout>
-</LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_sche_empty_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_sche_toolbar"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="선택한 세션이 없습니다. \n 상단의 별모양 아이콘을 눌러서 들을 세션을 선택해주세요." />
+    </RelativeLayout>
+</RelativeLayout>
