@@ -31,13 +31,13 @@
             android:id="@+id/item_session_sche_sessioninfo_speaker_img"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:src="@drawable/ic_account_circle_black_36dp" />
+            android:src="@drawable/ic_account_circle_36px" />
 
         <ImageView
             android:id="@+id/item_session_sche_sessioninfo_speaker_img_second"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:src="@drawable/ic_account_circle_black_36dp"
+            android:src="@drawable/ic_account_circle_36px"
             android:visibility="gone" />
 
     </LinearLayout>
@@ -45,9 +45,9 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
         android:layout_weight="6"
         android:gravity="center_vertical"
-        android:layout_gravity="center_vertical"
         android:orientation="vertical"
         android:paddingRight="8dp">
 

@@ -37,7 +37,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="40dp"
         android:layout_marginRight="40dp"
-        android:src="@drawable/ic_done_white_24dp"
+        android:src="@drawable/ic_done_white_24px"
         app:fabSize="normal">
 
     </android.support.design.widget.FloatingActionButton>

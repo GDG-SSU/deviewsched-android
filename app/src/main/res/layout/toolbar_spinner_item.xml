@@ -3,7 +3,7 @@
     android:id="@android:id/text1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:drawableRight="@drawable/ic_arrow_drop_down_white_18dp"
+    android:drawableRight="@drawable/ic_arrow_drop_down_white_18px"
     android:fontFamily="sans-serif"
     android:paddingLeft="16dp"
     android:textColor="#ffffffff"
