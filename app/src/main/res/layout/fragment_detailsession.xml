@@ -36,8 +36,8 @@
                 android:layout_height="@dimen/appbar"
                 android:background="@color/colorPrimary"
                 android:fitsSystemWindows="true"
-                android:title="세션안내"
-                android:theme="@style/DeviewAppTheme_ActionBar"/>
+                android:theme="@style/DeviewAppTheme_ActionBar"
+                android:title="세션안내" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -85,13 +85,13 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
                                 android:layout_marginTop="12dp"
-                                android:src="@drawable/ic_arrow_back_black_24dp" />
+                                android:src="@drawable/ic_arrow_back_24px" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="center_horizontal"
                                 android:layout_centerHorizontal="true"
+                                android:gravity="center_horizontal"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -109,9 +109,9 @@
                                     android:id="@+id/detailsession_timelocation"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
                                     android:text="Day 1 10:00-10:45 in Track1"
                                     android:textColor="@android:color/black"
-                                    android:layout_marginTop="8dp"
                                     android:textSize="14sp" />
 
                             </LinearLayout>
@@ -122,15 +122,15 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
                                 android:layout_marginTop="12dp"
-                                android:src="@drawable/ic_share_black_24dp" />
+                                android:src="@drawable/ic_share_black_24px" />
 
                         </RelativeLayout>
 
                         <TextView
                             android:id="@+id/detailsession_sessioninfo"
-                            android:layout_below="@id/detailsession_header_center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/detailsession_header_center"
                             android:layout_gravity="center_horizontal"
                             android:layout_margin="12dp"
                             android:text=""

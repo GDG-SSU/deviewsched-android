@@ -1,5 +1,6 @@
 package com.gdgssu.android_deviewsched.ui.sche;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -7,6 +8,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -16,14 +20,17 @@ import android.widget.Spinner;
 
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
-import com.gdgssu.android_deviewsched.ui.DeviewFragment;
+import com.gdgssu.android_deviewsched.ui.BaseFragment;
+import com.gdgssu.android_deviewsched.ui.selectsession.SelectSessionActivity;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-public class ScheFragment extends DeviewFragment {
+public class ScheFragment extends BaseFragment {
 
     private static final String TAG = makeLogTag("ScheFragment");
-    private static final String KEY_TITLE = "title";
+    public static final String KEY_TITLE = "title";
+    public static final String KEY_MYSESSION = "mysession";
+
     public static final int SELECT_SESSION = 100;
 
     private ViewPager mPager;
@@ -32,10 +39,11 @@ public class ScheFragment extends DeviewFragment {
 
     private SchePagerFragmentAdapter mAdapter;
 
-    public static ScheFragment newInstance(CharSequence title) {
+    public static ScheFragment newInstance(CharSequence title, boolean isMySession) {
         ScheFragment fragment = new ScheFragment();
         Bundle args = new Bundle();
         args.putCharSequence(KEY_TITLE, title);
+        args.putBoolean(KEY_MYSESSION, isMySession);
         fragment.setArguments(args);
         return fragment;
     }
@@ -48,9 +56,12 @@ public class ScheFragment extends DeviewFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setHasOptionsMenu(true);
+
         if (getArguments() != null) {
             this.title = getArguments().getString(KEY_TITLE);
-            if (this.title == getActivity().getText(R.string.all_schedule)) {
+            this.isMySession = getArguments().getBoolean(KEY_MYSESSION);
+            if (!this.isMySession) {
                 isMySession = false;
             } else {
                 isMySession = true;
@@ -77,9 +88,12 @@ public class ScheFragment extends DeviewFragment {
     }
 
     private void setMySessionView(View rootView) {
-        if ((!isMySession) || DeviewSchedApplication.FAVOR_SESSION_STATE) {
-            RelativeLayout emptyLayout = (RelativeLayout) rootView.findViewById(R.id.fragment_sche_empty_container);
-            emptyLayout.setVisibility(View.GONE);
+        RelativeLayout emptyLayout = (RelativeLayout) rootView.findViewById(R.id.fragment_sche_empty_container);
+        if (isMySession) {
+            emptyLayout.setVisibility(View.VISIBLE);
+            if (DeviewSchedApplication.FAVOR_SESSION_STATE) {
+                emptyLayout.setVisibility(View.GONE);
+            }
         }
     }
 
@@ -152,5 +166,28 @@ public class ScheFragment extends DeviewFragment {
 
             }
         });
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        if (isMySession) {
+            inflater.inflate(R.menu.menu_sche, menu);
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.menu_all_sche_favorite:
+
+                Intent intent = new Intent(getActivity(), SelectSessionActivity.class);
+                startActivityForResult(intent, ScheFragment.SELECT_SESSION);
+
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

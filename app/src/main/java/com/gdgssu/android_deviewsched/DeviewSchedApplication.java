@@ -13,7 +13,7 @@ import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
 import com.gdgssu.android_deviewsched.model.sessioninfo.AllScheItems;
-import com.gdgssu.android_deviewsched.ui.MainActivity;
+import com.gdgssu.android_deviewsched.ui.main.MainActivity;
 import com.navercorp.volleyextensions.volleyer.factory.DefaultRequestQueueFactory;
 
 public class DeviewSchedApplication extends Application {

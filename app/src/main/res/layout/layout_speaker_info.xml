@@ -60,7 +60,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:src="@drawable/ic_link_black_24dp" />
+                        android:src="@drawable/ic_link_black_24px" />
 
                     <TextView
                         android:id="@+id/speaker_intro"
@@ -82,6 +82,6 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_account_circle_black_36dp" />
+        android:src="@drawable/ic_account_circle_36px" />
 
 </RelativeLayout>

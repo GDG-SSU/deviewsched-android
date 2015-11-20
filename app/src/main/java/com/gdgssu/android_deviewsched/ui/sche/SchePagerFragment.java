@@ -30,6 +30,7 @@ public class SchePagerFragment extends Fragment {
         bundle.putSerializable(TAG, track);
         fragment.setArguments(bundle);
 
+
         return fragment;
     }
 
@@ -73,27 +74,4 @@ public class SchePagerFragment extends Fragment {
         });
         listview.setAdapter(adapter);
     }
-
-//
-//    @Override
-//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-//        super.onCreateOptionsMenu(menu, inflater);
-//        inflater.inflate(R.menu.menu_sche, menu);
-//
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//
-//        switch (item.getItemId()) {
-//            case R.id.menu_all_sche_favorite:
-//
-//                Intent intent = new Intent(getActivity(), SelectSessionActivity.class);
-//                startActivityForResult(intent, ScheFragment.SELECT_SESSION);
-//
-//                return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
 }

@@ -21,7 +21,7 @@
         android:layout_height="64dip"
         android:layout_gravity="bottom"
         android:layout_weight="1"
-        android:src="@drawable/ic_done_white_36dp"
+        android:src="@drawable/ic_done_white_36px"
         app:cb_color="#99CC00"
         app:cb_pressedRingWidth="8dip" />
 </LinearLayout>

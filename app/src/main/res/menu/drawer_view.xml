@@ -5,27 +5,27 @@
         <item
             android:id="@+id/nav_home"
             android:checked="true"
-            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:icon="@drawable/ic_dashboard_24dp"
             android:title="@string/home" />
         <item
             android:id="@+id/nav_all_schedule"
             android:checked="true"
-            android:icon="@drawable/ic_insert_invitation_black_24dp"
+            android:icon="@drawable/ic_today_24dp"
             android:title="@string/all_schedule" />
         <item
             android:id="@+id/nav_my_schedule"
             android:checked="true"
-            android:icon="@drawable/ic_stars_black_24dp"
+            android:icon="@drawable/ic_stars_black_24px"
             android:title="@string/my_schedule" />
         <item
             android:id="@+id/nav_find_friends"
             android:checked="true"
-            android:icon="@drawable/ic_person_pin_black_24dp"
+            android:icon="@drawable/ic_person_pin_24px"
             android:title="@string/find_friends" />
         <item
             android:id="@+id/nav_location"
             android:checked="true"
-            android:icon="@drawable/ic_location_on_black_24dp"
+            android:icon="@drawable/ic_pin_drop_24dp"
             android:title="@string/location" />
     </group>
 
@@ -34,12 +34,12 @@
             <item
                 android:id="@+id/nav_account"
                 android:checked="true"
-                android:icon="@drawable/ic_account_box_black_24dp"
+                android:icon="@drawable/ic_account_box_24px"
                 android:title="@string/account" />
             <item
                 android:id="@+id/nav_setting"
                 android:checked="true"
-                android:icon="@drawable/ic_settings_applications_black_24dp"
+                android:icon="@drawable/ic_settings_applications_black_24px"
                 android:title="@string/setting" />
         </menu>
     </item>
