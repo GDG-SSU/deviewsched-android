@@ -20,12 +20,12 @@ import android.widget.Spinner;
 
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
-import com.gdgssu.android_deviewsched.ui.DeviewFragment;
+import com.gdgssu.android_deviewsched.ui.BaseFragment;
 import com.gdgssu.android_deviewsched.ui.selectsession.SelectSessionActivity;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-public class ScheFragment extends DeviewFragment {
+public class ScheFragment extends BaseFragment {
 
     private static final String TAG = makeLogTag("ScheFragment");
     public static final String KEY_TITLE = "title";

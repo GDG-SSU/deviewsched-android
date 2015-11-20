@@ -1,4 +1,4 @@
-package com.gdgssu.android_deviewsched.ui;
+package com.gdgssu.android_deviewsched.ui.main;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -24,11 +24,11 @@ import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginManager;
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
-import com.gdgssu.android_deviewsched.example.RecyclerViewFragment;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
 import com.gdgssu.android_deviewsched.helper.ProfileChangedListener;
 import com.gdgssu.android_deviewsched.helper.UserProfileProvider;
 import com.gdgssu.android_deviewsched.model.User;
+import com.gdgssu.android_deviewsched.ui.BaseFragment;
 import com.gdgssu.android_deviewsched.ui.account.AccoutActivity;
 import com.gdgssu.android_deviewsched.ui.location.LocationActivity;
 import com.gdgssu.android_deviewsched.ui.sche.ScheActivity;
@@ -40,7 +40,7 @@ import com.github.florent37.materialviewpager.header.HeaderDesign;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-public class MainActivity extends AppCompatActivity implements DeviewFragment.OnFragmentInteractionListener, ProfileChangedListener {
+public class MainActivity extends AppCompatActivity implements BaseFragment.OnFragmentInteractionListener, ProfileChangedListener {
 
     private static final String TAG = makeLogTag("MainActivity");
 

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
 
-public class DeviewFragment extends Fragment {
+public class BaseFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 

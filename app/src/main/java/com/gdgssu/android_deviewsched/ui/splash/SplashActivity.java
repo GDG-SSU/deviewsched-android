@@ -10,7 +10,7 @@ import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.UserProfileProvider;
 import com.gdgssu.android_deviewsched.model.User;
 import com.gdgssu.android_deviewsched.model.sessioninfo.AllScheItems;
-import com.gdgssu.android_deviewsched.ui.MainActivity;
+import com.gdgssu.android_deviewsched.ui.main.MainActivity;
 import com.gdgssu.android_deviewsched.util.JsonFromFile;
 import com.google.gson.Gson;
 

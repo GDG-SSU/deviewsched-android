@@ -1,4 +1,4 @@
-package com.gdgssu.android_deviewsched.example;
+package com.gdgssu.android_deviewsched.ui.main;
 
 
 import android.support.v7.widget.RecyclerView;

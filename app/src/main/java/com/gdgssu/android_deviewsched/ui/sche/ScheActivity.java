@@ -7,12 +7,12 @@ import android.os.Bundle;
 
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.model.sessioninfo.Session;
-import com.gdgssu.android_deviewsched.ui.DeviewFragment;
+import com.gdgssu.android_deviewsched.ui.BaseFragment;
 import com.gdgssu.android_deviewsched.ui.detailsession.DetailSessionFragment;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-public class ScheActivity extends AppCompatActivity implements DeviewFragment.OnFragmentInteractionListener {
+public class ScheActivity extends AppCompatActivity implements BaseFragment.OnFragmentInteractionListener {
 
     private static final String TAG = makeLogTag("ScheActivity");
     private static final String KEY_TITLE = "title";

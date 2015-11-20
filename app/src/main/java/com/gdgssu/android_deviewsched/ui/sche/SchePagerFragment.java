@@ -30,6 +30,7 @@ public class SchePagerFragment extends Fragment {
         bundle.putSerializable(TAG, track);
         fragment.setArguments(bundle);
 
+
         return fragment;
     }
 
