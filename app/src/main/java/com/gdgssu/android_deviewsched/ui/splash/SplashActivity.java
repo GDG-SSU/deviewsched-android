@@ -53,7 +53,7 @@ public class SplashActivity extends AppCompatActivity implements Runnable {
     private void getAllScheDataFromFile() {
         Gson gson = new Gson();
         String jsonString = JsonFromFile.readJsonFromAssets("allsche.json", getBaseContext());
-        DeviewSchedApplication.allscheItems = gson.fromJson(jsonString, AllScheItems.class);
+        DeviewSchedApplication.sAllscheItems = gson.fromJson(jsonString, AllScheItems.class);
     }
 
     @Override
@@ -61,7 +61,7 @@ public class SplashActivity extends AppCompatActivity implements Runnable {
         getAllScheDataFromFile();
 
         User user = new User();
-        if (DeviewSchedApplication.LOGIN_STATE) {
+        if (DeviewSchedApplication.sLoginstate) {
             user = UserProfileProvider.getUserProfile(getBaseContext(),60);
         }
 

@@ -36,12 +36,12 @@ public class DetailSessionFragment extends Fragment {
 
     public static final String KEY_SESSION = "SESSION_DATA";
 
-    private Session sessionInfo;
-    private ArrayList<Speaker> speakers;
+    private Session mSessionInfo;
+    private ArrayList<Speaker> mSpeakers;
 
-    private TextView sessionTitle;
-    private TextView sessionDesc;
-    private LinearLayout speakerBasket;
+    private TextView mSessionTitle;
+    private TextView mSessionDesc;
+    private LinearLayout mSpeakerLayout;
 
     public static DetailSessionFragment newInstance(Session sessionData) {
         DetailSessionFragment fragment = new DetailSessionFragment();
@@ -60,8 +60,8 @@ public class DetailSessionFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         if (getArguments().getSerializable(KEY_SESSION) != null) {
-            sessionInfo = (Session) getArguments().getSerializable(KEY_SESSION);
-            speakers = sessionInfo.speakers;
+            mSessionInfo = (Session) getArguments().getSerializable(KEY_SESSION);
+            mSpeakers = mSessionInfo.speakers;
         }
     }
 
@@ -80,10 +80,10 @@ public class DetailSessionFragment extends Fragment {
 
 
     public void setData() {
-        sessionTitle.setText(sessionInfo.title);
-        sessionDesc.setText(Html.fromHtml(sessionInfo.description));
+        mSessionTitle.setText(mSessionInfo.title);
+        mSessionDesc.setText(Html.fromHtml(mSessionInfo.description));
 
-        for (int i = 0; i < speakers.size(); i++) {
+        for (int i = 0; i < mSpeakers.size(); i++) {
             setSpeakerInfo(i);
         }
     }
@@ -97,23 +97,23 @@ public class DetailSessionFragment extends Fragment {
         TextView speakerIntro = (TextView) speakerInfoLayout.findViewById(R.id.speaker_intro);
 
         Glide.with(getActivity())
-                .load(speakers.get(index).picture)
+                .load(mSpeakers.get(index).picture)
                 .transform(new GlideCircleTransform(getActivity()))
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .placeholder(R.drawable.person_image_empty)
                 .into(speakerPicture);
 
-        speakerName.setText(speakers.get(index).name);
-        speakerOrg.setText(speakers.get(index).organization);
+        speakerName.setText(mSpeakers.get(index).name);
+        speakerOrg.setText(mSpeakers.get(index).organization);
 
-        if (speakers.get(index).url.equals("")) {
+        if (mSpeakers.get(index).url.equals("")) {
             speakerUrl.setVisibility(View.GONE);
         } else {
             speakerUrl.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     try {
-                        Intent urlIntent = SpeakerURIHandler.getIntent(speakers.get(index).url);
+                        Intent urlIntent = SpeakerURIHandler.getIntent(mSpeakers.get(index).url);
                         if (urlIntent != null) {
                             startActivity(urlIntent);
                         }
@@ -124,9 +124,9 @@ public class DetailSessionFragment extends Fragment {
             });
         }
 
-        speakerIntro.setText(Html.fromHtml(speakers.get(index).introduction));
+        speakerIntro.setText(Html.fromHtml(mSpeakers.get(index).introduction));
 
-        speakerBasket.addView(speakerInfoLayout);
+        mSpeakerLayout.addView(speakerInfoLayout);
     }
 
 
@@ -134,9 +134,9 @@ public class DetailSessionFragment extends Fragment {
 
         initToolbar(rootView);
 
-        sessionTitle = (TextView) rootView.findViewById(R.id.detailsession_title);
-        sessionDesc = (TextView) rootView.findViewById(R.id.detailsession_sessioninfo);
-        speakerBasket = (LinearLayout) rootView.findViewById(R.id.detailsession_speaker_basket);
+        mSessionTitle = (TextView) rootView.findViewById(R.id.detailsession_title);
+        mSessionDesc = (TextView) rootView.findViewById(R.id.detailsession_sessioninfo);
+        mSpeakerLayout = (LinearLayout) rootView.findViewById(R.id.detailsession_speaker_basket);
         ImageView backarrowButton = (ImageView) rootView.findViewById(R.id.detailsession_backbutton);
         backarrowButton.setOnClickListener(new View.OnClickListener() {
             @Override

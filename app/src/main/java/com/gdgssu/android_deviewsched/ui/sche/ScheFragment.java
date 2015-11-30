@@ -34,16 +34,16 @@ public class ScheFragment extends BaseFragment {
     public static final int SELECT_SESSION = 100;
 
     private ViewPager mPager;
-    private CharSequence title;
-    private boolean isMySession = false;
+    private CharSequence mTitle;
+    private boolean mIsMySession = false;
 
     private SchePagerFragmentAdapter mAdapter;
 
-    public static ScheFragment newInstance(CharSequence title, boolean isMySession) {
+    public static ScheFragment newInstance(CharSequence title, boolean mIsMySession) {
         ScheFragment fragment = new ScheFragment();
         Bundle args = new Bundle();
         args.putCharSequence(KEY_TITLE, title);
-        args.putBoolean(KEY_MYSESSION, isMySession);
+        args.putBoolean(KEY_MYSESSION, mIsMySession);
         fragment.setArguments(args);
         return fragment;
     }
@@ -59,12 +59,12 @@ public class ScheFragment extends BaseFragment {
         setHasOptionsMenu(true);
 
         if (getArguments() != null) {
-            this.title = getArguments().getString(KEY_TITLE);
-            this.isMySession = getArguments().getBoolean(KEY_MYSESSION);
-            if (!this.isMySession) {
-                isMySession = false;
+            this.mTitle = getArguments().getString(KEY_TITLE);
+            this.mIsMySession = getArguments().getBoolean(KEY_MYSESSION);
+            if (!this.mIsMySession) {
+                mIsMySession = false;
             } else {
-                isMySession = true;
+                mIsMySession = true;
             }
         }
     }
@@ -89,9 +89,9 @@ public class ScheFragment extends BaseFragment {
 
     private void setMySessionView(View rootView) {
         RelativeLayout emptyLayout = (RelativeLayout) rootView.findViewById(R.id.fragment_sche_empty_container);
-        if (isMySession) {
+        if (mIsMySession) {
             emptyLayout.setVisibility(View.VISIBLE);
-            if (DeviewSchedApplication.FAVOR_SESSION_STATE) {
+            if (DeviewSchedApplication.sFavorSessionState) {
                 emptyLayout.setVisibility(View.GONE);
             }
         }
@@ -99,7 +99,7 @@ public class ScheFragment extends BaseFragment {
 
     private void initFragmentPager(View rootView) {
         mPager = (ViewPager) rootView.findViewById(R.id.fragment_sche_content_pager);
-        mAdapter = new SchePagerFragmentAdapter(getChildFragmentManager(), DeviewSchedApplication.allscheItems.days.get(0));
+        mAdapter = new SchePagerFragmentAdapter(getChildFragmentManager(), DeviewSchedApplication.sAllscheItems.days.get(0));
         mPager.setAdapter(mAdapter);
 
         TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.fragment_sche_tabs);
@@ -129,7 +129,7 @@ public class ScheFragment extends BaseFragment {
 
         ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle(this.title);
+        actionBar.setTitle(this.mTitle);
 
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -152,10 +152,10 @@ public class ScheFragment extends BaseFragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (mAdapter != null) {
                     if (position == 0) {
-                        mAdapter.setDayItem(DeviewSchedApplication.allscheItems.days.get(0));
+                        mAdapter.setDayItem(DeviewSchedApplication.sAllscheItems.days.get(0));
                         mAdapter.notifyDataSetChanged();
                     } else {
-                        mAdapter.setDayItem(DeviewSchedApplication.allscheItems.days.get(1));
+                        mAdapter.setDayItem(DeviewSchedApplication.sAllscheItems.days.get(1));
                         mAdapter.notifyDataSetChanged();
                     }
                 }
@@ -171,7 +171,7 @@ public class ScheFragment extends BaseFragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-        if (isMySession) {
+        if (mIsMySession) {
             inflater.inflate(R.menu.menu_sche, menu);
         }
     }

@@ -14,21 +14,21 @@ public class SchePagerFragmentAdapter extends FragmentStatePagerAdapter {
 
     private static final String TAG = makeLogTag("SchePagerFragmentAdapter");
 
-    private ArrayList<CharSequence> pagerTitles = new ArrayList<CharSequence>();
-    private Day dayItem;
+    private ArrayList<CharSequence> mPagerTitles = new ArrayList<CharSequence>();
+    private Day mDayItem;
 
     public SchePagerFragmentAdapter(FragmentManager fm, Day dayItem) {
         super(fm);
 
-        this.dayItem = dayItem;
+        this.mDayItem = dayItem;
         setPagerTitles();
     }
 
     private void setPagerTitles() {
-        pagerTitles.add("Track1");
-        pagerTitles.add("Track2");
-        pagerTitles.add("Track3");
-        pagerTitles.add("Track4");
+        mPagerTitles.add("Track1");
+        mPagerTitles.add("Track2");
+        mPagerTitles.add("Track3");
+        mPagerTitles.add("Track4");
 
     }
 
@@ -42,13 +42,13 @@ public class SchePagerFragmentAdapter extends FragmentStatePagerAdapter {
 
         switch (position){
             case 0:
-                return SchePagerFragment.newInstance(dayItem.tracks.get(position));
+                return SchePagerFragment.newInstance(mDayItem.tracks.get(position));
             case 1:
-                return SchePagerFragment.newInstance(dayItem.tracks.get(position));
+                return SchePagerFragment.newInstance(mDayItem.tracks.get(position));
             case 2:
-                return SchePagerFragment.newInstance(dayItem.tracks.get(position));
+                return SchePagerFragment.newInstance(mDayItem.tracks.get(position));
             case 3:
-                return SchePagerFragment.newInstance(dayItem.tracks.get(position));
+                return SchePagerFragment.newInstance(mDayItem.tracks.get(position));
             default:
                 throw new RuntimeException("There is not case");
         }
@@ -56,15 +56,15 @@ public class SchePagerFragmentAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return pagerTitles.size();
+        return mPagerTitles.size();
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return pagerTitles.get(position);
+        return mPagerTitles.get(position);
     }
 
     public void setDayItem(Day dayItem) {
-        this.dayItem = dayItem;
+        this.mDayItem = dayItem;
     }
 }

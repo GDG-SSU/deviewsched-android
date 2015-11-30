@@ -22,29 +22,29 @@ public class FavoritePreferenceHelper {
     public final static String PREF_FAVOR_STATE = "PREF_FAVOR_STATE";
     public final static String PREF_FAVOR_VALUE = "PREF_FAVOR_VALUE";
 
-    private static Context mContext;
+    private Context mContext;
 
     public FavoritePreferenceHelper(Context context) {
         this.mContext = context;
     }
 
-    public void setFavorSessionState(String key, boolean value){
+    public void setFavorSessionState(String key, boolean value) {
         SharedPreferences pref = mContext.getSharedPreferences(PREF_NAME, Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
 
         editor.putBoolean(key, value);
         editor.apply();
 
-        DeviewSchedApplication.FAVOR_SESSION_STATE = value;
+        DeviewSchedApplication.sFavorSessionState = value;
     }
 
-    public boolean getFavorSessionState(String key){
+    public boolean getFavorSessionState(String key) {
         SharedPreferences pref = mContext.getSharedPreferences(PREF_NAME, Activity.MODE_PRIVATE);
 
         return pref.getBoolean(key, false);
     }
 
-    public void setFavorSessionValue(String key, ArrayList<Integer> favorSessionList){
+    public void setFavorSessionValue(String key, ArrayList<Integer> favorSessionList) {
 
         SharedPreferences pref = mContext.getSharedPreferences(PREF_NAME, Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
@@ -58,18 +58,18 @@ public class FavoritePreferenceHelper {
         setFavorSessionState(PREF_FAVOR_STATE, true);
     }
 
-    public List<Integer> getFavorSessionValue(String key){
+    public List<Integer> getFavorSessionValue(String key) {
 
         List<Integer> favorSessionList;
         SharedPreferences pref = mContext.getSharedPreferences(PREF_NAME, Activity.MODE_PRIVATE);
 
-        if (pref.contains(PREF_FAVOR_VALUE)){
+        if (pref.contains(PREF_FAVOR_VALUE)) {
             String favorSessionJson = pref.getString(key, null);
             Gson gson = new Gson();
             Integer[] favorSessionArray = gson.fromJson(favorSessionJson, Integer[].class);
             favorSessionList = Arrays.asList(favorSessionArray);
             favorSessionList = new ArrayList<>(favorSessionList);
-        }else{
+        } else {
             return null;
         }
 

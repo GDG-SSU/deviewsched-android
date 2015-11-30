@@ -20,7 +20,7 @@ public class PreferenceFragment extends PreferenceFragmentCompat implements Shar
     private static final String KEY_FRIENDS_NOTI = "pref_friends_noti";
     private static final String KEY_PREF_OSSLICENSES = "pref_opensourcelicense";
 
-    private SharedPreferences sharedPref = null;
+    private SharedPreferences mSharedPref = null;
 
     private OnSettingFragmentChangeListener mListener = null;
 
@@ -29,7 +29,7 @@ public class PreferenceFragment extends PreferenceFragmentCompat implements Shar
         addPreferencesFromResource(R.xml.preference);
 
         //Get stored Preferencedata from SharedPreference
-        sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        mSharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
     }
 
     @Override

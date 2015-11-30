@@ -15,7 +15,7 @@ public class LoginPreferenceHelper {
     public final static String PREF_LOGIN_STATE = "PREF_LOGIN_STATE";
     public final static String PREF_ACCESS_TOKEN = "PREF_ACCESS_TOKEN";
 
-    private static Context mContext;
+    private Context mContext;
 
     public LoginPreferenceHelper(Context context) {
         this.mContext = context;

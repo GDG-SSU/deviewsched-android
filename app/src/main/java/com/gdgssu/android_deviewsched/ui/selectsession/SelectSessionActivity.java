@@ -26,7 +26,7 @@ public class SelectSessionActivity extends AppCompatActivity implements AdapterV
     private static final String TAG = makeLogTag("SelectSessionActivity");
 
     private SelectSessionListAdapter mAdapter;
-    private FavoriteSession selectedSessionList = new FavoriteSession();
+    private FavoriteSession mSelectedSessionList = new FavoriteSession();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class SelectSessionActivity extends AppCompatActivity implements AdapterV
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (selectedSessionList.getFavorListSize() == 0) {
+                if (mSelectedSessionList.getFavorListSize() == 0) {
                     Toast.makeText(getBaseContext(), "선택한 세션이 없습니다", Toast.LENGTH_SHORT).show();
                     FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(getBaseContext());
                     prefHelper.setFavorSessionState(FavoritePreferenceHelper.PREF_FAVOR_STATE, false);
@@ -61,14 +61,14 @@ public class SelectSessionActivity extends AppCompatActivity implements AdapterV
 
     public void saveFavorSessionIDs() {
         FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(getBaseContext());
-        prefHelper.setFavorSessionValue(FavoritePreferenceHelper.PREF_FAVOR_VALUE, selectedSessionList.getFavorList());
+        prefHelper.setFavorSessionValue(FavoritePreferenceHelper.PREF_FAVOR_VALUE, mSelectedSessionList.getFavorList());
         Toast.makeText(getBaseContext(), "세션 리스트가 저장되었습니다.", Toast.LENGTH_SHORT).show();
     }
 
     private void initListView() {
         ListView listview = (ListView) findViewById(R.id.select_session_list);
         listview.setOnItemClickListener(this);
-        mAdapter = new SelectSessionListAdapter(DeviewSchedApplication.allscheItems.days.get(0), getBaseContext());
+        mAdapter = new SelectSessionListAdapter(DeviewSchedApplication.sAllscheItems.days.get(0), getBaseContext());
         listview.setAdapter(mAdapter);
     }
 
@@ -97,10 +97,10 @@ public class SelectSessionActivity extends AppCompatActivity implements AdapterV
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    mAdapter.setDayItem(DeviewSchedApplication.allscheItems.days.get(0));
+                    mAdapter.setDayItem(DeviewSchedApplication.sAllscheItems.days.get(0));
                     mAdapter.notifyDataSetChanged();
                 } else {
-                    mAdapter.setDayItem(DeviewSchedApplication.allscheItems.days.get(1));
+                    mAdapter.setDayItem(DeviewSchedApplication.sAllscheItems.days.get(1));
                     mAdapter.notifyDataSetChanged();
                 }
             }
@@ -114,14 +114,14 @@ public class SelectSessionActivity extends AppCompatActivity implements AdapterV
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        if (!SelectSessionListAdapter.sessionItems.get(position).isSelected) {
+        if (!SelectSessionListAdapter.sSessionItems.get(position).isSelected) {
             view.setBackgroundColor(ContextCompat.getColor(getBaseContext(), R.color.colorAccent));
-            SelectSessionListAdapter.sessionItems.get(position).isSelected = true;
-            selectedSessionList.selectSession(SelectSessionListAdapter.sessionItems.get(position).session_id);
+            SelectSessionListAdapter.sSessionItems.get(position).isSelected = true;
+            mSelectedSessionList.selectSession(SelectSessionListAdapter.sSessionItems.get(position).session_id);
         } else {
             view.setBackgroundColor(ContextCompat.getColor(getBaseContext(), android.R.color.white));
-            SelectSessionListAdapter.sessionItems.get(position).isSelected = false;
-            selectedSessionList.selectSession(SelectSessionListAdapter.sessionItems.get(position).session_id);
+            SelectSessionListAdapter.sSessionItems.get(position).isSelected = false;
+            mSelectedSessionList.selectSession(SelectSessionListAdapter.sSessionItems.get(position).session_id);
         }
     }
 }

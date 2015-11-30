@@ -18,9 +18,9 @@ public class ScheActivity extends AppCompatActivity implements BaseFragment.OnFr
     private static final String KEY_TITLE = "title";
     private static final String KEY_MYSESSION = "mysession";
 
-    private CharSequence title;
-    private boolean isMySession;
-    private FragmentManager fragmentManager;
+    private CharSequence mTitle;
+    private boolean mIsMySession;
+    private FragmentManager mFragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,18 +28,18 @@ public class ScheActivity extends AppCompatActivity implements BaseFragment.OnFr
         setContentView(R.layout.activity_sche);
 
         if (getIntent() != null) {
-            this.title = getIntent().getStringExtra(KEY_TITLE);
-            this.isMySession = getIntent().getBooleanExtra(KEY_MYSESSION, false);
+            this.mTitle = getIntent().getStringExtra(KEY_TITLE);
+            this.mIsMySession = getIntent().getBooleanExtra(KEY_MYSESSION, false);
         }
 
-        fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .add(R.id.sche_list_container, ScheFragment.newInstance(this.title, this.isMySession))
+        mFragmentManager = getSupportFragmentManager();
+        mFragmentManager.beginTransaction()
+                .add(R.id.sche_list_container, ScheFragment.newInstance(this.mTitle, this.mIsMySession))
                 .commit();
     }
 
     public void setDetailSessionFragment(Session sessionData) {
-        fragmentManager.beginTransaction()
+        mFragmentManager.beginTransaction()
                 .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out)
                 .replace(R.id.detailsession_container, DetailSessionFragment.newInstance(sessionData))
                 .addToBackStack("detailsession")
@@ -50,8 +50,8 @@ public class ScheActivity extends AppCompatActivity implements BaseFragment.OnFr
     public void onBackPressed() {
         super.onBackPressed();
 
-        if (fragmentManager.getBackStackEntryCount() > 0) {
-            fragmentManager.popBackStackImmediate("detailsession", FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        if (mFragmentManager.getBackStackEntryCount() > 0) {
+            mFragmentManager.popBackStackImmediate("detailsession", FragmentManager.POP_BACK_STACK_INCLUSIVE);
         }
     }
 

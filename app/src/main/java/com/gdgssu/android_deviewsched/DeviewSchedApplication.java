@@ -10,6 +10,7 @@ import com.facebook.Profile;
 import com.facebook.ProfileTracker;
 import com.gdgssu.android_deviewsched.helper.FavoritePreferenceHelper;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
+
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
 import com.gdgssu.android_deviewsched.model.sessioninfo.AllScheItems;
@@ -20,27 +21,27 @@ public class DeviewSchedApplication extends Application {
 
     private static final String TAG = makeLogTag("DeviewSchedApplication");
 
-    private Context GLOBAL_CONTEXT = null;
-    public static Boolean LOGIN_STATE = false;
-    public static boolean FAVOR_SESSION_STATE = false;
+    private Context mContext = null;
+    public static Boolean sLoginstate = false;
+    public static boolean sFavorSessionState = false;
 
     private CallbackManager mCallbackManager;
-    public static RequestQueue deviewRequestQueue;
-    private ProfileTracker profileTracker;
+    public static RequestQueue sDeviewRequestQueue;
+    private ProfileTracker mProfileTracker;
 
     private MainActivity mActivity = new MainActivity();
 
-    public static AllScheItems allscheItems = new AllScheItems();
+    public static AllScheItems sAllscheItems = new AllScheItems();
 
     @Override
     public void onCreate() {
         super.onCreate();
 
-        GLOBAL_CONTEXT = getApplicationContext();
+        mContext = getApplicationContext();
 
-        FacebookSdk.sdkInitialize(GLOBAL_CONTEXT);
+        FacebookSdk.sdkInitialize(mContext);
         mCallbackManager = CallbackManager.Factory.create();
-        profileTracker = new ProfileTracker() {
+        mProfileTracker = new ProfileTracker() {
             @Override
             protected void onCurrentProfileChanged(Profile oldProfile, Profile currentProfile) {
 //                mActivity.updateUserProfile(currentProfile.getProfilePictureUri(100, 100), currentProfile.getName());
@@ -55,7 +56,7 @@ public class DeviewSchedApplication extends Application {
 
     public void setLoginState() {
         LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
-        DeviewSchedApplication.LOGIN_STATE = prefHelper.getPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);
+        DeviewSchedApplication.sLoginstate = prefHelper.getPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);
     }
 
     public void setFavorSessionState() {
@@ -63,11 +64,11 @@ public class DeviewSchedApplication extends Application {
          * 로그인할때 false로 돌려야함
          */
         FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(getBaseContext());
-        DeviewSchedApplication.FAVOR_SESSION_STATE = prefHelper.getFavorSessionState(FavoritePreferenceHelper.PREF_FAVOR_STATE);
+        DeviewSchedApplication.sFavorSessionState = prefHelper.getFavorSessionState(FavoritePreferenceHelper.PREF_FAVOR_STATE);
     }
 
     public void initRequestQueue() {
-        deviewRequestQueue = DefaultRequestQueueFactory.create(GLOBAL_CONTEXT);
-        deviewRequestQueue.start();
+        sDeviewRequestQueue = DefaultRequestQueueFactory.create(mContext);
+        sDeviewRequestQueue.start();
     }
 }

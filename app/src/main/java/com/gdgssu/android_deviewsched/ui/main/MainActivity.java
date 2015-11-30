@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
     private ImageView mAvatarImage;
     private TextView mNameText;
 
-    private FragmentManager fragmentManager;
+    private FragmentManager mFragmentManager;
 
     private User mUser = new User();
 
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
             mUser = (User) getIntent().getSerializableExtra("UserInfo");
         }
 
-        fragmentManager = getSupportFragmentManager();
+        mFragmentManager = getSupportFragmentManager();
 
         initMaterialViewPager();
         initToolbar();
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
     }
 
     private void setUserInfo() {
-        if (DeviewSchedApplication.LOGIN_STATE) {
+        if (DeviewSchedApplication.sLoginstate) {
             Glide.with(this)
                     .load(mUser.picture)
                     .transform(new GlideCircleTransform(this))
@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
 
         LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
         prefHelper.setPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);
-        DeviewSchedApplication.LOGIN_STATE = false;
+        DeviewSchedApplication.sLoginstate = false;
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
                         break;
 
                     case R.id.nav_account:
-                        if (DeviewSchedApplication.LOGIN_STATE) {
+                        if (DeviewSchedApplication.sLoginstate) {
                             LoginManager.getInstance().logOut();
                             resetUserInfo();
                             Toast.makeText(getBaseContext(), getText(R.string.logout_msg), Toast.LENGTH_LONG).show();
@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
         /**
          * Todo 아래의 메소드가 호출되면 MainActivity위로 있는 모든 Fragment가 소멸됨
          */
-        fragmentManager.popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        mFragmentManager.popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
     }
 
     private void showSche(CharSequence title, boolean isMySession) {
@@ -273,7 +273,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == AccoutActivity.ACCOUNT_REQUEST) {
-            if (DeviewSchedApplication.LOGIN_STATE) {
+            if (DeviewSchedApplication.sLoginstate) {
                 mUser = UserProfileProvider.getUserProfile(getBaseContext(), 60);
                 setUserInfo();
                 //이미지를 정상적으로 못불러오는 경우가 생김

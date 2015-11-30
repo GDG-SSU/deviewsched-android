@@ -1,6 +1,7 @@
 package com.gdgssu.android_deviewsched.model;
 
 public class RequestData {
+
     public String token;
     public long timestamp;
     public String nonce;
@@ -12,4 +13,5 @@ public class RequestData {
         this.nonce = nonce;
         this.signature = signature;
     }
+
 }

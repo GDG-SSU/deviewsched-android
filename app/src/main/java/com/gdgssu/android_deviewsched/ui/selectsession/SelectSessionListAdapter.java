@@ -30,7 +30,7 @@ public class SelectSessionListAdapter extends BaseAdapter {
 
     private static final String TAG = makeLogTag("SelectSessionListAdapter");
 
-    public static ArrayList<Session> sessionItems = new ArrayList<>();
+    public static ArrayList<Session> sSessionItems = new ArrayList<>();
 
     private LayoutInflater mInflater;
     private Context mContext;
@@ -46,7 +46,7 @@ public class SelectSessionListAdapter extends BaseAdapter {
             for (int i = 0; i < day.tracks.get(0).sessions.size(); i++) {
                 for (int j = 0; j < day.tracks.size(); j++) {
                     if (day.tracks.get(j).sessions.get(i).is_session) {
-                        sessionItems.add(day.tracks.get(j).sessions.get(i));
+                        sSessionItems.add(day.tracks.get(j).sessions.get(i));
                     }
                 }
             }
@@ -57,12 +57,12 @@ public class SelectSessionListAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return sessionItems.size();
+        return sSessionItems.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return sessionItems.get(position);
+        return sSessionItems.get(position);
     }
 
     @Override
@@ -93,7 +93,7 @@ public class SelectSessionListAdapter extends BaseAdapter {
             selectHolder = (SelectSessionHolder) convertView.getTag();
         }
 
-        Session sessionItem = sessionItems.get(position);
+        Session sessionItem = sSessionItems.get(position);
 
         if (sessionItem.isSelected) {
             convertView.setBackgroundColor(ContextCompat.getColor(mContext, R.color.colorAccent));
@@ -125,7 +125,7 @@ public class SelectSessionListAdapter extends BaseAdapter {
     }
 
     public void setDayItem(Day day) {
-        sessionItems.clear();
+        sSessionItems.clear();
         makeSelectSessionList(day);
     }
 

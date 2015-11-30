@@ -24,24 +24,24 @@ public class SchePagerAdapter extends BaseAdapter {
     private static final String TAG = makeLogTag("SchePagerAdapter");
 
     private LayoutInflater mInflater;
-    private ArrayList<Session> sessionItems;
+    private ArrayList<Session> mSessionItems;
     private Context mContext;
 
     public SchePagerAdapter(Track track, Context context) {
 
-        this.sessionItems = track.sessions;
+        this.mSessionItems = track.sessions;
         this.mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.mContext = context;
     }
 
     @Override
     public int getCount() {
-        return sessionItems.size();
+        return mSessionItems.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return sessionItems.get(position);
+        return mSessionItems.get(position);
     }
 
     @Override
@@ -70,7 +70,7 @@ public class SchePagerAdapter extends BaseAdapter {
             sessionHolder = (SessionViewHolder) convertView.getTag();
         }
 
-        Session sessionItem = sessionItems.get(position);
+        Session sessionItem = mSessionItems.get(position);
         sessionHolder.sessionTime.setText(String.format("%s~%s", sessionItem.starts_at, sessionItem.ends_at));
 
         if (sessionItem.speakers.size() > 1) {

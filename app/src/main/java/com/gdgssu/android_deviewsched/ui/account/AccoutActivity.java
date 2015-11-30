@@ -77,12 +77,12 @@ public class AccoutActivity extends AppCompatActivity implements FacebookCallbac
         fbLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!DeviewSchedApplication.LOGIN_STATE) {
+                if (!DeviewSchedApplication.sLoginstate) {
                     fbLoginButton.registerCallback(mCallbackManager, AccoutActivity.this);
-                } else if (DeviewSchedApplication.LOGIN_STATE) {
+                } else if (DeviewSchedApplication.sLoginstate) {
                     LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
                     prefHelper.setPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);
-                    DeviewSchedApplication.LOGIN_STATE = false;
+                    DeviewSchedApplication.sLoginstate = false;
                     setResult(ACCOUNT_REQUEST);
                 }
             }
@@ -103,7 +103,7 @@ public class AccoutActivity extends AppCompatActivity implements FacebookCallbac
     public void onSuccess(LoginResult loginResult) {
         LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
         prefHelper.setPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, true);
-        DeviewSchedApplication.LOGIN_STATE = true;
+        DeviewSchedApplication.sLoginstate = true;
         setResult(ACCOUNT_REQUEST);
     }
 

@@ -12,13 +12,13 @@ import java.util.List;
 
 public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    List<Object> contents;
+    private List<Object> mContents;
 
     static final int TYPE_HEADER = 0;
     static final int TYPE_CELL = 1;
 
     public TestRecyclerViewAdapter(List<Object> contents) {
-        this.contents = contents;
+        this.mContents = contents;
     }
 
     @Override
@@ -33,7 +33,7 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
 
     @Override
     public int getItemCount() {
-        return contents.size();
+        return mContents.size();
     }
 
     @Override

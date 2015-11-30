@@ -20,9 +20,9 @@ public class SchePagerFragment extends Fragment {
 
     private Track mTrackData;
 
-    private ListView listview;
-    private SchePagerAdapter adapter;
-    private FavoriteSession sessionList;
+    private ListView mListview;
+    private SchePagerAdapter mAdapter;
+    private FavoriteSession mSessionList;
 
     public static SchePagerFragment newInstance(Track track) {
         SchePagerFragment fragment = new SchePagerFragment();
@@ -61,10 +61,10 @@ public class SchePagerFragment extends Fragment {
     }
 
     private void initScheListView(View rootView) {
-        listview = (ListView) rootView.findViewById(R.id.fragment_sche_pager_list);
-        adapter = new SchePagerAdapter(mTrackData, getActivity());
+        mListview = (ListView) rootView.findViewById(R.id.fragment_sche_pager_list);
+        mAdapter = new SchePagerAdapter(mTrackData, getActivity());
 
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (mTrackData.sessions.get(position).is_session) {
@@ -72,6 +72,6 @@ public class SchePagerFragment extends Fragment {
                 }
             }
         });
-        listview.setAdapter(adapter);
+        mListview.setAdapter(mAdapter);
     }
 }
