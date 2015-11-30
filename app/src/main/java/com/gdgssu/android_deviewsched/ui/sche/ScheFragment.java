@@ -98,7 +98,7 @@ public class ScheFragment extends BaseFragment {
     }
 
     private void initFragmentPager(View rootView) {
-        mPager = (ViewPager) rootView.findViewById(R.id.fragment_sche_content_pager);
+        mPager = (ViewPager) rootView.findViewById(R.id.sche_pager_contents);
         mAdapter = new SchePagerFragmentAdapter(getChildFragmentManager(), DeviewSchedApplication.sAllscheItems.days.get(0));
         mPager.setAdapter(mAdapter);
 
@@ -124,7 +124,7 @@ public class ScheFragment extends BaseFragment {
     }
 
     private void initToolbar(View rootView) {
-        Toolbar mToolbar = (Toolbar) rootView.findViewById(R.id.fragment_sche_toolbar);
+        Toolbar mToolbar = (Toolbar) rootView.findViewById(R.id.sche_toolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
 
         ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
@@ -142,10 +142,10 @@ public class ScheFragment extends BaseFragment {
     }
 
     private void initToolbarSpinner(View rootView) {
-        Spinner toolbarSpinner = (Spinner) rootView.findViewById(R.id.fragment_sche_spinner);
+        Spinner toolbarSpinner = (Spinner) rootView.findViewById(R.id.sche_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
-                R.array.days, R.layout.toolbar_spinner_item);
-        adapter.setDropDownViewResource(R.layout.toolbar_spinner_item_dropdown);
+                R.array.days, R.layout.item_toolbar_spinner);
+        adapter.setDropDownViewResource(R.layout.item_toolbar_spinner_dropdown);
         toolbarSpinner.setAdapter(adapter);
         toolbarSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

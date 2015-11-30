@@ -53,7 +53,7 @@ public class SchePagerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_sche_pager, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_schepager, container, false);
 
         initScheListView(rootView);
 
@@ -61,7 +61,7 @@ public class SchePagerFragment extends Fragment {
     }
 
     private void initScheListView(View rootView) {
-        mListview = (ListView) rootView.findViewById(R.id.fragment_sche_pager_list);
+        mListview = (ListView) rootView.findViewById(R.id.schepager_list);
         mAdapter = new SchePagerAdapter(mTrackData, getActivity());
 
         mListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {

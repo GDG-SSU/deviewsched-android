@@ -27,7 +27,7 @@
     </com.github.florent37.materialviewpager.MaterialViewPager>
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/content_pager"
+        android:id="@+id/pager_contents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"

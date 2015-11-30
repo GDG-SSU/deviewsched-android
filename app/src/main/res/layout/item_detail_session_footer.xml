@@ -8,7 +8,7 @@
     android:orientation="horizontal">
 
     <EditText
-        android:id="@+id/item_detail_session_footer_edittext"
+        android:id="@+id/detailsession_edit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
@@ -16,7 +16,7 @@
         android:hint="질문을 남겨주세요" />
 
     <at.markushi.ui.CircleButton
-        android:id="@+id/item_detail_session_footer_sendreply"
+        android:id="@+id/detailsession_button_sendreply"
         android:layout_width="0dp"
         android:layout_height="64dip"
         android:layout_gravity="bottom"

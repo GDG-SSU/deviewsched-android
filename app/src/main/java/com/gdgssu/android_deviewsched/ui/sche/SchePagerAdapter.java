@@ -58,11 +58,11 @@ public class SchePagerAdapter extends BaseAdapter {
 
             sessionHolder = new SessionViewHolder();
 
-            sessionHolder.sessionTime = (TextView) convertView.findViewById(R.id.item_session_sche_sessioninfo_time);
-            sessionHolder.speakerImg = (ImageView) convertView.findViewById(R.id.item_session_sche_sessioninfo_speaker_img);
-            sessionHolder.speakerImgSecond = (ImageView) convertView.findViewById(R.id.item_session_sche_sessioninfo_speaker_img_second);
-            sessionHolder.speakerName = (TextView) convertView.findViewById(R.id.item_session_sche_sessioninfo_speaker_name);
-            sessionHolder.sessionName = (TextView) convertView.findViewById(R.id.item_session_sche_sessioninfo_session_title);
+            sessionHolder.sessionTime = (TextView) convertView.findViewById(R.id.sessionsche_text_time);
+            sessionHolder.speakerImg = (ImageView) convertView.findViewById(R.id.sessionsche_image_speakerphoto);
+            sessionHolder.speakerImgSecond = (ImageView) convertView.findViewById(R.id.sessionsche_image_speakerphoto_second);
+            sessionHolder.speakerName = (TextView) convertView.findViewById(R.id.sessionsche_text_speakername);
+            sessionHolder.sessionName = (TextView) convertView.findViewById(R.id.sessionsche_text_sessionname);
 
             convertView.setTag(sessionHolder);
 

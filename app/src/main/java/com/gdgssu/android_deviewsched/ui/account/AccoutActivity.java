@@ -72,7 +72,7 @@ public class AccoutActivity extends AppCompatActivity implements FacebookCallbac
     }
 
     private void initView() {
-        final LoginButton fbLoginButton = (LoginButton) findViewById(R.id.account_facebooklogin);
+        final LoginButton fbLoginButton = (LoginButton) findViewById(R.id.account_button_facebooklogin);
         fbLoginButton.setReadPermissions("user_friends");
         fbLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,7 +88,7 @@ public class AccoutActivity extends AppCompatActivity implements FacebookCallbac
             }
         });
 
-        OAuthLoginButton naverLoginButton = (OAuthLoginButton) findViewById(R.id.account_naverlogin);
+        OAuthLoginButton naverLoginButton = (OAuthLoginButton) findViewById(R.id.account_button_naverlogin);
         naverLoginButton.setOAuthLoginHandler(mOAuthLoginHandler);
     }
 

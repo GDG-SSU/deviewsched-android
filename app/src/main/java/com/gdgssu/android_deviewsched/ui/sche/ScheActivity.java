@@ -34,14 +34,14 @@ public class ScheActivity extends AppCompatActivity implements BaseFragment.OnFr
 
         mFragmentManager = getSupportFragmentManager();
         mFragmentManager.beginTransaction()
-                .add(R.id.sche_list_container, ScheFragment.newInstance(this.mTitle, this.mIsMySession))
+                .add(R.id.sche_container_list, ScheFragment.newInstance(this.mTitle, this.mIsMySession))
                 .commit();
     }
 
     public void setDetailSessionFragment(Session sessionData) {
         mFragmentManager.beginTransaction()
                 .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out)
-                .replace(R.id.detailsession_container, DetailSessionFragment.newInstance(sessionData))
+                .replace(R.id.sche_container_detailsession, DetailSessionFragment.newInstance(sessionData))
                 .addToBackStack("detailsession")
                 .commit();
     }

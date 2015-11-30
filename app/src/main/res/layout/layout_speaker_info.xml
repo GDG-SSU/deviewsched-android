@@ -2,12 +2,12 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/item_detail_session_header_speakerlayout"
+    android:id="@+id/detailsession_container_speakerinfo"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:id="@+id/speaker_card"
+        android:id="@+id/detailsession_container_speakercard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp">
@@ -31,14 +31,14 @@
                     android:paddingTop="8dp">
 
                     <LinearLayout
-                        android:id="@+id/speaker_upinfo"
+                        android:id="@+id/detailsession_contianer_speakerupinfo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/speaker_name"
+                            android:id="@+id/detailsession_text_speakername"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@android:color/black"
@@ -46,7 +46,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/speaker_company"
+                            android:id="@+id/detailsession_text_speakercompany"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="4dp"
@@ -56,7 +56,7 @@
                     </LinearLayout>
 
                     <ImageView
-                        android:id="@+id/speaker_url"
+                        android:id="@+id/detailsession_image_speakerurl"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -66,7 +66,7 @@
                         android:id="@+id/speaker_intro"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/speaker_upinfo"
+                        android:layout_below="@id/detailsession_contianer_speakerupinfo"
                         android:layout_marginTop="8dp"
                         android:textColor="@android:color/black"
                         android:textSize="12sp" />
@@ -78,7 +78,7 @@
     </RelativeLayout>
 
     <ImageView
-        android:id="@+id/speaker_img"
+        android:id="@+id/detailsession_image_speakerphoto"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"

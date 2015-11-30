@@ -30,7 +30,7 @@
         android:layout_below="@id/select_session_toolbar" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/select_session_done"
+        android:id="@+id/select_session_button_done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

@@ -6,7 +6,7 @@
     tools:context="com.gdgssu.android_deviewsched.ui.splash.SplashActivity">
 
     <ImageView
-        android:id="@+id/deviewlogo"
+        android:id="@+id/splash_image_deviewlogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/deviewlogo_black"

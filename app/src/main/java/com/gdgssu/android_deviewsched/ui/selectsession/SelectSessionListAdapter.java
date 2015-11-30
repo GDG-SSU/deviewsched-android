@@ -80,12 +80,12 @@ public class SelectSessionListAdapter extends BaseAdapter {
 
             selectHolder = new SelectSessionHolder();
 
-            selectHolder.sessionTime = (TextView) convertView.findViewById(R.id.item_select_session_time);
+            selectHolder.sessionTime = (TextView) convertView.findViewById(R.id.selectsession_text_time);
             selectHolder.sessionTrack = (TextView) convertView.findViewById(R.id.item_select_session_track);
-            selectHolder.speakerImg = (ImageView) convertView.findViewById(R.id.item_select_session_speaker_img);
-            selectHolder.speakerImgSecond = (ImageView) convertView.findViewById(R.id.item_select_session_speaker_img_second);
-            selectHolder.speakerName = (TextView) convertView.findViewById(R.id.item_select_session_speaker_name);
-            selectHolder.sessionName = (TextView) convertView.findViewById(R.id.item_select_session_session_title);
+            selectHolder.speakerImg = (ImageView) convertView.findViewById(R.id.selectsession_image_speakerprofile);
+            selectHolder.speakerImgSecond = (ImageView) convertView.findViewById(R.id.selectsession_image_speakerprofile_second);
+            selectHolder.speakerName = (TextView) convertView.findViewById(R.id.sessionsche_text_speakername);
+            selectHolder.sessionName = (TextView) convertView.findViewById(R.id.selectsession_text_sessiontitle);
 
             convertView.setTag(selectHolder);
 

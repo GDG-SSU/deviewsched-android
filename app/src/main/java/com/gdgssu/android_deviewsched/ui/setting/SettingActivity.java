@@ -22,14 +22,14 @@ public class SettingActivity extends AppCompatActivity implements OnSettingFragm
 
     private void setFragment() {
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.setting_contents_container, new PreferenceFragment())
+                .add(R.id.setting_container, new PreferenceFragment())
                 .commit();
     }
 
     @Override
     public void onFragmentChange() {
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.setting_contents_container, new OSSlicensesFragment())
+                .add(R.id.setting_container, new OSSlicensesFragment())
                 .addToBackStack(null)
                 .commit();
 

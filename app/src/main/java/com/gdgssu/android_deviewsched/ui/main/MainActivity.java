@@ -136,9 +136,9 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         setupDrawerContent(navigationView);
 
-        View headerView = navigationView.inflateHeaderView(R.layout.nav_header);
-        mAvatarImage = (ImageView) headerView.findViewById(R.id.profile_image);
-        mNameText = (TextView) headerView.findViewById(R.id.profile_name_text);
+        View headerView = navigationView.inflateHeaderView(R.layout.layout_nav_header);
+        mAvatarImage = (ImageView) headerView.findViewById(R.id.navheader_image_userphoto);
+        mNameText = (TextView) headerView.findViewById(R.id.navheader_text_username);
 
         setUserInfo();
     }

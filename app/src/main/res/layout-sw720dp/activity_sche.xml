@@ -6,13 +6,13 @@
     android:orientation="horizontal">
 
     <FrameLayout
-        android:id="@+id/sche_list_container"
+        android:id="@+id/sche_conatiner_list"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="3" />
 
     <FrameLayout
-        android:id="@+id/detailsession_container"
+        android:id="@+id/sche_container_detailsession"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="6" />

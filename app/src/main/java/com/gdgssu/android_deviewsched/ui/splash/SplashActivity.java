@@ -23,7 +23,7 @@ public class SplashActivity extends AppCompatActivity implements Runnable {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splashlogin);
+        setContentView(R.layout.activity_splash);
 
         Handler handler = new Handler();
         handler.postDelayed(this, 1500);

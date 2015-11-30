@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <android.support.percent.PercentFrameLayout
-        android:id="@+id/setting_contents_container"
+        android:id="@+id/setting_container"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_gravity="center"

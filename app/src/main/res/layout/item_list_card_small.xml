@@ -4,20 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view"
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview_small"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="80dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
         android:layout_marginBottom="@dimen/cardMarginVertical"
         android:layout_marginLeft="@dimen/cardMarginHorizontal"
         android:layout_marginRight="@dimen/cardMarginHorizontal"
         android:layout_marginTop="@dimen/cardMarginVertical"
-        app:cardCornerRadius="2dp"
-        app:cardElevation="2dp"
         app:cardPreventCornerOverlap="false"
-        app:contentPadding="0dp">
-
-    </android.support.v7.widget.CardView>
-
+        app:contentPadding="0dp"></android.support.v7.widget.CardView>
 </FrameLayout>

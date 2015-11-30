@@ -2,7 +2,6 @@ package com.gdgssu.android_deviewsched.ui.selectsession;
 
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -42,7 +41,7 @@ public class SelectSessionActivity extends AppCompatActivity implements AdapterV
     private void initView() {
         initToolbar();
         initListView();
-        FloatingActionButton doneButton = (FloatingActionButton) findViewById(R.id.select_session_done);
+        FloatingActionButton doneButton = (FloatingActionButton) findViewById(R.id.select_session_button_done);
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,8 +89,8 @@ public class SelectSessionActivity extends AppCompatActivity implements AdapterV
     private void initToolbarSpinner() {
         Spinner toolbarSpinner = (Spinner) findViewById(R.id.select_session_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getBaseContext(),
-                R.array.days, R.layout.toolbar_spinner_item);
-        adapter.setDropDownViewResource(R.layout.toolbar_spinner_item_dropdown);
+                R.array.days, R.layout.item_toolbar_spinner);
+        adapter.setDropDownViewResource(R.layout.item_toolbar_spinner_dropdown);
         toolbarSpinner.setAdapter(adapter);
         toolbarSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

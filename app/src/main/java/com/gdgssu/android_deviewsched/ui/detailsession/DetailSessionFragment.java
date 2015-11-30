@@ -90,10 +90,10 @@ public class DetailSessionFragment extends Fragment {
 
     private void setSpeakerInfo(final int index) {
         RelativeLayout speakerInfoLayout = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.layout_speaker_info, null, false);
-        ImageView speakerPicture = (ImageView) speakerInfoLayout.findViewById(R.id.speaker_img);
-        TextView speakerName = (TextView) speakerInfoLayout.findViewById(R.id.speaker_name);
-        TextView speakerOrg = (TextView) speakerInfoLayout.findViewById(R.id.speaker_company);
-        ImageView speakerUrl = (ImageView) speakerInfoLayout.findViewById(R.id.speaker_url);
+        ImageView speakerPicture = (ImageView) speakerInfoLayout.findViewById(R.id.detailsession_image_speakerphoto);
+        TextView speakerName = (TextView) speakerInfoLayout.findViewById(R.id.detailsession_text_speakername);
+        TextView speakerOrg = (TextView) speakerInfoLayout.findViewById(R.id.detailsession_text_speakercompany);
+        ImageView speakerUrl = (ImageView) speakerInfoLayout.findViewById(R.id.detailsession_image_speakerurl);
         TextView speakerIntro = (TextView) speakerInfoLayout.findViewById(R.id.speaker_intro);
 
         Glide.with(getActivity())
@@ -134,10 +134,10 @@ public class DetailSessionFragment extends Fragment {
 
         initToolbar(rootView);
 
-        mSessionTitle = (TextView) rootView.findViewById(R.id.detailsession_title);
+        mSessionTitle = (TextView) rootView.findViewById(R.id.detailsession_text_title);
         mSessionDesc = (TextView) rootView.findViewById(R.id.detailsession_sessioninfo);
-        mSpeakerLayout = (LinearLayout) rootView.findViewById(R.id.detailsession_speaker_basket);
-        ImageView backarrowButton = (ImageView) rootView.findViewById(R.id.detailsession_backbutton);
+        mSpeakerLayout = (LinearLayout) rootView.findViewById(R.id.detailsession_container_speaker);
+        ImageView backarrowButton = (ImageView) rootView.findViewById(R.id.detailsession_button_back);
         backarrowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -145,7 +145,7 @@ public class DetailSessionFragment extends Fragment {
             }
         });
 
-        ImageView shareButton = (ImageView) rootView.findViewById(R.id.detailsession_share);
+        ImageView shareButton = (ImageView) rootView.findViewById(R.id.detailsession_image_share);
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -156,7 +156,7 @@ public class DetailSessionFragment extends Fragment {
 
         setData();
 
-        ImageView backdropImg = (ImageView) rootView.findViewById(R.id.detailsession_backdrop);
+        ImageView backdropImg = (ImageView) rootView.findViewById(R.id.detailsession_image_backdrop);
         Glide.with(getActivity())
                 .load("http://insanehong.kr/post/deview2013/@img/keynote.jpg")
                 .centerCrop()
