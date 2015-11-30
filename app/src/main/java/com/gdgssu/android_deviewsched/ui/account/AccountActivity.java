@@ -22,9 +22,9 @@ import static com.gdgssu.android_deviewsched.util.LogUtils.LOGE;
 import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-public class AccoutActivity extends AppCompatActivity implements FacebookCallback<LoginResult> {
+public class AccountActivity extends AppCompatActivity implements FacebookCallback<LoginResult> {
 
-    private static final String TAG = makeLogTag("AccoutActivity");
+    private static final String TAG = makeLogTag("AccountActivity");
 
     public static final int ACCOUNT_REQUEST = 100;
 
@@ -78,7 +78,7 @@ public class AccoutActivity extends AppCompatActivity implements FacebookCallbac
             @Override
             public void onClick(View v) {
                 if (!DeviewSchedApplication.sLoginstate) {
-                    fbLoginButton.registerCallback(mCallbackManager, AccoutActivity.this);
+                    fbLoginButton.registerCallback(mCallbackManager, AccountActivity.this);
                 } else if (DeviewSchedApplication.sLoginstate) {
                     LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
                     prefHelper.setPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);

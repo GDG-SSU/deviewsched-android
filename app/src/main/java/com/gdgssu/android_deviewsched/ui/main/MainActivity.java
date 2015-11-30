@@ -29,7 +29,7 @@ import com.gdgssu.android_deviewsched.helper.ProfileChangedListener;
 import com.gdgssu.android_deviewsched.helper.UserProfileProvider;
 import com.gdgssu.android_deviewsched.model.User;
 import com.gdgssu.android_deviewsched.ui.BaseFragment;
-import com.gdgssu.android_deviewsched.ui.account.AccoutActivity;
+import com.gdgssu.android_deviewsched.ui.account.AccountActivity;
 import com.gdgssu.android_deviewsched.ui.location.LocationActivity;
 import com.gdgssu.android_deviewsched.ui.sche.ScheActivity;
 import com.gdgssu.android_deviewsched.ui.sche.ScheFragment;
@@ -234,7 +234,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
     }
 
     private void showAccount() {
-        startActivityForResult(new Intent(getBaseContext(), AccoutActivity.class), AccoutActivity.ACCOUNT_REQUEST);
+        startActivityForResult(new Intent(getBaseContext(), AccountActivity.class), AccountActivity.ACCOUNT_REQUEST);
     }
 
     private void showSetting() {
@@ -272,7 +272,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == AccoutActivity.ACCOUNT_REQUEST) {
+        if (requestCode == AccountActivity.ACCOUNT_REQUEST) {
             if (DeviewSchedApplication.sLoginstate) {
                 mUser = UserProfileProvider.getUserProfile(getBaseContext(), 60);
                 setUserInfo();
