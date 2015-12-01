@@ -34,6 +34,8 @@ public class ScheFragment extends BaseFragment {
     public static final int SELECT_SESSION = 100;
 
     private ViewPager mPager;
+    private Spinner mToolbarSpinner;
+
     private CharSequence mTitle;
     private boolean mIsMySession = false;
 
@@ -90,9 +92,9 @@ public class ScheFragment extends BaseFragment {
     private void setMySessionView(View rootView) {
         RelativeLayout emptyLayout = (RelativeLayout) rootView.findViewById(R.id.fragment_sche_empty_container);
         if (mIsMySession) {
-            emptyLayout.setVisibility(View.VISIBLE);
-            if (DeviewSchedApplication.sFavorSessionState) {
-                emptyLayout.setVisibility(View.GONE);
+            if (!DeviewSchedApplication.sFavorSessionState) {
+                emptyLayout.setVisibility(View.VISIBLE);
+                mToolbarSpinner.setVisibility(View.GONE);
             }
         }
     }
@@ -142,12 +144,12 @@ public class ScheFragment extends BaseFragment {
     }
 
     private void initToolbarSpinner(View rootView) {
-        Spinner toolbarSpinner = (Spinner) rootView.findViewById(R.id.sche_spinner);
+        mToolbarSpinner = (Spinner) rootView.findViewById(R.id.sche_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.days, R.layout.item_toolbar_spinner);
         adapter.setDropDownViewResource(R.layout.item_toolbar_spinner_dropdown);
-        toolbarSpinner.setAdapter(adapter);
-        toolbarSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        mToolbarSpinner.setAdapter(adapter);
+        mToolbarSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (mAdapter != null) {
