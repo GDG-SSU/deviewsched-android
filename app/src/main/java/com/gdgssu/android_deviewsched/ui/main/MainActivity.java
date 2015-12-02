@@ -29,7 +29,8 @@ import com.gdgssu.android_deviewsched.helper.ProfileChangedListener;
 import com.gdgssu.android_deviewsched.helper.UserProfileProvider;
 import com.gdgssu.android_deviewsched.model.User;
 import com.gdgssu.android_deviewsched.ui.BaseFragment;
-import com.gdgssu.android_deviewsched.ui.account.AccountActivity;
+
+import com.gdgssu.android_deviewsched.ui.account.AccountDialogFragment;
 import com.gdgssu.android_deviewsched.ui.location.LocationActivity;
 import com.gdgssu.android_deviewsched.ui.sche.ScheActivity;
 import com.gdgssu.android_deviewsched.ui.sche.ScheFragment;
@@ -234,7 +235,9 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
     }
 
     private void showAccount() {
-        startActivityForResult(new Intent(getBaseContext(), AccountActivity.class), AccountActivity.ACCOUNT_REQUEST);
+        //startActivityForResult(new Intent(getBaseContext(), AccoutActivity.class), AccoutActivity.ACCOUNT_REQUEST);
+        AccountDialogFragment fragment = new AccountDialogFragment();
+        fragment.show(getSupportFragmentManager(), "Account");
     }
 
     private void showSetting() {
@@ -272,12 +275,10 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == AccountActivity.ACCOUNT_REQUEST) {
-            if (DeviewSchedApplication.sLoginstate) {
-                mUser = UserProfileProvider.getUserProfile(getBaseContext(), 60);
-                setUserInfo();
-                //이미지를 정상적으로 못불러오는 경우가 생김
-            }
+        if (DeviewSchedApplication.sLoginstate) {
+            mUser = UserProfileProvider.getUserProfile(getBaseContext(), 60);
+            setUserInfo();
+            //이미지를 정상적으로 못불러오는 경우가 생김
         }
     }
 

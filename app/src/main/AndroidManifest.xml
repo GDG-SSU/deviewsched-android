@@ -40,8 +40,6 @@
             android:name=".ui.selectsession.SelectSessionActivity"
             android:label="세션선택" />
 
-        <activity android:name=".ui.account.AccountActivity" />
-
         <activity
             android:name=".ui.sche.ScheActivity"/>
 
