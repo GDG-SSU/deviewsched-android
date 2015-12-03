@@ -1,5 +1,6 @@
 package com.gdgssu.android_deviewsched.ui.main;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,8 +21,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.Profile;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
@@ -41,18 +46,19 @@ import com.github.florent37.materialviewpager.header.HeaderDesign;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-public class MainActivity extends AppCompatActivity implements BaseFragment.OnFragmentInteractionListener, ProfileChangedListener {
+public class MainActivity extends AppCompatActivity implements BaseFragment.OnFragmentInteractionListener {
 
     private static final String TAG = makeLogTag("MainActivity");
 
     private MaterialViewPager mViewPager;
     private Toolbar mToolbar;
-    private ImageView mAvatarImage;
-    private TextView mNameText;
+    private static ImageView sAvatarImage;
+    private static TextView sNameText;
+    private static Context sContext;
 
     private FragmentManager mFragmentManager;
 
-    private User mUser = new User();
+    private static User mUser = new User();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
         if (getIntent() != null) {
             mUser = (User) getIntent().getSerializableExtra("UserInfo");
         }
-
+        sContext = getBaseContext();
         mFragmentManager = getSupportFragmentManager();
 
         initMaterialViewPager();
@@ -138,26 +144,28 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
         setupDrawerContent(navigationView);
 
         View headerView = navigationView.inflateHeaderView(R.layout.layout_nav_header);
-        mAvatarImage = (ImageView) headerView.findViewById(R.id.navheader_image_userphoto);
-        mNameText = (TextView) headerView.findViewById(R.id.navheader_text_username);
+        sAvatarImage = (ImageView) headerView.findViewById(R.id.navheader_image_userphoto);
+        sNameText = (TextView) headerView.findViewById(R.id.navheader_text_username);
 
         setUserInfo();
     }
 
-    private void setUserInfo() {
-        if (DeviewSchedApplication.sLoginstate) {
-            Glide.with(this)
-                    .load(mUser.picture)
-                    .transform(new GlideCircleTransform(this))
-                    .into(mAvatarImage);
+    public static void setUserInfo() {
+        mUser = UserProfileProvider.getUserProfile(sContext, 60);
 
-            mNameText.setText(mUser.name);
+        if (DeviewSchedApplication.sLoginstate) {
+            Glide.with(sContext)
+                    .load(mUser.picture)
+                    .transform(new GlideCircleTransform(sContext))
+                    .into(sAvatarImage);
+
+            sNameText.setText(mUser.name);
         }
     }
 
     private void resetUserInfo() {
-        mAvatarImage.setImageResource(R.drawable.person_image_empty);
-        mNameText.setText(getText(R.string.please_login));
+        sAvatarImage.setImageResource(R.drawable.person_image_empty);
+        sNameText.setText(getText(R.string.please_login));
 
         LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
         prefHelper.setPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);
@@ -235,7 +243,6 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
     }
 
     private void showAccount() {
-        //startActivityForResult(new Intent(getBaseContext(), AccoutActivity.class), AccoutActivity.ACCOUNT_REQUEST);
         AccountDialogFragment fragment = new AccountDialogFragment();
         fragment.show(getSupportFragmentManager(), "Account");
     }
@@ -276,17 +283,15 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
         super.onActivityResult(requestCode, resultCode, data);
 
         if (DeviewSchedApplication.sLoginstate) {
-            mUser = UserProfileProvider.getUserProfile(getBaseContext(), 60);
             setUserInfo();
-            //이미지를 정상적으로 못불러오는 경우가 생김
         }
     }
 
-    @Override
-    public void updateUserProfile(Uri imageUri, String name) {
-        this.mUser.picture = imageUri.toString();
-        this.mUser.name = name;
-
-        setUserInfo();
-    }
+//    @Override
+//    public void updateUserProfile(Uri imageUri, String name) {
+//        this.mUser.picture = imageUri.toString();
+//        this.mUser.name = name;
+//
+//        setUserInfo();
+//    }
 }
