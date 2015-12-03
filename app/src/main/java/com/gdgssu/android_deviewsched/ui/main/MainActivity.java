@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -12,7 +13,6 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.design.widget.NavigationView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
 
     private MaterialViewPager mViewPager;
     private Toolbar mToolbar;
+    private NavigationView mNavigationView;
     private static ImageView sAvatarImage;
     private static TextView sNameText;
     private static Context sContext;
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
 
         initMaterialViewPager();
         initToolbar();
-        initNavigationView();
+        initmNavigationView();
     }
 
     private void initToolbar() {
@@ -129,20 +130,26 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
         mViewPager.getPagerTitleStrip().setViewPager(mViewPager.getViewPager());
     }
 
-    private void initNavigationView() {
+    private void initmNavigationView() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        setupDrawerContent(navigationView);
+        mNavigationView = (NavigationView) findViewById(R.id.nav_view);
+        setupDrawerContent(mNavigationView);
 
-        View headerView = navigationView.inflateHeaderView(R.layout.layout_nav_header);
+        View headerView = mNavigationView.inflateHeaderView(R.layout.layout_nav_header);
         sAvatarImage = (ImageView) headerView.findViewById(R.id.navheader_image_userphoto);
         sNameText = (TextView) headerView.findViewById(R.id.navheader_text_username);
 
         setUserInfo();
+
+        if (DeviewSchedApplication.sLoginstate) {
+            mNavigationView.getMenu().findItem(R.id.nav_account).setTitle(R.string.account_logout);
+        } else {
+            mNavigationView.getMenu().findItem(R.id.nav_account).setTitle(R.string.account_login);
+        }
     }
 
     public static void setUserInfo() {
@@ -165,6 +172,8 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
         LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
         prefHelper.setPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);
         DeviewSchedApplication.sLoginstate = false;
+
+        mNavigationView.getMenu().findItem(R.id.nav_account).setTitle(R.string.account_login);
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
@@ -279,6 +288,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
 
         if (DeviewSchedApplication.sLoginstate) {
             setUserInfo();
+            mNavigationView.getMenu().findItem(R.id.nav_account).setTitle(R.string.account_logout);
         }
     }
 

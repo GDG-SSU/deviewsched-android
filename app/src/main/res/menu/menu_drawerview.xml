@@ -35,7 +35,7 @@
                 android:id="@+id/nav_account"
                 android:checked="true"
                 android:icon="@drawable/ic_account_box_24px"
-                android:title="@string/account" />
+                android:title="@string/account_login" />
             <item
                 android:id="@+id/nav_setting"
                 android:checked="true"
