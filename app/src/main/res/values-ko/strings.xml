@@ -15,7 +15,8 @@
     <string name="find_friends">친구 찾기</string>
     <string name="deview_story">#Deview2016</string>
     <string name="location">오시는 길</string>
-    <string name="account">로그인/로그아웃</string>
+    <string name="account_login">로그인</string>
+    <string name="account_logout">로그아웃</string>
     <string name="setting">설정</string>
     <string name="nav_category2">계정 및 설정</string>
     <string name="please_login">Deview2016에 로그인해주세요</string>

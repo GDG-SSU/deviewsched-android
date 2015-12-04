@@ -2,6 +2,7 @@ package com.gdgssu.android_deviewsched;
 
 import android.app.Application;
 import android.content.Context;
+import android.util.Log;
 
 import com.android.volley.RequestQueue;
 import com.facebook.CallbackManager;
@@ -29,8 +30,6 @@ public class DeviewSchedApplication extends Application {
     public static RequestQueue sDeviewRequestQueue;
     private ProfileTracker mProfileTracker;
 
-    private MainActivity mActivity = new MainActivity();
-
     public static AllScheItems sAllscheItems = new AllScheItems();
 
     @Override
@@ -44,6 +43,7 @@ public class DeviewSchedApplication extends Application {
         mProfileTracker = new ProfileTracker() {
             @Override
             protected void onCurrentProfileChanged(Profile oldProfile, Profile currentProfile) {
+                Log.d(TAG, "onCurrentProfileChanged");
 //                mActivity.updateUserProfile(currentProfile.getProfilePictureUri(100, 100), currentProfile.getName());
             }
         };
