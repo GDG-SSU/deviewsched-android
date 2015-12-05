@@ -28,7 +28,6 @@ public class DeviewSchedApplication extends Application {
 
     private CallbackManager mCallbackManager;
     public static RequestQueue sDeviewRequestQueue;
-    private ProfileTracker mProfileTracker;
 
     public static AllScheItems sAllscheItems = new AllScheItems();
 
@@ -40,13 +39,6 @@ public class DeviewSchedApplication extends Application {
 
         FacebookSdk.sdkInitialize(mContext);
         mCallbackManager = CallbackManager.Factory.create();
-        mProfileTracker = new ProfileTracker() {
-            @Override
-            protected void onCurrentProfileChanged(Profile oldProfile, Profile currentProfile) {
-                Log.d(TAG, "onCurrentProfileChanged");
-//                mActivity.updateUserProfile(currentProfile.getProfilePictureUri(100, 100), currentProfile.getName());
-            }
-        };
 
         setLoginState();
         setFavorSessionState();

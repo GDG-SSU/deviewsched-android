@@ -20,6 +20,7 @@ import com.facebook.login.widget.LoginButton;
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
+import com.gdgssu.android_deviewsched.helper.ProfileChangedListener;
 import com.gdgssu.android_deviewsched.ui.main.MainActivity;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
@@ -28,21 +29,23 @@ public class AccountDialogFragment extends DialogFragment {
 
     private static final String TAG = makeLogTag("AccountDialogFragment");
 
-    public static final int ACCOUNT_REQUEST = 100;
-
     private CallbackManager mCallbackManager;
     private LoginButton loginButton;
     private ProfileTracker mProfileTracker;
 
+    private ProfileChangedListener mListener;
+
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        mListener = (MainActivity) getActivity();
 
         mCallbackManager = CallbackManager.Factory.create();
         mProfileTracker = new ProfileTracker() {
             @Override
             protected void onCurrentProfileChanged(Profile oldProfile, Profile currentProfile) {
-                MainActivity.setUserInfo();
+                mListener.updateUserProfile();
             }
         };
     }

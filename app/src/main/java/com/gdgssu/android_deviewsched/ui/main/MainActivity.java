@@ -1,6 +1,5 @@
 package com.gdgssu.android_deviewsched.ui.main;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,15 +20,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
-import com.facebook.Profile;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginManager;
-import com.facebook.login.LoginResult;
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
+import com.gdgssu.android_deviewsched.helper.ProfileChangedListener;
 import com.gdgssu.android_deviewsched.helper.UserProfileProvider;
 import com.gdgssu.android_deviewsched.model.User;
 import com.gdgssu.android_deviewsched.ui.BaseFragment;
@@ -43,18 +39,18 @@ import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
 import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.github.florent37.materialviewpager.header.HeaderDesign;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-public class MainActivity extends AppCompatActivity implements BaseFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements BaseFragment.OnFragmentInteractionListener, ProfileChangedListener {
 
     private static final String TAG = makeLogTag("MainActivity");
 
     private MaterialViewPager mViewPager;
     private Toolbar mToolbar;
     private NavigationView mNavigationView;
-    private static ImageView sAvatarImage;
-    private static TextView sNameText;
-    private static Context sContext;
+    private ImageView mAvatarImage;
+    private TextView mNameText;
 
     private FragmentManager mFragmentManager;
 
@@ -68,12 +64,12 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
         if (getIntent() != null) {
             mUser = (User) getIntent().getSerializableExtra("UserInfo");
         }
-        sContext = getBaseContext();
+
         mFragmentManager = getSupportFragmentManager();
 
         initMaterialViewPager();
         initToolbar();
-        initmNavigationView();
+        initNavigationView();
     }
 
     private void initToolbar() {
@@ -134,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
         mViewPager.getPagerTitleStrip().setViewPager(mViewPager.getViewPager());
     }
 
-    private void initmNavigationView() {
+    private void initNavigationView() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -144,40 +140,37 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
         setupDrawerContent(mNavigationView);
 
         View headerView = mNavigationView.inflateHeaderView(R.layout.layout_nav_header);
-        sAvatarImage = (ImageView) headerView.findViewById(R.id.navheader_image_userphoto);
-        sNameText = (TextView) headerView.findViewById(R.id.navheader_text_username);
+        mAvatarImage = (ImageView) headerView.findViewById(R.id.navheader_image_userphoto);
+        mNameText = (TextView) headerView.findViewById(R.id.navheader_text_username);
 
         setUserInfo();
 
         if (DeviewSchedApplication.sLoginstate) {
             mNavigationView.getMenu().findItem(R.id.nav_account).setTitle(R.string.account_logout);
-        } else {
-            mNavigationView.getMenu().findItem(R.id.nav_account).setTitle(R.string.account_login);
         }
     }
 
-    public static void setUserInfo() {
-        mUser = UserProfileProvider.getUserProfile(sContext, 60);
+    public void setUserInfo() {
+        mUser = UserProfileProvider.getUserProfile(getBaseContext(), 60);
 
         if (DeviewSchedApplication.sLoginstate) {
-            Glide.with(sContext)
+            Glide.with(getBaseContext())
                     .load(mUser.picture)
-                    .transform(new GlideCircleTransform(sContext))
-                    .into(sAvatarImage);
+                    .transform(new GlideCircleTransform(getBaseContext()))
+                    .into(mAvatarImage);
 
-            sNameText.setText(mUser.name);
+            mNameText.setText(mUser.name);
         }
     }
 
     private void resetUserInfo() {
-        sAvatarImage.setImageResource(R.drawable.person_image_empty);
-        sNameText.setText(getText(R.string.please_login));
+        mAvatarImage.setImageResource(R.drawable.person_image_empty);
+        mNameText.setText(getText(R.string.please_login));
+        mNavigationView.getMenu().findItem(R.id.nav_account).setTitle(R.string.account_login);
 
         LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
         prefHelper.setPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);
         DeviewSchedApplication.sLoginstate = false;
-
-        mNavigationView.getMenu().findItem(R.id.nav_account).setTitle(R.string.account_login);
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
@@ -209,6 +202,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
                         if (DeviewSchedApplication.sLoginstate) {
                             LoginManager.getInstance().logOut();
                             resetUserInfo();
+
                             Toast.makeText(getBaseContext(), getText(R.string.logout_msg), Toast.LENGTH_LONG).show();
 
                             return true;
@@ -272,10 +266,6 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
     }
 
     @Override
-    public void onFragmentInteraction(Uri uri) {
-    }
-
-    @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -287,20 +277,14 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
+    public void updateUserProfile() {
         if (DeviewSchedApplication.sLoginstate) {
             setUserInfo();
             mNavigationView.getMenu().findItem(R.id.nav_account).setTitle(R.string.account_logout);
         }
     }
 
-//    @Override
-//    public void updateUserProfile(Uri imageUri, String name) {
-//        this.mUser.picture = imageUri.toString();
-//        this.mUser.name = name;
-//
-//        setUserInfo();
-//    }
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+    }
 }
