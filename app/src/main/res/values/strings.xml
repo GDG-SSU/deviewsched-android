@@ -14,7 +14,8 @@
     <string name="find_friends">Find My Friends</string>
     <string name="deview_story">#Deview2016</string>
     <string name="location">Location</string>
-    <string name="account">Login/Logout</string>
+    <string name="account_login">Login</string>
+    <string name="account_logout">Logout</string>
     <string name="setting">Settings</string>
     <string name="nav_category2">Account &amp; Setting</string>
     <string name="please_login">Please Login Deview2016</string>

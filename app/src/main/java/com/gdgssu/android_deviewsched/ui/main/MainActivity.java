@@ -3,6 +3,7 @@ package com.gdgssu.android_deviewsched.ui.main;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -11,7 +12,6 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.design.widget.NavigationView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,7 +29,8 @@ import com.gdgssu.android_deviewsched.helper.ProfileChangedListener;
 import com.gdgssu.android_deviewsched.helper.UserProfileProvider;
 import com.gdgssu.android_deviewsched.model.User;
 import com.gdgssu.android_deviewsched.ui.BaseFragment;
-import com.gdgssu.android_deviewsched.ui.account.AccountActivity;
+
+import com.gdgssu.android_deviewsched.ui.account.AccountDialogFragment;
 import com.gdgssu.android_deviewsched.ui.location.LocationActivity;
 import com.gdgssu.android_deviewsched.ui.sche.ScheActivity;
 import com.gdgssu.android_deviewsched.ui.sche.ScheFragment;
@@ -38,6 +39,7 @@ import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
 import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.github.florent37.materialviewpager.header.HeaderDesign;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
 public class MainActivity extends AppCompatActivity implements BaseFragment.OnFragmentInteractionListener, ProfileChangedListener {
@@ -46,12 +48,13 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
 
     private MaterialViewPager mViewPager;
     private Toolbar mToolbar;
+    private NavigationView mNavigationView;
     private ImageView mAvatarImage;
     private TextView mNameText;
 
     private FragmentManager mFragmentManager;
 
-    private User mUser = new User();
+    private static User mUser = new User();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,21 +136,27 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        setupDrawerContent(navigationView);
+        mNavigationView = (NavigationView) findViewById(R.id.nav_view);
+        setupDrawerContent(mNavigationView);
 
-        View headerView = navigationView.inflateHeaderView(R.layout.layout_nav_header);
+        View headerView = mNavigationView.inflateHeaderView(R.layout.layout_nav_header);
         mAvatarImage = (ImageView) headerView.findViewById(R.id.navheader_image_userphoto);
         mNameText = (TextView) headerView.findViewById(R.id.navheader_text_username);
 
         setUserInfo();
+
+        if (DeviewSchedApplication.sLoginstate) {
+            mNavigationView.getMenu().findItem(R.id.nav_account).setTitle(R.string.account_logout);
+        }
     }
 
-    private void setUserInfo() {
+    public void setUserInfo() {
+        mUser = UserProfileProvider.getUserProfile(getBaseContext(), 60);
+
         if (DeviewSchedApplication.sLoginstate) {
-            Glide.with(this)
+            Glide.with(getBaseContext())
                     .load(mUser.picture)
-                    .transform(new GlideCircleTransform(this))
+                    .transform(new GlideCircleTransform(getBaseContext()))
                     .into(mAvatarImage);
 
             mNameText.setText(mUser.name);
@@ -157,6 +166,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
     private void resetUserInfo() {
         mAvatarImage.setImageResource(R.drawable.person_image_empty);
         mNameText.setText(getText(R.string.please_login));
+        mNavigationView.getMenu().findItem(R.id.nav_account).setTitle(R.string.account_login);
 
         LoginPreferenceHelper prefHelper = new LoginPreferenceHelper(getBaseContext());
         prefHelper.setPrefLoginValue(LoginPreferenceHelper.PREF_LOGIN_STATE, false);
@@ -192,6 +202,7 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
                         if (DeviewSchedApplication.sLoginstate) {
                             LoginManager.getInstance().logOut();
                             resetUserInfo();
+
                             Toast.makeText(getBaseContext(), getText(R.string.logout_msg), Toast.LENGTH_LONG).show();
 
                             return true;
@@ -234,7 +245,8 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
     }
 
     private void showAccount() {
-        startActivityForResult(new Intent(getBaseContext(), AccountActivity.class), AccountActivity.ACCOUNT_REQUEST);
+        AccountDialogFragment fragment = new AccountDialogFragment();
+        fragment.show(getSupportFragmentManager(), "Account");
     }
 
     private void showSetting() {
@@ -254,10 +266,6 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
     }
 
     @Override
-    public void onFragmentInteraction(Uri uri) {
-    }
-
-    @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -269,23 +277,14 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnFr
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == AccountActivity.ACCOUNT_REQUEST) {
-            if (DeviewSchedApplication.sLoginstate) {
-                mUser = UserProfileProvider.getUserProfile(getBaseContext(), 60);
-                setUserInfo();
-                //이미지를 정상적으로 못불러오는 경우가 생김
-            }
+    public void updateUserProfile() {
+        if (DeviewSchedApplication.sLoginstate) {
+            setUserInfo();
+            mNavigationView.getMenu().findItem(R.id.nav_account).setTitle(R.string.account_logout);
         }
     }
 
     @Override
-    public void updateUserProfile(Uri imageUri, String name) {
-        this.mUser.picture = imageUri.toString();
-        this.mUser.name = name;
-
-        setUserInfo();
+    public void onFragmentInteraction(Uri uri) {
     }
 }
