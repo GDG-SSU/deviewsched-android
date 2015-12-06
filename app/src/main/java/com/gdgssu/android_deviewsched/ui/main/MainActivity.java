@@ -11,7 +11,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,11 +24,9 @@ import com.facebook.login.LoginManager;
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
-import com.gdgssu.android_deviewsched.helper.ProfileChangedListener;
 import com.gdgssu.android_deviewsched.helper.UserProfileProvider;
 import com.gdgssu.android_deviewsched.model.User;
 import com.gdgssu.android_deviewsched.ui.BaseActivity;
-import com.gdgssu.android_deviewsched.ui.BaseFragment;
 
 import com.gdgssu.android_deviewsched.ui.account.AccountDialogFragment;
 import com.gdgssu.android_deviewsched.ui.location.LocationActivity;
@@ -42,7 +39,7 @@ import com.github.florent37.materialviewpager.header.HeaderDesign;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-public class MainActivity extends BaseActivity implements BaseFragment.OnFragmentInteractionListener {
+public class MainActivity extends BaseActivity {
 
     private static final String TAG = makeLogTag("MainActivity");
 

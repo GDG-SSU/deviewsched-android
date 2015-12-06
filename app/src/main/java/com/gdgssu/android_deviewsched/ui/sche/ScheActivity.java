@@ -14,7 +14,7 @@ import com.gdgssu.android_deviewsched.ui.detailsession.DetailSessionFragment;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-public class ScheActivity extends BaseActivity implements BaseFragment.OnFragmentInteractionListener {
+public class ScheActivity extends BaseActivity {
 
     private static final String TAG = makeLogTag("ScheActivity");
     private static final String KEY_TITLE = "title";
