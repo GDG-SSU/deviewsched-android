@@ -28,6 +28,7 @@ import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
 import com.gdgssu.android_deviewsched.helper.ProfileChangedListener;
 import com.gdgssu.android_deviewsched.helper.UserProfileProvider;
 import com.gdgssu.android_deviewsched.model.User;
+import com.gdgssu.android_deviewsched.ui.BaseActivity;
 import com.gdgssu.android_deviewsched.ui.BaseFragment;
 
 import com.gdgssu.android_deviewsched.ui.account.AccountDialogFragment;
@@ -39,10 +40,9 @@ import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
 import com.github.florent37.materialviewpager.MaterialViewPager;
 import com.github.florent37.materialviewpager.header.HeaderDesign;
 
-import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-public class MainActivity extends AppCompatActivity implements BaseFragment.OnFragmentInteractionListener, ProfileChangedListener {
+public class MainActivity extends BaseActivity implements BaseFragment.OnFragmentInteractionListener {
 
     private static final String TAG = makeLogTag("MainActivity");
 
