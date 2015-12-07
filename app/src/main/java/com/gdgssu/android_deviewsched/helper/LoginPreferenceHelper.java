@@ -27,6 +27,11 @@ public class LoginPreferenceHelper {
 
         editor.putBoolean(key, value);
         editor.apply();
+
+        if (!value) {
+            FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(mContext);
+            prefHelper.setFavorSessionState(FavoritePreferenceHelper.PREF_FAVOR_STATE, false);
+        }
     }
 
     public boolean getPrefLoginValue(String key, boolean defaultValue) {
