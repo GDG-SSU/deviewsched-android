@@ -59,7 +59,7 @@ public class ScheActivity extends BaseActivity {
 
     public void showLoginDialog() {
         AccountDialogFragment dialogFragment = new AccountDialogFragment();
-        dialogFragment.show(mFragmentManager, "Account");
+        dialogFragment.show(mFragmentManager, "ScheActivity");
     }
 
     @Override

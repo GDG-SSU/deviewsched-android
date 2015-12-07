@@ -243,7 +243,7 @@ public class MainActivity extends BaseActivity {
 
     private void showAccount() {
         AccountDialogFragment fragment = new AccountDialogFragment();
-        fragment.show(getSupportFragmentManager(), "Account");
+        fragment.show(getSupportFragmentManager(), "MainActivity");
     }
 
     private void showSetting() {
