@@ -3,7 +3,7 @@ package com.gdgssu.android_deviewsched.helper;
 import android.util.Base64;
 
 import com.gdgssu.android_deviewsched.model.RequestData;
-import com.gdgssu.android_deviewsched.util.DeviewSchedConfig;
+import com.gdgssu.android_deviewsched.DeviewSchedConfig;
 import com.google.gson.Gson;
 
 import java.io.UnsupportedEncodingException;

@@ -58,16 +58,16 @@ public class FavoritePreferenceHelper {
         setFavorSessionState(PREF_FAVOR_STATE, true);
     }
 
-    public List<Integer> getFavorSessionValue(String key) {
+    public ArrayList<Integer> getFavorSessionValue(String key) {
 
-        List<Integer> favorSessionList;
+        ArrayList<Integer> favorSessionList = new ArrayList<>();
         SharedPreferences pref = mContext.getSharedPreferences(PREF_NAME, Activity.MODE_PRIVATE);
 
         if (pref.contains(PREF_FAVOR_VALUE)) {
             String favorSessionJson = pref.getString(key, null);
             Gson gson = new Gson();
             Integer[] favorSessionArray = gson.fromJson(favorSessionJson, Integer[].class);
-            favorSessionList = Arrays.asList(favorSessionArray);
+            favorSessionList.addAll(Arrays.asList(favorSessionArray));
             favorSessionList = new ArrayList<>(favorSessionList);
         } else {
             return null;

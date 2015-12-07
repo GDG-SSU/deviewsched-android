@@ -14,6 +14,7 @@ public class Session implements Serializable {
     public String presentation_url;
     public String video_url;
     public ArrayList<Speaker> speakers;
+    // 기본이 false;
     public boolean isSelected = false;
 
 }

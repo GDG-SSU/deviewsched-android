@@ -1,5 +1,6 @@
 package com.gdgssu.android_deviewsched.ui.sche;
 
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,25 +12,39 @@ import android.widget.ListView;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.model.FavoriteSession;
 import com.gdgssu.android_deviewsched.model.sessioninfo.Track;
+import com.google.common.primitives.Ints;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
 public class SchePagerFragment extends Fragment {
 
     private static final String TAG = makeLogTag("SchePagerFragment");
+    private static final String BUNDLE_ISFAVORITEMODE = "BUNDLE_ISFAVORITEMODE";
+    private static final String BUNDLE_STOREDSESSIONIDARRAY = "BUNDLE_STOREDSESSIONIDARRAY";
 
     private Track mTrackData;
 
     private ListView mListview;
     private SchePagerAdapter mAdapter;
-    private FavoriteSession mSessionList;
+    private boolean mIsFavoriteMode;
+    private List<Integer> mStoredSessionIDs;
 
-    public static SchePagerFragment newInstance(Track track) {
+    public static SchePagerFragment newInstance(Track track, @Nullable Boolean isFavoriteMode, @Nullable ArrayList<Integer> storedSessionIDs) {
         SchePagerFragment fragment = new SchePagerFragment();
         Bundle bundle = new Bundle();
         bundle.putSerializable(TAG, track);
-        fragment.setArguments(bundle);
+        if (isFavoriteMode) {
+            bundle.putBoolean(BUNDLE_ISFAVORITEMODE, isFavoriteMode);
+            int[] storedSessionIDArray = Ints.toArray(storedSessionIDs);
+            bundle.putIntArray(BUNDLE_STOREDSESSIONIDARRAY, storedSessionIDArray);
+        }
 
+        fragment.setArguments(bundle);
 
         return fragment;
     }
@@ -46,8 +61,11 @@ public class SchePagerFragment extends Fragment {
 
         if (getArguments() != null) {
             mTrackData = (Track) getArguments().getSerializable(TAG);
+            if (getArguments().getBoolean(BUNDLE_ISFAVORITEMODE)) {
+                mIsFavoriteMode = getArguments().getBoolean(BUNDLE_ISFAVORITEMODE);
+                mStoredSessionIDs = Ints.asList(getArguments().getIntArray(BUNDLE_STOREDSESSIONIDARRAY));
+            }
         }
-
     }
 
     @Override
@@ -62,13 +80,13 @@ public class SchePagerFragment extends Fragment {
 
     private void initScheListView(View rootView) {
         mListview = (ListView) rootView.findViewById(R.id.schepager_list);
-        mAdapter = new SchePagerAdapter(mTrackData, getActivity());
+        mAdapter = new SchePagerAdapter(mTrackData, getActivity(), mIsFavoriteMode, mStoredSessionIDs);
 
         mListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (mTrackData.sessions.get(position).is_session) {
-                    ((ScheActivity) getActivity()).setDetailSessionFragment(mTrackData.sessions.get(position));
+                if (mAdapter.mSessionItems.get(position).is_session){
+                    ((ScheActivity) getActivity()).setDetailSessionFragment(mAdapter.mSessionItems.get(position));
                 }
             }
         });
