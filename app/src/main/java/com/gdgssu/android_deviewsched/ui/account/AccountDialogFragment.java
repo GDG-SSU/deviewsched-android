@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,7 @@ import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
 import com.gdgssu.android_deviewsched.helper.ProfileChangedListener;
+import com.gdgssu.android_deviewsched.ui.BaseActivity;
 import com.gdgssu.android_deviewsched.ui.main.MainActivity;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
@@ -39,7 +41,7 @@ public class AccountDialogFragment extends DialogFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        mListener = (MainActivity) getActivity();
+        mListener = (BaseActivity) getActivity();
 
         mCallbackManager = CallbackManager.Factory.create();
         mProfileTracker = new ProfileTracker() {

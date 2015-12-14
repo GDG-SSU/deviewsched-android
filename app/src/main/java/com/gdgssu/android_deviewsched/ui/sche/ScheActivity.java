@@ -7,12 +7,14 @@ import android.os.Bundle;
 
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.model.sessioninfo.Session;
+import com.gdgssu.android_deviewsched.ui.BaseActivity;
 import com.gdgssu.android_deviewsched.ui.BaseFragment;
+import com.gdgssu.android_deviewsched.ui.account.AccountDialogFragment;
 import com.gdgssu.android_deviewsched.ui.detailsession.DetailSessionFragment;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-public class ScheActivity extends AppCompatActivity implements BaseFragment.OnFragmentInteractionListener {
+public class ScheActivity extends BaseActivity {
 
     private static final String TAG = makeLogTag("ScheActivity");
     private static final String KEY_TITLE = "title";
@@ -53,6 +55,11 @@ public class ScheActivity extends AppCompatActivity implements BaseFragment.OnFr
         if (mFragmentManager.getBackStackEntryCount() > 0) {
             mFragmentManager.popBackStackImmediate("detailsession", FragmentManager.POP_BACK_STACK_INCLUSIVE);
         }
+    }
+
+    public void showLoginDialog() {
+        AccountDialogFragment dialogFragment = new AccountDialogFragment();
+        dialogFragment.show(mFragmentManager, "Account");
     }
 
     @Override

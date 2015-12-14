@@ -95,6 +95,8 @@ public class ScheFragment extends BaseFragment {
             if (!DeviewSchedApplication.sFavorSessionState) {
                 emptyLayout.setVisibility(View.VISIBLE);
                 mToolbarSpinner.setVisibility(View.GONE);
+                if (!DeviewSchedApplication.sLoginstate)
+                    ((ScheActivity) getActivity()).showLoginDialog();
             }
         }
     }
