@@ -1,6 +1,7 @@
 package com.gdgssu.android_deviewsched.ui.sche;
 
 import android.content.Context;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,9 @@ import com.gdgssu.android_deviewsched.model.sessioninfo.Track;
 import com.gdgssu.android_deviewsched.util.GlideCircleTransform;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
 public class SchePagerAdapter extends BaseAdapter {
@@ -24,14 +27,33 @@ public class SchePagerAdapter extends BaseAdapter {
     private static final String TAG = makeLogTag("SchePagerAdapter");
 
     private LayoutInflater mInflater;
-    private ArrayList<Session> mSessionItems;
+    public ArrayList<Session> mSessionItems;
     private Context mContext;
+    private boolean mIsFavoriteMode = false;
+    private List<Integer> mStoredSessionIDs;
 
-    public SchePagerAdapter(Track track, Context context) {
+    public SchePagerAdapter(Track track, Context context, @Nullable Boolean isFavoriteMode, @Nullable List<Integer> storedSessionIDs) {
 
         this.mSessionItems = track.sessions;
         this.mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.mContext = context;
+
+        mIsFavoriteMode = isFavoriteMode;
+        if (mIsFavoriteMode) {
+            mStoredSessionIDs = storedSessionIDs;
+            this.mSessionItems = initFavoriteSessionList();
+        }
+    }
+
+    private ArrayList<Session> initFavoriteSessionList() {
+        ArrayList<Session> mFavoriteItems = new ArrayList<>();
+        for (Session session : mSessionItems) {
+            if (mStoredSessionIDs.contains(session.session_id)) {
+                mFavoriteItems.add(session);
+            }
+        }
+
+        return mFavoriteItems;
     }
 
     @Override

@@ -8,6 +8,7 @@ import com.gdgssu.android_deviewsched.model.sessioninfo.Day;
 
 import java.util.ArrayList;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
 public class SchePagerFragmentAdapter extends FragmentStatePagerAdapter {
@@ -16,11 +17,23 @@ public class SchePagerFragmentAdapter extends FragmentStatePagerAdapter {
 
     private ArrayList<CharSequence> mPagerTitles = new ArrayList<CharSequence>();
     private Day mDayItem;
+    private ArrayList<Integer> mStoredSessionIDs = null;
+    private Boolean mIsFavoriteMode = false;
 
     public SchePagerFragmentAdapter(FragmentManager fm, Day dayItem) {
         super(fm);
 
         this.mDayItem = dayItem;
+        setPagerTitles();
+    }
+
+    public SchePagerFragmentAdapter(FragmentManager fm, Day dayItem, boolean isFavoriteMode, ArrayList<Integer> storedSessionIDs) {
+        super(fm);
+
+        this.mDayItem = dayItem;
+
+        this.mStoredSessionIDs = storedSessionIDs;
+        this.mIsFavoriteMode = isFavoriteMode;
         setPagerTitles();
     }
 
@@ -40,15 +53,15 @@ public class SchePagerFragmentAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        switch (position){
+        switch (position) {
             case 0:
-                return SchePagerFragment.newInstance(mDayItem.tracks.get(position));
+                return SchePagerFragment.newInstance(mDayItem.tracks.get(position), mIsFavoriteMode, mStoredSessionIDs);
             case 1:
-                return SchePagerFragment.newInstance(mDayItem.tracks.get(position));
+                return SchePagerFragment.newInstance(mDayItem.tracks.get(position), mIsFavoriteMode, mStoredSessionIDs);
             case 2:
-                return SchePagerFragment.newInstance(mDayItem.tracks.get(position));
+                return SchePagerFragment.newInstance(mDayItem.tracks.get(position), mIsFavoriteMode, mStoredSessionIDs);
             case 3:
-                return SchePagerFragment.newInstance(mDayItem.tracks.get(position));
+                return SchePagerFragment.newInstance(mDayItem.tracks.get(position), mIsFavoriteMode, mStoredSessionIDs);
             default:
                 throw new RuntimeException("There is not case");
         }
