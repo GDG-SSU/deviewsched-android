@@ -1,4 +1,4 @@
-package com.gdgssu.android_deviewsched.ui.account;
+package com.gdgssu.android_deviewsched.ui.login;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -27,24 +27,31 @@ import com.gdgssu.android_deviewsched.ui.BaseActivity;
 import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-public class AccountDialogFragment extends DialogFragment {
+public class LoginDialogFragment extends DialogFragment {
 
-    private static final String TAG = makeLogTag("AccountDialogFragment");
+    private static final String TAG = makeLogTag("LoginDialogFragment");
+    public static final String BUNDLE_FROM_ACTIVITY = "BUNDLE_FROM_ACTIVITY";
 
     private CallbackManager mCallbackManager;
     private LoginButton loginButton;
     private ProfileTracker mProfileTracker;
-
     private ProfileChangedListener mListener;
 
-    public AccountDialogFragment() {
+    public static LoginDialogFragment newInstance(CharSequence fromActivity) {
+        LoginDialogFragment fragment = new LoginDialogFragment();
+        Bundle bundle = new Bundle();
+        bundle.putCharSequence(BUNDLE_FROM_ACTIVITY, fromActivity);
+        fragment.setArguments(bundle);
+
+        return fragment;
+    }
+
+    public LoginDialogFragment() {
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        LOGI(TAG, getTag());
 
         mListener = (BaseActivity) getActivity();
 
@@ -107,8 +114,8 @@ public class AccountDialogFragment extends DialogFragment {
     public void onDismiss(DialogInterface dialog) {
         super.onDismiss(dialog);
 
-        if (getTag().equals("ScheActivity")){
-            if (!DeviewSchedApplication.sLoginstate){
+        if (getArguments().getCharSequence(BUNDLE_FROM_ACTIVITY).equals("ScheActivity")) {
+            if (!DeviewSchedApplication.sLoginstate) {
                 getActivity().finish();
             }
         }

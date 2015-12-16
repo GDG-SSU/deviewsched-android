@@ -24,8 +24,8 @@ import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 public class SchePagerFragment extends Fragment {
 
     private static final String TAG = makeLogTag("SchePagerFragment");
-    private static final String BUNDLE_ISFAVORITEMODE = "BUNDLE_ISFAVORITEMODE";
-    private static final String BUNDLE_STOREDSESSIONIDARRAY = "BUNDLE_STOREDSESSIONIDARRAY";
+    private static final String BUNDLE_IS_FAVORITE_MODE = "BUNDLE_IS_FAVORITE_MODE";
+    private static final String BUNDLE_STORED_SESSION_ID_ARRAY = "BUNDLE_STORED_SESSION_ID_ARRAY";
 
     private Track mTrackData;
 
@@ -39,9 +39,9 @@ public class SchePagerFragment extends Fragment {
         Bundle bundle = new Bundle();
         bundle.putSerializable(TAG, track);
         if (isFavoriteMode) {
-            bundle.putBoolean(BUNDLE_ISFAVORITEMODE, isFavoriteMode);
+            bundle.putBoolean(BUNDLE_IS_FAVORITE_MODE, isFavoriteMode);
             int[] storedSessionIDArray = Ints.toArray(storedSessionIDs);
-            bundle.putIntArray(BUNDLE_STOREDSESSIONIDARRAY, storedSessionIDArray);
+            bundle.putIntArray(BUNDLE_STORED_SESSION_ID_ARRAY, storedSessionIDArray);
         }
 
         fragment.setArguments(bundle);
@@ -61,9 +61,9 @@ public class SchePagerFragment extends Fragment {
 
         if (getArguments() != null) {
             mTrackData = (Track) getArguments().getSerializable(TAG);
-            if (getArguments().getBoolean(BUNDLE_ISFAVORITEMODE)) {
-                mIsFavoriteMode = getArguments().getBoolean(BUNDLE_ISFAVORITEMODE);
-                mStoredSessionIDs = Ints.asList(getArguments().getIntArray(BUNDLE_STOREDSESSIONIDARRAY));
+            if (getArguments().getBoolean(BUNDLE_IS_FAVORITE_MODE)) {
+                mIsFavoriteMode = getArguments().getBoolean(BUNDLE_IS_FAVORITE_MODE);
+                mStoredSessionIDs = Ints.asList(getArguments().getIntArray(BUNDLE_STORED_SESSION_ID_ARRAY));
             }
         }
     }
@@ -85,8 +85,8 @@ public class SchePagerFragment extends Fragment {
         mListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (mAdapter.mSessionItems.get(position).is_session){
-                    ((ScheActivity) getActivity()).setDetailSessionFragment(mAdapter.mSessionItems.get(position));
+                if (mAdapter.getSessionItems().get(position).is_session){
+                    ((ScheActivity) getActivity()).setDetailSessionFragment(mAdapter.getSessionItems().get(position));
                 }
             }
         });

@@ -28,7 +28,7 @@ import com.gdgssu.android_deviewsched.helper.UserProfileProvider;
 import com.gdgssu.android_deviewsched.model.User;
 import com.gdgssu.android_deviewsched.ui.BaseActivity;
 
-import com.gdgssu.android_deviewsched.ui.account.AccountDialogFragment;
+import com.gdgssu.android_deviewsched.ui.login.LoginDialogFragment;
 import com.gdgssu.android_deviewsched.ui.location.LocationActivity;
 import com.gdgssu.android_deviewsched.ui.sche.ScheActivity;
 import com.gdgssu.android_deviewsched.ui.sche.ScheFragment;
@@ -242,8 +242,8 @@ public class MainActivity extends BaseActivity {
     }
 
     private void showAccount() {
-        AccountDialogFragment fragment = new AccountDialogFragment();
-        fragment.show(getSupportFragmentManager(), "MainActivity");
+        LoginDialogFragment dialogFragment = LoginDialogFragment.newInstance("MainActivity");
+        dialogFragment.show(getSupportFragmentManager(), "LoginDialogFragment");
     }
 
     private void showSetting() {

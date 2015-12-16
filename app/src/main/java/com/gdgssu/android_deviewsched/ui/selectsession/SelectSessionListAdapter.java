@@ -36,7 +36,7 @@ public class SelectSessionListAdapter extends BaseAdapter {
     private Context mContext;
 
     public SelectSessionListAdapter(Day day, ArrayList<Integer> storedFavorSessionIDs, Context context) {
-        makeSelectSessionList(day);
+        orderSessionChronologically(day);
         this.mStoredFavoriteSessionIDs = storedFavorSessionIDs;
         this.mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.mContext = context;
@@ -48,7 +48,7 @@ public class SelectSessionListAdapter extends BaseAdapter {
      *
      * @param day
      */
-    public void makeSelectSessionList(Day day) {
+    public void orderSessionChronologically(Day day) {
         try {
             for (int i = 0; i < day.tracks.get(0).sessions.size(); i++) {
                 for (int j = 0; j < day.tracks.size(); j++) {
@@ -135,7 +135,7 @@ public class SelectSessionListAdapter extends BaseAdapter {
 
     public void setDayItem(Day day) {
         mSessionItems.clear();
-        makeSelectSessionList(day);
+        orderSessionChronologically(day);
     }
 
     public void setOneSpeakerInfo(SelectSessionHolder sessionHolder, Session sessionItem) {

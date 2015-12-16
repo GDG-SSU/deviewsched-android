@@ -2,14 +2,12 @@ package com.gdgssu.android_deviewsched.ui.sche;
 
 import android.net.Uri;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.model.sessioninfo.Session;
 import com.gdgssu.android_deviewsched.ui.BaseActivity;
-import com.gdgssu.android_deviewsched.ui.BaseFragment;
-import com.gdgssu.android_deviewsched.ui.account.AccountDialogFragment;
+import com.gdgssu.android_deviewsched.ui.login.LoginDialogFragment;
 import com.gdgssu.android_deviewsched.ui.detailsession.DetailSessionFragment;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
@@ -58,8 +56,8 @@ public class ScheActivity extends BaseActivity {
     }
 
     public void showLoginDialog() {
-        AccountDialogFragment dialogFragment = new AccountDialogFragment();
-        dialogFragment.show(mFragmentManager, "ScheActivity");
+        LoginDialogFragment dialogFragment = LoginDialogFragment.newInstance("ScheActivity");
+        dialogFragment.show(mFragmentManager, "LoginDialogFragment");
     }
 
     @Override

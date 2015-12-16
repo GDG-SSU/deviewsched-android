@@ -27,14 +27,16 @@ public class SchePagerAdapter extends BaseAdapter {
     private static final String TAG = makeLogTag("SchePagerAdapter");
 
     private LayoutInflater mInflater;
-    public ArrayList<Session> mSessionItems;
+    private Track mTrack;
+    private ArrayList<Session> mSessionItems;
     private Context mContext;
     private boolean mIsFavoriteMode = false;
     private List<Integer> mStoredSessionIDs;
 
     public SchePagerAdapter(Track track, Context context, @Nullable Boolean isFavoriteMode, @Nullable List<Integer> storedSessionIDs) {
 
-        this.mSessionItems = track.sessions;
+        this.mTrack = track;
+        this.mSessionItems = getSessionItems();
         this.mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.mContext = context;
 
@@ -43,6 +45,10 @@ public class SchePagerAdapter extends BaseAdapter {
             mStoredSessionIDs = storedSessionIDs;
             this.mSessionItems = initFavoriteSessionList();
         }
+    }
+
+    public ArrayList<Session> getSessionItems(){
+        return mTrack.sessions;
     }
 
     private ArrayList<Session> initFavoriteSessionList() {

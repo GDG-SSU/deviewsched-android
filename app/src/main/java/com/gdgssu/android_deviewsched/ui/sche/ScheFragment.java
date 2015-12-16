@@ -118,7 +118,7 @@ public class ScheFragment extends BaseFragment {
         if (!mIsMySession) {
             mAdapter = new SchePagerFragmentAdapter(getChildFragmentManager(), DeviewSchedApplication.sAllscheItems.days.get(0));
         } else {
-            mAdapter = new SchePagerFragmentAdapter(getChildFragmentManager(), DeviewSchedApplication.sAllscheItems.days.get(0), mIsMySession, mStoredSessionIDs);
+            mAdapter = new SchePagerFragmentAdapter(getChildFragmentManager(), DeviewSchedApplication.sAllscheItems.days.get(0), DeviewSchedApplication.sFavorSessionState, mStoredSessionIDs);
         }
         mPager.setAdapter(mAdapter);
 
