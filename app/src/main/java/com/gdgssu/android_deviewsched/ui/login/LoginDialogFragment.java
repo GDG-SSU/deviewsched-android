@@ -1,11 +1,11 @@
-package com.gdgssu.android_deviewsched.ui.account;
+package com.gdgssu.android_deviewsched.ui.login;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,19 +23,31 @@ import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.helper.LoginPreferenceHelper;
 import com.gdgssu.android_deviewsched.helper.ProfileChangedListener;
 import com.gdgssu.android_deviewsched.ui.BaseActivity;
-import com.gdgssu.android_deviewsched.ui.main.MainActivity;
 
+import static com.gdgssu.android_deviewsched.util.LogUtils.LOGI;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
-public class AccountDialogFragment extends DialogFragment {
+public class LoginDialogFragment extends DialogFragment {
 
-    private static final String TAG = makeLogTag("AccountDialogFragment");
+    private static final String TAG = makeLogTag("LoginDialogFragment");
+    public static final String BUNDLE_FROM_ACTIVITY = "BUNDLE_FROM_ACTIVITY";
 
     private CallbackManager mCallbackManager;
     private LoginButton loginButton;
     private ProfileTracker mProfileTracker;
-
     private ProfileChangedListener mListener;
+
+    public static LoginDialogFragment newInstance(CharSequence fromActivity) {
+        LoginDialogFragment fragment = new LoginDialogFragment();
+        Bundle bundle = new Bundle();
+        bundle.putCharSequence(BUNDLE_FROM_ACTIVITY, fromActivity);
+        fragment.setArguments(bundle);
+
+        return fragment;
+    }
+
+    public LoginDialogFragment() {
+    }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -62,7 +74,7 @@ public class AccountDialogFragment extends DialogFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        loginButton = (LoginButton) view.findViewById(R.id.account_button_facebooklogin_2);
+        loginButton = (LoginButton) view.findViewById(R.id.account_button_facebooklogin);
         loginButton.setReadPermissions("public_profile");
         loginButton.setFragment(this);
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -96,5 +108,16 @@ public class AccountDialogFragment extends DialogFragment {
 
         mCallbackManager.onActivityResult(requestCode, resultCode, data);
         getDialog().dismiss();
+    }
+
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
+
+        if (getArguments().getCharSequence(BUNDLE_FROM_ACTIVITY).equals("ScheActivity")) {
+            if (!DeviewSchedApplication.sLoginstate) {
+                getActivity().finish();
+            }
+        }
     }
 }

@@ -20,8 +20,11 @@ import android.widget.Spinner;
 
 import com.gdgssu.android_deviewsched.DeviewSchedApplication;
 import com.gdgssu.android_deviewsched.R;
+import com.gdgssu.android_deviewsched.helper.FavoritePreferenceHelper;
 import com.gdgssu.android_deviewsched.ui.BaseFragment;
 import com.gdgssu.android_deviewsched.ui.selectsession.SelectSessionActivity;
+
+import java.util.ArrayList;
 
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
@@ -35,9 +38,11 @@ public class ScheFragment extends BaseFragment {
 
     private ViewPager mPager;
     private Spinner mToolbarSpinner;
+    private RelativeLayout mEmptyLayout;
 
     private CharSequence mTitle;
     private boolean mIsMySession = false;
+    private ArrayList<Integer> mStoredSessionIDs;
 
     private SchePagerFragmentAdapter mAdapter;
 
@@ -84,26 +89,37 @@ public class ScheFragment extends BaseFragment {
 
         initToolbar(rootView);
         setMySessionView(rootView);
-        initFragmentPager(rootView);
 
         return rootView;
     }
 
     private void setMySessionView(View rootView) {
-        RelativeLayout emptyLayout = (RelativeLayout) rootView.findViewById(R.id.fragment_sche_empty_container);
+        mEmptyLayout = (RelativeLayout) rootView.findViewById(R.id.fragment_sche_empty_container);
         if (mIsMySession) {
             if (!DeviewSchedApplication.sFavorSessionState) {
-                emptyLayout.setVisibility(View.VISIBLE);
+                mEmptyLayout.setVisibility(View.VISIBLE);
                 mToolbarSpinner.setVisibility(View.GONE);
                 if (!DeviewSchedApplication.sLoginstate)
                     ((ScheActivity) getActivity()).showLoginDialog();
+            } else {
+                //Todo : 관심 세션 목록을 Preference로부터 받아와야함.
+                FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(getActivity());
+                mStoredSessionIDs = prefHelper.getFavorSessionValue(FavoritePreferenceHelper.PREF_FAVOR_VALUE);
+                initFragmentPager(rootView);
+                return;
             }
         }
+        initFragmentPager(rootView);
     }
 
     private void initFragmentPager(View rootView) {
         mPager = (ViewPager) rootView.findViewById(R.id.sche_pager_contents);
-        mAdapter = new SchePagerFragmentAdapter(getChildFragmentManager(), DeviewSchedApplication.sAllscheItems.days.get(0));
+        //FavoriteFlag와 관심세션 ID 리스트를 전달하는 생성자 오버로딩하기.
+        if (!mIsMySession) {
+            mAdapter = new SchePagerFragmentAdapter(getChildFragmentManager(), DeviewSchedApplication.sAllscheItems.days.get(0));
+        } else {
+            mAdapter = new SchePagerFragmentAdapter(getChildFragmentManager(), DeviewSchedApplication.sAllscheItems.days.get(0), DeviewSchedApplication.sFavorSessionState, mStoredSessionIDs);
+        }
         mPager.setAdapter(mAdapter);
 
         TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.fragment_sche_tabs);
@@ -193,5 +209,40 @@ public class ScheFragment extends BaseFragment {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(getActivity());
+        boolean favorSessionState = prefHelper.getFavorSessionState(FavoritePreferenceHelper.PREF_FAVOR_STATE);
+
+        if (favorSessionState) {
+            mEmptyLayout.setVisibility(View.GONE);
+            mToolbarSpinner.setVisibility(View.VISIBLE);
+        } else {
+            mEmptyLayout.setVisibility(View.VISIBLE);
+            mToolbarSpinner.setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == ScheFragment.SELECT_SESSION) {
+            //SelectSessionActivity에 갔다가 돌아왔을때 실행되는 로직
+            FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(getActivity());
+            if (prefHelper.getFavorSessionState(FavoritePreferenceHelper.PREF_FAVOR_STATE)) {
+                //저장된 세션 갯수가 0개이면 이 로직이 실행되지 않음.
+                ArrayList<Integer> storedSessionIDs = prefHelper.getFavorSessionValue(FavoritePreferenceHelper.PREF_FAVOR_VALUE);
+                //Todo 저장된 ID값들을 가져와서 그 ID에 맞는 세션 리스트들을 출력해줘야함.
+                //mAdapter에 들어갈 데이터들을 새롭게 짜맞춰줘야함.
+                mAdapter = new SchePagerFragmentAdapter(getChildFragmentManager(), DeviewSchedApplication.sAllscheItems.days.get(0), true, storedSessionIDs);
+                mAdapter.notifyDataSetChanged();
+                mPager.setAdapter(mAdapter);
+            }
+        }
     }
 }

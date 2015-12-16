@@ -2,7 +2,6 @@ package com.gdgssu.android_deviewsched.ui.selectsession;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +21,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
-import static com.gdgssu.android_deviewsched.util.LogUtils.LOGD;
 import static com.gdgssu.android_deviewsched.util.LogUtils.LOGE;
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
@@ -30,23 +28,32 @@ public class SelectSessionListAdapter extends BaseAdapter {
 
     private static final String TAG = makeLogTag("SelectSessionListAdapter");
 
-    public static ArrayList<Session> sSessionItems = new ArrayList<>();
+    //Fixme : static으로 되어있는것을 수정해야함.
+    public ArrayList<Session> mSessionItems = new ArrayList<>();
+    public ArrayList<Integer> mStoredFavoriteSessionIDs;
 
     private LayoutInflater mInflater;
     private Context mContext;
 
-    public SelectSessionListAdapter(Day day, Context context) {
-        makeSelectSessionList(day);
+    public SelectSessionListAdapter(Day day, ArrayList<Integer> storedFavorSessionIDs, Context context) {
+        orderSessionChronologically(day);
+        this.mStoredFavoriteSessionIDs = storedFavorSessionIDs;
         this.mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.mContext = context;
     }
 
-    public void makeSelectSessionList(Day day) {
+    /**
+     * 트랙들의 모든 세션들을 시간순서대로 정렬하는 로직
+     * Todo : day.tracks.get(0).sessions.size()를 상수형태로 재정의하기
+     *
+     * @param day
+     */
+    public void orderSessionChronologically(Day day) {
         try {
             for (int i = 0; i < day.tracks.get(0).sessions.size(); i++) {
                 for (int j = 0; j < day.tracks.size(); j++) {
                     if (day.tracks.get(j).sessions.get(i).is_session) {
-                        sSessionItems.add(day.tracks.get(j).sessions.get(i));
+                        mSessionItems.add(day.tracks.get(j).sessions.get(i));
                     }
                 }
             }
@@ -57,12 +64,12 @@ public class SelectSessionListAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return sSessionItems.size();
+        return mSessionItems.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return sSessionItems.get(position);
+        return mSessionItems.get(position);
     }
 
     @Override
@@ -84,7 +91,7 @@ public class SelectSessionListAdapter extends BaseAdapter {
             selectHolder.sessionTrack = (TextView) convertView.findViewById(R.id.item_select_session_track);
             selectHolder.speakerImg = (ImageView) convertView.findViewById(R.id.selectsession_image_speakerprofile);
             selectHolder.speakerImgSecond = (ImageView) convertView.findViewById(R.id.selectsession_image_speakerprofile_second);
-            selectHolder.speakerName = (TextView) convertView.findViewById(R.id.sessionsche_text_speakername);
+            selectHolder.speakerName = (TextView) convertView.findViewById(R.id.selectsession_text_speakername);
             selectHolder.sessionName = (TextView) convertView.findViewById(R.id.selectsession_text_sessiontitle);
 
             convertView.setTag(selectHolder);
@@ -93,9 +100,11 @@ public class SelectSessionListAdapter extends BaseAdapter {
             selectHolder = (SelectSessionHolder) convertView.getTag();
         }
 
-        Session sessionItem = sSessionItems.get(position);
+        Session sessionItem = mSessionItems.get(position);
 
-        if (sessionItem.isSelected) {
+        //is_checked의 True/False를 보고 색상을 입히는것이 아님.
+        //mStoredFavoriteSessionIds가 잘못되었을 가능성이 높음.
+        if (mStoredFavoriteSessionIDs.contains(Integer.valueOf(sessionItem.session_id))) {
             convertView.setBackgroundColor(ContextCompat.getColor(mContext, R.color.colorAccent));
         } else {
             convertView.setBackgroundColor(ContextCompat.getColor(mContext, android.R.color.white));
@@ -125,8 +134,8 @@ public class SelectSessionListAdapter extends BaseAdapter {
     }
 
     public void setDayItem(Day day) {
-        sSessionItems.clear();
-        makeSelectSessionList(day);
+        mSessionItems.clear();
+        orderSessionChronologically(day);
     }
 
     public void setOneSpeakerInfo(SelectSessionHolder sessionHolder, Session sessionItem) {
