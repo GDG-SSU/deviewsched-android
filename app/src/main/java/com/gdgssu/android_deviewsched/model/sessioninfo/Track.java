@@ -7,7 +7,4 @@ public class Track implements Serializable {
 
     public ArrayList<Session> sessions;
 
-    public ArrayList<Session> getSessions() {
-        return sessions;
-    }
 }
