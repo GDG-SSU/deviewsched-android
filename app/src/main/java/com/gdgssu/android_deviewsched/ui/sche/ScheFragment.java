@@ -239,7 +239,7 @@ public class ScheFragment extends BaseFragment {
                 ArrayList<Integer> storedSessionIDs = prefHelper.getFavorSessionValue(FavoritePreferenceHelper.PREF_FAVOR_VALUE);
                 //Todo 저장된 ID값들을 가져와서 그 ID에 맞는 세션 리스트들을 출력해줘야함.
                 //mAdapter에 들어갈 데이터들을 새롭게 짜맞춰줘야함.
-                mAdapter = new SchePagerFragmentAdapter(getChildFragmentManager(), DeviewSchedApplication.sAllscheItems.days.get(0), true, storedSessionIDs);
+                mAdapter = new SchePagerFragmentAdapter(getChildFragmentManager(), DeviewSchedApplication.sAllscheItems.days.get(0), DeviewSchedApplication.sFavorSessionState, storedSessionIDs);
                 mAdapter.notifyDataSetChanged();
                 mPager.setAdapter(mAdapter);
             }

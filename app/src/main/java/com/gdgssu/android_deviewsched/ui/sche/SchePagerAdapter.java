@@ -36,7 +36,7 @@ public class SchePagerAdapter extends BaseAdapter {
     public SchePagerAdapter(Track track, Context context, @Nullable Boolean isFavoriteMode, @Nullable List<Integer> storedSessionIDs) {
 
         this.mTrack = track;
-        this.mSessionItems = getSessionItems();
+        this.mSessionItems = initSessionItems();
         this.mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.mContext = context;
 
@@ -47,7 +47,7 @@ public class SchePagerAdapter extends BaseAdapter {
         }
     }
 
-    public ArrayList<Session> getSessionItems(){
+    public ArrayList<Session> initSessionItems(){
         return mTrack.sessions;
     }
 
@@ -68,7 +68,7 @@ public class SchePagerAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int position) {
+    public Session getItem(int position) {
         return mSessionItems.get(position);
     }
 

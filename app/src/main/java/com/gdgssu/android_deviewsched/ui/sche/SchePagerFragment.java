@@ -85,8 +85,8 @@ public class SchePagerFragment extends Fragment {
         mListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (mAdapter.getSessionItems().get(position).is_session){
-                    ((ScheActivity) getActivity()).setDetailSessionFragment(mAdapter.getSessionItems().get(position));
+                if (mAdapter.getItem(position).is_session){
+                    ((ScheActivity) getActivity()).setDetailSessionFragment(mAdapter.getItem(position));
                 }
             }
         });
