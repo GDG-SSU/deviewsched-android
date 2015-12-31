@@ -10,6 +10,8 @@ import android.support.v7.preference.PreferenceManager;
 import com.gdgssu.android_deviewsched.R;
 import com.gdgssu.android_deviewsched.util.LogUtils;
 
+import de.psdev.licensesdialog.LicensesDialogFragment;
+
 import static com.gdgssu.android_deviewsched.util.LogUtils.makeLogTag;
 
 public class PreferenceFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener {
@@ -54,14 +56,25 @@ public class PreferenceFragment extends PreferenceFragmentCompat implements Shar
 
             case KEY_PREF_OSSLICENSES:
                 //Todo : SettingActivity에서 PreferenceFragment에서 OSSlicensesFragment로 전환하는 로직 작성
-                mListener.onFragmentChange();
-
+                try {
+                    onMultipleIncludeOwnFragmentClick();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 break;
         }
 
         return super.onPreferenceTreeClick(preference);
     }
+    public void onMultipleIncludeOwnFragmentClick() throws Exception {
+        final LicensesDialogFragment fragment = new LicensesDialogFragment.Builder(getActivity())
+                .setNotices(R.raw.notices)
+                .setShowFullLicenseText(false)
+                .setIncludeOwnLicense(true)
+                .build();
 
+        fragment.show(getFragmentManager(), "LicensesDialogFragment");
+    }
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
