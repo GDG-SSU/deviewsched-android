@@ -37,9 +37,9 @@
 
     <string name="pref_aboutus_category">About us</string>
     <string name="pref_aboutus">Developers</string>
-    <string name="pref_summ_aboutus">Ace Kim - ace.jckim@gmail.com</string>
+    <string name="pref_summ_aboutus">Acegugu / Hyemingway / wikay</string>
     <string name="pref_github">Show project repo</string>
-    <string name="pref_summ_github">https://github.com/Acegugu/deviewsched-android</string>
+    <string name="pref_summ_github">https://github.com/GDG-SSU/deviewsched-android</string>
 
     <string name="pref_lawinfo_category">Law Informations</string>
     <string name="pref_opensourcelicense">Opensource Licenses</string>
