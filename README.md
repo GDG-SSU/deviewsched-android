@@ -17,7 +17,18 @@ Deviewsched는 대한민국 최대의 개발자 컨퍼런스 Deview를 타겟으
 - 설정
 
 ## 라이선스
-본 프로젝트는 MIT 라이선스를 따르고 있습니다.
+- Junit(http://junit.org/license.html)
+- Robolectric(https://github.com/robolectric/robolectric)
+- Android support library(https://android.googlesource.com/platform/frameworks/support/+/master/v13/java/android/support/v13/app/FragmentCompat.java)
+- Gson(https://github.com/google/gson)
+- Guava - Apache
+- Glide(https://github.com/bumptech/glide)
+- Volley(https://github.com/mcxiaoke/android-volley)
+- Volleyextensions(https://github.com/naver/volley-extensions)
+- Facebook-android-sdk(https://github.com/facebook/facebook-android-sdk)
+- Materialviewpager(https://github.com/florent37/MaterialViewPager)
+- Circlebutton(https://github.com/markushi/android-circlebutton)
+
 
 ## 개발자
 - Acegugu(ace.jckim@gmail.com)
