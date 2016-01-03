@@ -215,16 +215,24 @@ public class ScheFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
 
-        FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(getActivity());
-        boolean favorSessionState = prefHelper.getFavorSessionState(FavoritePreferenceHelper.PREF_FAVOR_STATE);
+        if (mTitle.equals(getResources().getText(R.string.all_schedule))) {
 
-        if (favorSessionState) {
-            mEmptyLayout.setVisibility(View.GONE);
-            mToolbarSpinner.setVisibility(View.VISIBLE);
-        } else {
-            mEmptyLayout.setVisibility(View.VISIBLE);
-            mToolbarSpinner.setVisibility(View.GONE);
+            // all sessions
+            setEmptyViewVisible(false);
+
+        } else if (mTitle.equals(getResources().getText(R.string.my_schedule))) {
+
+            // favorite sessions
+            FavoritePreferenceHelper prefHelper = new FavoritePreferenceHelper(getActivity());
+            boolean favorSessionState = prefHelper.getFavorSessionState(FavoritePreferenceHelper.PREF_FAVOR_STATE);
+
+            setEmptyViewVisible(!favorSessionState);
         }
+    }
+
+    private void setEmptyViewVisible(boolean visible) {
+        mEmptyLayout.setVisibility(visible ? View.VISIBLE : View.GONE);
+        mToolbarSpinner.setVisibility(visible ? View.GONE : View.VISIBLE);
     }
 
     @Override
