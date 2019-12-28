@@ -35,4 +35,4 @@ Deviewsched는 대한민국 최대의 개발자 컨퍼런스 Deview를 타겟으
 ## 개발자
 - Acegugu(ace.jckim@gmail.com)
 - Hyemingway(rueru35@gmail.com)
-- wikay(dnlrkgp@gmail.com)
+- wikay
